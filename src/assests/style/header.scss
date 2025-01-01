@@ -13,11 +13,7 @@ $breakpoints: (
   }
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
+
 
 .header {
   position: fixed;
@@ -195,6 +191,7 @@ $breakpoints: (
       ul {
         flex-direction: row;
 
+
         li {
           margin-left: 16px;
           padding: 0;
@@ -203,6 +200,7 @@ $breakpoints: (
           .dropdown {
             display: none;
             position: absolute;
+            margin-top: 20px;
             top: 100%;
             left: 0;
           }

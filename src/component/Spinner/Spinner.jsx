@@ -1,30 +1,22 @@
 import React from "react";
-import PropTypes from "prop-types";
-import cx from "classnames";
 
 import "./style.scss";
 
-const Spinner = ({ className, position, md }) => {
-	const classNames = cx(
-		"spinner-wrap",
-		position ? position : "",
-		md ? "md" : "",
-		className
-	);
-	return (
-		<div className={classNames}>
-			<div className="spinner" />
-		</div>
-	);
+const Spinner = () => {
+    const letters = "Tech Master".split("");
+
+    return (
+        <div className="loading-page">
+            <h1 className="loading-text">
+                {letters.map((letter, index) => (
+                    <span key={index} style={{"--i": index}}>
+            {letter}
+          </span>
+                ))}
+            </h1>
+        </div>
+    );
 };
 
-Spinner.propTypes = {
-	className: PropTypes.string,
-	position: PropTypes.oneOf(["center", "start", "end", "full", "absolute"])
-};
-Spinner.defaultProps = {
-	className: "",
-	position: "center"
-};
 
 export default Spinner;
