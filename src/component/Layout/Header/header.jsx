@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Logo from "../../../assests/images/Logo.jpg";
 import { IoIosArrowDown } from "react-icons/io";
-
+import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle } from '@coreui/react'
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(null);
@@ -37,54 +37,42 @@ const Header = () => {
                 </a>
                 <nav className={`nav ${menuOpen ? "open" : ""}`}>
                     <ul>
-                        <li>
-                            <a href="#home">Home </a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#home">Home </a>
 
                         </li>
-                        <li
-                            onMouseEnter={() => toggleDropdown(1)}
-                            onMouseLeave={() => toggleDropdown(null)}
-                        >
-                            <a href="#about">Pages  <IoIosArrowDown className="arrowIcon" /></a>
-                            {dropdownOpen === 1 && (
-                                <ul className="dropdown">
-                                    <li><a href="#about-us">About Us</a></li>
-                                    <li><a href="#about-our">Our Team</a></li>
-                                    <li><a href="#about-our-team">Our Team Details</a></li>
-                                    <li><a href="#privacy-police">Privacy Police</a></li>
-                                    <li><a href="#terms-conditions">Terms & Conditions</a></li>
-                                </ul>
-                            )}
+                        <CDropdown className="nav-item">
+                            <CDropdownToggle className="nav-link" >Pages</CDropdownToggle>
+                            <CDropdownMenu className="dropdown-menu">
+                                <CDropdownItem href="/about">About Us</CDropdownItem>
+                                <CDropdownItem href="#">Our Team</CDropdownItem>
+                                <CDropdownItem href="#">Our Team Details</CDropdownItem>
+                                <CDropdownItem href="#">Privacy Police</CDropdownItem>
+                                <CDropdownItem href="#">Terms & Conditions</CDropdownItem>
+                            </CDropdownMenu>
+                        </CDropdown>
+                        <CDropdown className="nav-item">
+                            <CDropdownToggle className="nav-link" >Courses</CDropdownToggle>
+                            <CDropdownMenu className="dropdown-menu">
+                                <CDropdownItem href="#">Courses List</CDropdownItem>
+                                <CDropdownItem href="#">Courses Grid</CDropdownItem>
+                                <CDropdownItem href="#">Courses Details</CDropdownItem>
+                                <CDropdownItem href="#">Courses Sidebar</CDropdownItem>
+                            </CDropdownMenu>
+                        </CDropdown>
+                        <CDropdown className="nav-item">
+                            <CDropdownToggle className="nav-link" >Blog</CDropdownToggle>
+                            <CDropdownMenu className="dropdown-menu">
+                                <CDropdownItem href="#">Blog Standart</CDropdownItem>
+                                <CDropdownItem href="#">Blog Details</CDropdownItem>
+                                <CDropdownItem href="#">Blog With Sidebar</CDropdownItem>
+                                <CDropdownItem href="#">Blog Without Sidebar</CDropdownItem>
+                            </CDropdownMenu>
+                        </CDropdown>
+
+                        <li className="nav-item">
+                            <a className="nav-link" href="#contact">Contact</a>
                         </li>
-                        <li
-                            onMouseEnter={() => toggleDropdown(2)}
-                            onMouseLeave={() => toggleDropdown(null)}
-                        >
-                            <a href="#services">Courses  <IoIosArrowDown className="arrowIcon" /></a>
-                            {dropdownOpen === 2 && (
-                                <ul className="dropdown">
-                                    <li><a href="#courses-list">Courses List</a></li>
-                                    <li><a href="#courses-grid">Courses Grid</a></li>
-                                    <li><a href="#courses-details">Courses Details</a></li>
-                                    <li><a href="#courses-sidebar">Courses Sidebar</a></li>
-                                </ul>
-                            )}
-                        </li>
-                        <li
-                            onMouseEnter={() => toggleDropdown(3)}
-                            onMouseLeave={() => toggleDropdown(null)}
-                        >
-                            <a href="#services">Blog  <IoIosArrowDown className="arrowIcon" /></a>
-                            {dropdownOpen === 3 && (
-                                <ul className="dropdown">
-                                    <li><a href="#blog-standart">Blog Standart</a></li>
-                                    <li><a href="#blog-details">Blog Details</a></li>
-                                    <li><a href="#blog-sidebar">Blog With Sidebar</a></li>
-                                    <li><a href="#blog--without-sidebar">Blog Without Sidebar</a></li>
-                                </ul>
-                            )}
-                        </li>
-                        <li><a href="#contact">Contact</a></li>
 
                     </ul>
                 </nav>

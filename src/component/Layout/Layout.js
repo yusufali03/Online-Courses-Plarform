@@ -54,7 +54,7 @@ const Layout = (props) => {
               <FaAngleUp color="white" />
             </button>
           )}{" "}
-          <Footer />
+          {pathname !== "/" && <Footer />}
         </>
       </div>
     </>

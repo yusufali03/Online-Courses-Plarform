@@ -6,10 +6,12 @@ import Layout from "./component/Layout/Layout";
 
 
 const Home = lazy(() => import("./page/Home/home"));
+const About = lazy(() => import("./page/About/about"));
 
 
 const routes = [
     {path: "/", element: Home},
+    {path: "about", element: About},
 ];
 
 const RoutesContainer = () => (

@@ -1,77 +1,30 @@
-import React, {useEffect, useState} from 'react'
-import Lines from "../../assests/images/lines.svg"
-import Burchak from "../../assests/images/burchak.webp"
-import shape from "../../assests/images/shape.svg"
-import banner from "../../assests/images/banner.webp"
-import line from "../../assests/images/bottom_line.svg"
-import leftBold from "../../assests/images/left-bold-black.svg"
-import "./home.scss"
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { FaPlayCircle } from "react-icons/fa";
+import React from 'react'
+
+import Hero from "../../component/Hero/Hero";
+import AboutArea from "../../component/AboutArea";
+import CoursesArea from "../../component/CoursesArea";
+import TeamMember from "../../component/TeamMember";
+import ChooseArea from "../../component/ChooseArea";
+import Partner from "../../component/Partner/partner";
+import Testimonial from "../../component/TestimonialArea";
+import OurBlog from "../../component/OurBlog";
+import TestimonialsTwo from "../../component/TestimonialArea/next";
+import HomeFooter from "../../component/HomeFooter";
 
 export default function Home() {
-    useEffect(() => {
-        AOS.init({
-            duration: 1000, // Animatsiya davomiyligi (ms)
-            offset: 100,    // Elementdan yuqori chekkasiga masofa
-            easing: "ease-in-out", // Animatsiya effekti
-            delay: 50,      // Animatsiya kechikishi (ms)
-            once: true,     // Animatsiya faqat bir marta ishlashi uchun
-        });
-    }, []);
-    const [isAnimated, setIsAnimated] = useState(false);
+
     return (
         <div className='home'>
-            <div className="container">
-                <div className="flex">
-                    {/*left*/}
-                    <div className="home_card">
-                        <div className="home_card_animation">
-                            <img className="home_card_animation_lines" src={Lines} alt="lines"/>
-                            <img className="home_card_animation_triangle" src={Burchak} alt=""/>
-                        </div>
-                        {/*text*/}
-                        <div className="home_card_title" data-aos="fade-up">
-                            <p className="home_card_title_gradient">Online Education Websayt</p>
-                            <h2 className="home_card_title_bigGradient">Innovate With <br/> Digital <span
-                                className="home_card_title_bigGradient_colors">Expertise <img
-                                className="home_card_title_bigGradient_colors_lines" src={line} alt=""/>
-                            </span></h2>
-                            <p className="home_card_title_des">Embark on a Journey of Digital Discovery: Expert-Led
-                                Courses Designed to Equip</p>
-                            <div className="home_card_title_dot">
-                                <img className="home_card_title_dot_shape" src={shape} alt="shape"/>
-                            </div>
-                            <div className="home_card_title_buttonList">
-                                <a href="#" className="home_card_title_buttonList_btn">
-                                    <img className="home_card_title_buttonList_btn_imgs" src={leftBold} alt=""/>
-                                    Enroll Now
-                                </a>
-                                <a href="#" className="home_card_title_buttonList_play">
-                                    <FaPlayCircle  className="home_card_title_buttonList_play_buttonPlay" />
-
-                                </a>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    {/*    right*/}
-                    <div className="home_box">
-                        <div className="home_box_banner">
-                            <div className="home_box_banner_dot">
-                                <img className="home_box_banner_dot_shape" src={shape} alt="shape"/>
-                            </div>
-                            <img className="home_box_banner_mainBanner" data-aos="fade-up" width="100%" height="100%"
-                                 src={banner} alt="banner"/>
-                            {/*<div className="home_box_banner_chat">Chat with mentor</div>*/}
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
+            <Hero/>
+            <AboutArea/>
+            <CoursesArea/>
+            <TeamMember/>
+            <ChooseArea/>
+            <Partner/>
+            <Testimonial/>
+            <OurBlog/>
+            <TestimonialsTwo/>
+            <HomeFooter/>
         </div>
     )
 }
