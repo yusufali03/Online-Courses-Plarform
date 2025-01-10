@@ -46,12 +46,6 @@ const teamItems = [
     name: "Tim R. Moyer",
     type: "Lecturer",
   },
-  {
-    link: "#",
-    img: "https://demo.themeies.com/edugen-html/assets/images/team/team1.jpg",
-    name: "Tim R. Moyer",
-    type: "Lecturer",
-  },
 ];
 
 const OurTeam = () => {
@@ -78,7 +72,7 @@ const OurTeam = () => {
             <a href={member.link}>
               <img src={member.img} alt={member.name} />
             </a>
-            <div class="content text-center">
+            <div class="">
               <h3>
                 <a href="team-details.html">{member.name}</a>
               </h3>
@@ -103,6 +97,46 @@ const OurTeam = () => {
             </div>
           </div>
         ))}
+      </section>
+      <section className="learning-area">
+        <div className="title">
+
+          <SectionTitle />
+        </div>
+        <div className="shapes">
+          <img
+            className="shape1"
+            src="https://demo.themeies.com/edugen-html/assets/images/shapes/shape11.svg"
+            alt=""
+          />
+          <img
+            className="shape2"
+            src="https://demo.themeies.com/edugen-html/assets/images/shapes/shape10.svg"
+            alt=""
+          />
+        </div>
+        <div className="cast">
+          <div className="live-info">
+            <span className="red_circel"></span>
+            <span className="live">LIVE</span>
+            <span className="timer">01:30:08</span>
+          </div>
+          <img
+            className="other"
+            src="https://demo.themeies.com/edugen-html/assets/images/learning/learning1.jpg"
+            alt=""
+          />
+          <img
+            className="yourself"
+            src="https://demo.themeies.com/edugen-html/assets/images/learning/learning2.jpg"
+            alt=""
+          />
+          <div className="trigers">
+            <button className="mute">mute</button>
+            <button className="end">end</button>
+            <button className="video">video</button>
+          </div>
+        </div>
       </section>
     </div>
   );

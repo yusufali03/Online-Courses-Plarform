@@ -1,5 +1,5 @@
 import React from "react";
-import "./SectionTitle.scss"
+import "./SectionTitle.scss";
 
 const SectionTitle = () => {
   return (
@@ -7,10 +7,11 @@ const SectionTitle = () => {
       <span class="subtitle">Team Members</span>
       <h2>
         Our Expert
-        <div class="gradient_text">
-          Lecturer
-          <img src="assets/images/shapes/title-shape.svg" alt="shape" />
-        </div>
+        <div class="gradient_text">Lecturer</div>
+        {/* <img
+          src="https://demo.themeies.com/edugen-html/assets/images/shapes/title-shape.svg"
+          alt="shape"
+        /> */}
       </h2>
     </div>
   );

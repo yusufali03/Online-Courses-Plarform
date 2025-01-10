@@ -1,17 +1,24 @@
 .section-title {
+  max-width: 100%;
   .subtitle {
     font-size: 18px;
-    background: linear-gradient(90deg, #0063f4 -2.18%, #00f0aa 15.12%);
+    background: linear-gradient(100deg, #0063f4 8.82%, #00f0aa 95.12%);
     -webkit-background-clip: text; // Применяем фон только к тексту
     -webkit-text-fill-color: transparent; // Прозрачный текст, через который видно градиент
     font-weight: 700;
   }
   h2 {
     .gradient_text {
-      background: linear-gradient(90deg, #0063f4 -2.18%, #00f0aa 15.12%);
+      display: inline-flex;
+      background: linear-gradient(100deg, #0063f4 8.82%, #00f0aa 95.12%);
       -webkit-background-clip: text; // Применяем фон только к тексту
       -webkit-text-fill-color: transparent; // Прозрачный текст, через который видно градиент
       font-weight: 700;
+      padding-left: 10px;
+    }
+    img {
+      display: block;
+      margin-top: -3px;
     }
   }
 
