@@ -1,12 +1,11 @@
-import React, {useEffect} from "react";
-import {t} from "i18next";
+import React from 'react';
 
 const Footer = () => {
-
     return (
-        <div className="footer">
-          Footer
+        <div>
+            Footer
         </div>
     );
 };
+
 export default Footer;
