@@ -1,0 +1,113 @@
+.page-title-area {
+  margin-top: 120px;
+  padding: 250px 0 157px 0;
+
+  background-color: #fff7fc;
+  position: relative;
+
+  .title {
+    text-align: center;
+    z-index: 1;
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      li {
+        font-size: 18px;
+        a {
+          color: #000;
+        }
+        &:last-child {
+          color: rgb(138, 71, 203);
+        }
+      }
+    }
+  }
+  .shapes {
+    .shape {
+      position: absolute;
+
+      &.shape1 {
+        top: 0;
+        left: 10vw;
+        z-index: 0;
+        width: 80vw;
+        height: 350px;
+      }
+      &.shape2 {
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+        width: 22vw;
+      }
+      &.shape3 {
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        max-height: 130px;
+      }
+      &.shape4 {
+        right: 431px;
+        bottom: 116px;
+      }
+      &.shape5 {
+        top: 229px;
+        left: 154px;
+      }
+    }
+  }
+
+  @media (max-width: 1280px) {
+    padding: 210px 0 120px 0;
+
+    .title {
+      ul {
+        li {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .shapes {
+      .shape {
+        &.shape1 {
+          left: 0;
+          width: 100vw;
+        height: auto;
+
+        }
+        &.shape2 {
+          height: auto;
+          width: 155px;
+        }
+        &.shape3 {
+          max-height: 90px;
+        }
+        &.shape4 {
+          right: 70px;
+          bottom: 144px;
+          max-width: 50px;
+        }
+        &.shape5 {
+          top: 140px;
+          left: 40px;
+          max-width: 100px;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 125px 0 100px 0;
+
+    .shapes {
+      display: none;
+    }
+    .title {
+      ul {
+        li {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
