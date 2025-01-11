@@ -25,93 +25,93 @@ const HomeFooter = () => {
         });
     }, []);
     return (
-        <div className="footer" data-aos="fade-up">
+        <div className="homeFooter" data-aos="fade-up">
             <div className="container">
-                <div className="footer_rows">
-                    <div className="footer_rows_col-3" data-aos="fade-up">
-                        <div className="footer_rows_col-3_infoFoot">
-                            <div className="footer_rows_col-3_infoFoot_logos" data-aos="fade-up">
+                <div className="homeFooter_rows">
+                    <div className="homeFooter_rows_col-3" data-aos="fade-up">
+                        <div className="homeFooter_rows_col-3_infoFoot">
+                            <div className="homeFooter_rows_col-3_infoFoot_logos" data-aos="fade-up">
                                 <img width="100%" src={logo} alt=""/>
                             </div>
-                            <p className="footer_rows_col-3_infoFoot_descFoot" data-aos="fade-up">Lorem Ipsum is simply dummy text of the
+                            <p className="homeFooter_rows_col-3_infoFoot_descFoot" data-aos="fade-up">Lorem Ipsum is simply dummy text of the
                                 printing and typesetting industry. Lorem Ipsum
                                 has been the industry's standard
                             </p>
-                            <h4 className="footer_rows_col-3_infoFoot_follow">Follow Us</h4>
-                            <div className="footer_rows_col-3_infoFoot_socialFoot">
-                                <div className="footer_rows_col-3_infoFoot_socialFoot_footIcon">
+                            <h4 className="homeFooter_rows_col-3_infoFoot_follow">Follow Us</h4>
+                            <div className="homeFooter_rows_col-3_infoFoot_socialFoot">
+                                <div className="homeFooter_rows_col-3_infoFoot_socialFoot_footIcon">
                                     <FaFacebookF/>
                                 </div>
-                                <div className="footer_rows_col-3_infoFoot_socialFoot_footIcon">
+                                <div className="homeFooter_rows_col-3_infoFoot_socialFoot_footIcon">
                                     <FaXTwitter/>
                                 </div>
-                                <div className="footer_rows_col-3_infoFoot_socialFoot_footIcon">
+                                <div className="homeFooter_rows_col-3_infoFoot_socialFoot_footIcon">
                                     <FaLinkedinIn/>
                                 </div>
-                                <div className="footer_rows_col-3_infoFoot_socialFoot_footIcon">
+                                <div className="homeFooter_rows_col-3_infoFoot_socialFoot_footIcon">
                                     <FaGoogle/>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="footer_rows_col-3" data-aos="fade-up">
-                        <div className="footer_rows_col-3_infoFoot" style={{marginLeft: "40px"}}>
-                            <h3 className="footer_rows_col-3_infoFoot_servisFoot" data-aos="fade-up">Services</h3>
-                            <div className="footer_rows_col-3_infoFoot_servisFoot_alls">
+                    <div className="homeFooter_rows_col-3" data-aos="fade-up">
+                        <div className="homeFooter_rows_col-3_infoFoot" style={{marginLeft: "40px"}}>
+                            <h3 className="homeFooter_rows_col-3_infoFoot_servisFoot" data-aos="fade-up">Services</h3>
+                            <div className="homeFooter_rows_col-3_infoFoot_servisFoot_alls">
                                 <img src={FooterDot} alt=""/>
-                                <a href="#" className="footer_rows_col-3_infoFoot_servisFoot_alls_textFoot">Air
+                                <a href="#" className="homeFooter_rows_col-3_infoFoot_servisFoot_alls_textFoot">Air
                                     Conditions</a>
                             </div>
-                            <div className="footer_rows_col-3_infoFoot_servisFoot_alls">
+                            <div className="homeFooter_rows_col-3_infoFoot_servisFoot_alls">
                                 <img src={FooterDot} alt=""/>
-                                <a href="#" className="footer_rows_col-3_infoFoot_servisFoot_alls_textFoot">Appliance
+                                <a href="#" className="homeFooter_rows_col-3_infoFoot_servisFoot_alls_textFoot">Appliance
                                     Repair</a>
                             </div>
-                            <div className="footer_rows_col-3_infoFoot_servisFoot_alls">
+                            <div className="homeFooter_rows_col-3_infoFoot_servisFoot_alls">
                                 <img src={FooterDot} alt=""/>
                                 <a href="#"
-                                   className="footer_rows_col-3_infoFoot_servisFoot_alls_textFoot">Ventilation </a>
+                                   className="homeFooter_rows_col-3_infoFoot_servisFoot_alls_textFoot">Ventilation </a>
                             </div>
-                            <div className="footer_rows_col-3_infoFoot_servisFoot_alls">
+                            <div className="homeFooter_rows_col-3_infoFoot_servisFoot_alls">
                                 <img src={FooterDot} alt=""/>
-                                <a href="#" className="footer_rows_col-3_infoFoot_servisFoot_alls_textFoot">Electrical
+                                <a href="#" className="homeFooter_rows_col-3_infoFoot_servisFoot_alls_textFoot">Electrical
                                     Work</a>
                             </div>
-                            <div className="footer_rows_col-3_infoFoot_servisFoot_alls">
+                            <div className="homeFooter_rows_col-3_infoFoot_servisFoot_alls">
                                 <img src={FooterDot} alt=""/>
-                                <a href="#" className="footer_rows_col-3_infoFoot_servisFoot_alls_textFoot">Home
+                                <a href="#" className="homeFooter_rows_col-3_infoFoot_servisFoot_alls_textFoot">Home
                                     Maintenance</a>
                             </div>
                         </div>
                     </div>
-                    <div className="footer_rows_col-3" data-aos="fade-up">
-                        <h3 className="footer_rows_col-3_infoFoot_servisFoot" data-aos="fade-up">Contact</h3>
-                        <div className="footer_rows_col-3_contacts">
-                            <div className="footer_rows_col-3_contacts_address">
-                                <div className="footer_rows_col-3_contacts_address_footIcon"><FaLocationDot /></div>
-                                <div className="footer_rows_col-3_contacts_address_footContent">
-                                    <p className="footer_rows_col-3_contacts_address_footContent_footP">Address</p>
-                                    <span className="footer_rows_col-3_contacts_address_footContent_add">1867 Fire Access, USA</span>
+                    <div className="homeFooter_rows_col-3" data-aos="fade-up">
+                        <h3 className="homeFooter_rows_col-3_infoFoot_servisFoot" data-aos="fade-up">Contact</h3>
+                        <div className="homeFooter_rows_col-3_contacts">
+                            <div className="homeFooter_rows_col-3_contacts_address">
+                                <div className="homeFooter_rows_col-3_contacts_address_footIcon"><FaLocationDot /></div>
+                                <div className="homeFooter_rows_col-3_contacts_address_footContent">
+                                    <p className="homeFooter_rows_col-3_contacts_address_footContent_footP">Address</p>
+                                    <span className="homeFooter_rows_col-3_contacts_address_footContent_add">1867 Fire Access, USA</span>
                                 </div>
                             </div>
-                            <div className="footer_rows_col-3_contacts_address">
-                                <div className="footer_rows_col-3_contacts_address_footIcon"><MdEmail /></div>
-                                <div className="footer_rows_col-3_contacts_address_footContent">
-                                    <p className="footer_rows_col-3_contacts_address_footContent_footP">Email</p>
-                                    <a href="#" className="footer_rows_col-3_contacts_address_footContent_add">hvacserv@email.com</a>
+                            <div className="homeFooter_rows_col-3_contacts_address">
+                                <div className="homeFooter_rows_col-3_contacts_address_footIcon"><MdEmail /></div>
+                                <div className="homeFooter_rows_col-3_contacts_address_footContent">
+                                    <p className="homeFooter_rows_col-3_contacts_address_footContent_footP">Email</p>
+                                    <a href="#" className="homeFooter_rows_col-3_contacts_address_footContent_add">hvacserv@email.com</a>
                                 </div>
                             </div>
-                            <div className="footer_rows_col-3_contacts_address">
-                                <div className="footer_rows_col-3_contacts_address_footIcon"><BsTelephoneFill /></div>
-                                <div className="footer_rows_col-3_contacts_address_footContent">
-                                    <p className="footer_rows_col-3_contacts_address_footContent_footP">Call</p>
-                                    <a href="#" className="footer_rows_col-3_contacts_address_footContent_add">+1 234 5678 900</a>
+                            <div className="homeFooter_rows_col-3_contacts_address">
+                                <div className="homeFooter_rows_col-3_contacts_address_footIcon"><BsTelephoneFill /></div>
+                                <div className="homeFooter_rows_col-3_contacts_address_footContent">
+                                    <p className="homeFooter_rows_col-3_contacts_address_footContent_footP">Call</p>
+                                    <a href="#" className="homeFooter_rows_col-3_contacts_address_footContent_add">+1 234 5678 900</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="footer_rows_col-3" data-aos="fade-up">
-                        <h3 className="footer_rows_col-3_infoFoot_servisFoot">Subscribe Newsletter:</h3>
+                    <div className="homeFooter_rows_col-3" data-aos="fade-up">
+                        <h3 className="homeFooter_rows_col-3_infoFoot_servisFoot">Subscribe Newsletter:</h3>
                         <form>
                             <div className="form-group">
                                 <input type="text" className="form-control" placeholder="Enter Your Email:"/>
@@ -121,10 +121,10 @@ const HomeFooter = () => {
                     </div>
                 </div>
             </div>
-            <div className="footer_bottom" data-aos="fade-up">
-                <div className="footer_bottom_copy" data-aos="fade-up"/>
+            <div className="homeFooter_bottom" data-aos="fade-up">
+                <div className="homeFooter_bottom_copy" data-aos="fade-up"/>
                 <div className="container">
-                    <p className="footer_bottom_bText" data-aos="fade-up">Copyright © TechMaster . All rights reserved..</p>
+                    <p className="homeFooter_bottom_bText" data-aos="fade-up">Copyright © TechMaster . All rights reserved..</p>
                 </div>
             </div>
         </div>

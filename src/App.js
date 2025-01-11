@@ -14,7 +14,7 @@ const About = lazy(() => import("./page/About/about"));
 
 const routes = [
     {path: "/", element: Home},
-    {path: "/our-team", element: OurTeam},
+    {path: "our-team", element: OurTeam},
     {path: "about", element: About},
 ];
 

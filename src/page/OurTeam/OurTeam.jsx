@@ -2,6 +2,8 @@ import React from "react";
 import PageTitleArea from "../../component/PageTitleArea/PageTitleArea";
 import SectionTitle from "../../component/SectionTitle/SectionTitle";
 import "./OurTeam.scss";
+import leftSmall from "../../assests/images/left-small.svg"
+
 
 const teamItems = [
   {
@@ -66,6 +68,7 @@ const OurTeam = () => {
             />
             Join Our Team
           </button>
+          <button className="aboutArea_texts_section_send">Learn More <img src={leftSmall} alt=""/></button>
         </div>
         {teamItems.map((member, index) => (
           <div key={index} className="member-card">

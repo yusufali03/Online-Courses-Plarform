@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import Logo from "../../../assests/images/Logo.jpg";
 import { IoIosArrowDown } from "react-icons/io";
 import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle } from '@coreui/react'
+import {Link} from "react-router-dom";
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(null);
@@ -38,7 +39,7 @@ const Header = () => {
                 <nav className={`nav ${menuOpen ? "open" : ""}`}>
                     <ul>
                         <li className="nav-item">
-                            <a className="nav-link" href="#home">Home </a>
+                            <Link className="nav-link" to="/">Home </Link>
 
                         </li>
                         <CDropdown className="nav-item">
