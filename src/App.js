@@ -11,11 +11,13 @@ const OurTeam = lazy(() => import("./page/OurTeam/OurTeam"));
 
 const About = lazy(() => import("./page/About/about"));
 
+const TeamDetails = lazy(() => import("./page/TeamDetails/TeamDetails"));
 
 const routes = [
     {path: "/", element: Home},
     {path: "our-team", element: OurTeam},
     {path: "about", element: About},
+    {path: "team-details", element: TeamDetails},
 ];
 
 const RoutesContainer = () => (
