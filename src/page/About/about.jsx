@@ -6,6 +6,9 @@ import page3 from "../../assests/images/pages3.webp"
 import page4 from "../../assests/images/pages4.svg"
 import page5 from "../../assests/images/pages5.svg"
 import InfoTechMaster from "./components/infoTechMaster";
+import ChooseUs from "./components/chooseUs/chooseUs";
+import FunFact from "./components/funFact/funFact";
+import Testimonial from "./components/testimonial/Testimonial";
 const About = () => {
     return (
         <>
@@ -39,6 +42,9 @@ const About = () => {
 
             </div>
             <InfoTechMaster/>
+            <ChooseUs />
+            <FunFact/>
+            <Testimonial/>
         </>
     );
 };

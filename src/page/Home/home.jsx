@@ -9,7 +9,7 @@ import Partner from "../../component/Partner/partner";
 import Testimonial from "../../component/TestimonialArea";
 import OurBlog from "../../component/OurBlog";
 import TestimonialsTwo from "../../component/TestimonialArea/next";
-import HomeFooter from "../../component/HomeFooter";
+import HomeFooter from "../../component/HomeFooter/homeFooter";
 
 export default function Home() {
 
