@@ -10,7 +10,7 @@ import shape6 from "../../../../assests/images/shape6.svg";
 import shape7 from "../../../../assests/images/shape7.svg";
 import SkillProgressBar from "../../../../component/SkillProgressBar/SkillProgressBar";
 
-const ChooseUs = () => {
+const ChooseUs = ({ dataAos,dataAosRight }) => {
     const Skill = [
         {
             label:"Skill Mastery Levels\n",
@@ -28,7 +28,7 @@ const ChooseUs = () => {
     return (
         <div className="chooseUs">
             <div className="container">
-                <div className="flexs">
+                <div className="flexs" data-aos={dataAos}>
                     <div className="chooseUs_colChoose">
                         <div className="globalTitle">Why Choose Us</div>
                         <h2 className="chooseUs_colChoose_titleChoose">
@@ -42,6 +42,7 @@ const ChooseUs = () => {
                             an unknown </p>
                         {Skill.map((skill, index) => (
                             <SkillProgressBar
+                                dataAosRight={dataAosRight}
                                 key={index}
                                 label={skill.label}
                                 percentage={skill.percentage}

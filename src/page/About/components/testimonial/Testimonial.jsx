@@ -9,20 +9,20 @@ import testimonial5 from "../../../../assests/images/testimonial5.webp";
 import line from "../../../../assests/images/bottom_line.svg";
 import Carousel from "../../../../component/Carousel/Carousel";
 
-const Testimonial = () => {
+const Testimonial = ({dataAos}) => {
     return (
         <div className="testimonial">
             <div className="container">
                 <div className="testimonial_testRow">
-                    <div className="testimonial_testRow_testCol-6">
+                    <div className="testimonial_testRow_testCol-6" data-aos={dataAos}>
                         <div className="testimonial_testRow_testCol-6_testImage">
-                            <div className="testimonial_testRow_testCol-6_testImage_testPho">
+                            <div className="testimonial_testRow_testCol-6_testImage_testPho" data-aos={dataAos}>
                                 <img src={bgShape} alt="bg-shape"/>
                                 <img src={testimonial1}
                                      className="testimonial_testRow_testCol-6_testImage_testPho_mainImage"
                                      alt="main-image"/>
                             </div>
-                            <div className="testimonial_testRow_testCol-6_testImage_testUserImg">
+                            <div className="testimonial_testRow_testCol-6_testImage_testUserImg" >
                                 <div className="images1">
                                     <img style={{width: "100px", height: "100px", borderRadius: "100%"}}
                                          src={testimonial2} alt="testimonial2"/>
@@ -42,10 +42,10 @@ const Testimonial = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="testimonial_testRow_testCol-6">
+                    <div className="testimonial_testRow_testCol-6" data-aos={dataAos}>
                         <div className="testimonial_testRow_testCol-6_subTest">
-                            <div className="globalTitle">Testimonials</div>
-                            <h2 className="testimonial_testRow_testCol-6_subTest_testH2">Voices of Success: Hear from
+                            <div className="globalTitle" data-aos={dataAos}>Testimonials</div>
+                            <h2 className="testimonial_testRow_testCol-6_subTest_testH2" data-aos={dataAos}>Voices of Success: Hear from
                                 Our <span
                                     className="testimonial_testRow_testCol-6_subTest_testH2_testColor">Students <img className="testimonial_testRow_testCol-6_subTest_testH2_testColor_testLine"
                                     src={line} alt=""/></span></h2>

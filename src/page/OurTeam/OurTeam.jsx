@@ -100,7 +100,7 @@ const OurTeam = () => {
             </div>
           </div>
         ))}
-      </section>
+      </section >
       <section className="learning-area">
         <div className="title">
 
