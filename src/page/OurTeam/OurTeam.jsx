@@ -51,9 +51,10 @@ const teamItems = [
 ];
 
 const OurTeam = () => {
+  const ourTeam="Our Team";
   return (
     <div>
-      <PageTitleArea />
+      <PageTitleArea titles={ourTeam} />
       <section className="team-area">
         <div className="info">
           <SectionTitle />

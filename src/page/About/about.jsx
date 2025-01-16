@@ -12,7 +12,9 @@ import Testimonial from "./components/testimonial/Testimonial";
 import TeamMembersAbout from "./components/TeamMembersAbout/TeamMembersAbout";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PageTitleArea from "../../component/PageTitleArea/PageTitleArea";
 const About = () => {
+    const abouts = "About Us"
     const aosAnimation = "fade-up";
     const aosAnimationRight = "fade-right";
     useEffect(() => {
@@ -26,35 +28,7 @@ const About = () => {
     }, []);
     return (
         <>
-            <div className="aboutUs">
-                <div className="aboutUs_titleHead">
-                    <div className="container">
-                        <div className="aboutUs_titleHead_aboutContent" >
-                            <h2 className="aboutUs_titleHead_aboutContent_aboutus" data-aos="fade-up">About Us</h2>
-                            <div className="aboutUs_titleHead_aboutContent_aboutList" data-aos="fade-up">
-                                <div className="aboutUs_titleHead_aboutContent_aboutList_textAbout">Home</div>
-                            </div>
-                            <div className="aboutUs_titleHead_aboutContent_colChange" data-aos="fade-up"> About Us</div>
-                        </div>
-                    </div>
-                    <div className="aboutUs_titleHead_pages1" data-aos="fade-up">
-                        <img src={page1} alt=""/>
-                    </div>
-                    <div className="aboutUs_titleHead_pages2">
-                        <img src={page2} alt=""/>
-                    </div>
-                    <div className="aboutUs_titleHead_pages3">
-                        <img src={page3} alt=""/>
-                    </div>
-                    <div className="aboutUs_titleHead_pages4" data-aos="fade-up">
-                        <img src={page4} alt=""/>
-                    </div>
-                    <div className="aboutUs_titleHead_pages5" data-aos="fade-up">
-                        <img src={page5} alt=""/>
-                    </div>
-                </div>
-
-            </div>
+            <PageTitleArea titles={abouts}/>
             <InfoTechMaster dataAos={aosAnimation} />
             <ChooseUs dataAos={aosAnimation} dataAosRight={aosAnimationRight} />
             <FunFact dataAos={aosAnimation}/>
