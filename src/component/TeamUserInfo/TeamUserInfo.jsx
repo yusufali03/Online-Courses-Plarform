@@ -1,6 +1,8 @@
 import React from "react";
 import "./TeamUserInfo.scss";
 
+import AOS from "aos";
+
 const contactItems = [
   {
     id: 1,
@@ -53,8 +55,17 @@ const socialLinks = [
 ];
 
 const TeamUserInfo = () => {
+  React.useEffect(() => {
+      AOS.init({
+        duration: 1000, // Animatsiya davomiyligi (ms)
+        offset: 100, // Elementdan yuqori chekkasiga masofa
+        easing: "ease-in-out", // Animatsiya effekti
+        delay: 50, // Animatsiya kechikishi (ms)
+        once: true, // Animatsiya faqat bir marta ishlashi uchun
+      });
+    }, []);
   return (
-    <div className="team-left-sidebar">
+    <div className="team-left-sidebar" data-aos="fade-up">
       <img
         src="https://demo.themeies.com/edugen-html/assets/images/team/team16.jpg"
         alt=""

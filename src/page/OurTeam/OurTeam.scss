@@ -162,7 +162,7 @@ h2 {
       .shape1 {
         position: absolute;
         bottom: 100px;
-        right: 50px;
+        right: -50px;
         animation: rotate 10s linear infinite;
 
         @keyframes rotate {
@@ -176,8 +176,8 @@ h2 {
       }
       .shape2 {
         position: absolute;
-        top: 10px;
-        left: 30px;
+        top: -10px;
+        left: -30px;
       }
     }
     .cast {

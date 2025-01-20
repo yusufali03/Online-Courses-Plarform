@@ -11,18 +11,20 @@ p {
   section {
     display: flex;
     gap: 24px;
+
+
     padding-top: 80px;
     padding-bottom: 80px;
-  
+
     position: relative;
-  
+
     .team-right-sidebar {
       .team-right-info {
         .description {
           display: grid;
           gap: 15px;
           margin-bottom: 80px;
-  
+
           .title {
             display: grid;
             gap: 8px;
@@ -35,21 +37,21 @@ p {
           display: flex;
           justify-content: space-evenly;
           gap: 16px;
-  
+
           margin-bottom: 60px;
-  
+          
           .rate-card {
             box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.07);
-            padding: 0 20px 20px 20px;
+            padding: 0 25px 25px 25px;
             border-radius: 8px;
-  
-            transition: all .5s ease-in-out ;
-  
+          
+            transition: all 0.5s ease-in-out;
+
             display: grid;
             justify-items: center;
             .icon {
               height: 50px;
-  
+
               img {
                 top: -40px;
                 width: 80px;
@@ -57,51 +59,58 @@ p {
                 position: relative;
               }
             }
-  
+
+            h3 {
+              font-size: 34px;
+              margin-bottom: 15px;
+            }
+
+            p{ 
+              font-size: 18px;
+              color: rgb(123, 123, 138);
+            }
+
             &:hover {
               transform: translateY(-12px);
             }
           }
-  
+
           @media (max-width: 768px) {
             display: grid;
             gap: 50px;
-        
           }
-
         }
       }
     }
     .shapes {
-      padding: 0;
       .shape26 {
         position: absolute;
-        top: 444px;
-        left: 104px;
+        top: 80px;
+        left: -55px;
       }
       .shape27 {
         position: absolute;
-        top: 160px;
-        right: 188px;
+        top: 80px;
+        right: -70px;
       }
       .shape28 {
         position: absolute;
-        top: 684px;
-    left: 182px;
+        top: 715px;
+        left: -55px;
         z-index: 2;
       }
       .shape29 {
         position: absolute;
-        left: 205px;
+        left: 100px;
         bottom: 274px;
       }
       .shape30 {
         position: absolute;
-        right: 188px;
+        right: -70px;
         bottom: 549px;
       }
     }
-  
+
     @media (max-width: 1240px) {
       .shapes {
         display: none;
@@ -112,8 +121,6 @@ p {
     }
     @media (max-width: 768px) {
       padding: 40px;
-  
     }
   }
 }
-
