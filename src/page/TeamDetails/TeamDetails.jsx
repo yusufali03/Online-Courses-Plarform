@@ -29,7 +29,7 @@ const rateCards = [
 
 const TeamDetails = () => {
   return (
-    <div>
+    <div className="wrapper">
       <PageTitleArea />
       <section className="container">
         <TeamUserInfo />

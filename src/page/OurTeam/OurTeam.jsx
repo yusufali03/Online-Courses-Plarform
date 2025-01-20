@@ -2,8 +2,6 @@ import React from "react";
 import PageTitleArea from "../../component/PageTitleArea/PageTitleArea";
 import SectionTitle from "../../component/SectionTitle/SectionTitle";
 import "./OurTeam.scss";
-import leftSmall from "../../assests/images/left-small.svg";
-import { BsArrowRight } from "react-icons/bs";
 
 const teamItems = [
   {
