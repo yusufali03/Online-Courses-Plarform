@@ -2,8 +2,7 @@ import React from "react";
 import PageTitleArea from "../../component/PageTitleArea/PageTitleArea";
 import SectionTitle from "../../component/SectionTitle/SectionTitle";
 import "./OurTeam.scss";
-import leftSmall from "../../assests/images/left-small.svg";
-import { BsArrowRight } from "react-icons/bs";
+import AOS from "aos";
 
 const teamItems = [
   {
@@ -51,13 +50,23 @@ const teamItems = [
 ];
 
 const OurTeam = () => {
-  const ourTeam="Our Team";
+  const ourTeam = "Our Team";
+
+  React.useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animatsiya davomiyligi (ms)
+      offset: 100, // Elementdan yuqori chekkasiga masofa
+      easing: "ease-in-out", // Animatsiya effekti
+      delay: 50, // Animatsiya kechikishi (ms)
+      once: true, // Animatsiya faqat bir marta ishlashi uchun
+    });
+  }, []);
   return (
     <div className="wrapper">
-      <PageTitleArea />
+      <PageTitleArea titles={ourTeam} />
       <section className="team-area container">
         <div className="info">
-          <SectionTitle />
+          <SectionTitle subtitle="Team Members" text="Our Expert" text_primary="Lecturer" />
           <p>
             Lorem Ipsum&nbsp;is simply dummy text of the printing and
             typesetting industry. Lorem Ipsum has
@@ -79,7 +88,12 @@ const OurTeam = () => {
           </button>
         </div>
         {teamItems.map((member, index) => (
-          <div key={index} className="member-card">
+          <div
+            key={index}
+            className="member-card"
+            data-aos="fade-up"
+            data-aos-delay={index * 100 + 50}
+          >
             <a href={member.link}>
               <img src={member.img} alt={member.name} />
             </a>
@@ -111,9 +125,9 @@ const OurTeam = () => {
       </section>
       <section className="learning-area container">
         <div className="title">
-          <SectionTitle />
+          <SectionTitle subtitle="Live Classes" text='It’s Easy To Start' text_primary="Learning"/>
         </div>
-        <div className="shapes">
+        <div className="shapes" data-aos="fade-up">
           <img
             className="shape1"
             src="https://demo.themeies.com/edugen-html/assets/images/shapes/shape11.svg"
@@ -125,7 +139,7 @@ const OurTeam = () => {
             alt=""
           />
         </div>
-        <div className="cast">
+        <div className="cast" data-aos="fade-up">
           <div className="live-info">
             <span className="red_circel"></span>
             <span className="live">LIVE</span>

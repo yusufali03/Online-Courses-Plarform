@@ -1,13 +1,13 @@
 import React from "react";
 import "./SectionTitle.scss";
 
-const SectionTitle = () => {
+const SectionTitle = ({subtitle, text, text_primary}) => {
   return (
     <div className="section-title">
-      <span class="subtitle">Team Members</span>
+      <span class="subtitle">{subtitle}</span>
       <h2>
-        Our Expert
-        <div class="gradient_text">Lecturer</div>
+        {text}
+        <div class="gradient_text">{text_primary}</div>
         {/* <img
           src="https://demo.themeies.com/edugen-html/assets/images/shapes/title-shape.svg"
           alt="shape"
