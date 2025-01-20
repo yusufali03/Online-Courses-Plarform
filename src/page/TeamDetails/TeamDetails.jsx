@@ -28,11 +28,10 @@ const rateCards = [
 ];
 
 const TeamDetails = () => {
-  const team = "Team Details";
   return (
     <div>
-      <PageTitleArea titles={team} />
-      <section>
+      <PageTitleArea />
+      <section className="container">
         <TeamUserInfo />
         <div className="team-right-sidebar">
           <div className="team-right-info">
