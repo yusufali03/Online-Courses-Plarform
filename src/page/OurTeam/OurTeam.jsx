@@ -51,6 +51,7 @@ const teamItems = [
 ];
 
 const OurTeam = () => {
+  const ourTeam="Our Team";
   return (
     <div className="wrapper">
       <PageTitleArea />

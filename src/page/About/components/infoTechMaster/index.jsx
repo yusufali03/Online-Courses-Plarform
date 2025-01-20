@@ -7,21 +7,21 @@ import check from "../../../../assests/images/check.svg";
 import awardLogo from "../../../../assests/images/awards-logo.svg";
 import videoPlay from "../../../../assests/images/video-play.svg";
 
-const InfoTechMaster = () => {
+const InfoTechMaster = ({ dataAos }) => {
     return (
-        <div className="infoTechMaster">
+        <div className="infoTechMaster" data-aos={dataAos}>
             <div className="container">
                 <div className="infoTechMaster_infoRow">
-                    <div className="infoTechMaster_infoRow_infoCol6">
-                        <div className="infoTechMaster_infoRow_infoCol6_imageOne">
+                    <div className="infoTechMaster_infoRow_infoCol6" data-aos={dataAos}>
+                        <div className="infoTechMaster_infoRow_infoCol6_imageOne" data-aos={dataAos}>
                             <img src={about5} style={{maxWidth: "445px", borderRadius: "10px"}} alt=""/>
                         </div>
-                        <div className="infoTechMaster_infoRow_infoCol6_imageTwo">
+                        <div className="infoTechMaster_infoRow_infoCol6_imageTwo" data-aos={dataAos}>
                             <img className="infoTechMaster_infoRow_infoCol6_imageTwo_grils" src={about6}  alt=""/>
                         </div>
                     </div>
-                    <div className="infoTechMaster_infoRow_infoCol6">
-                        <div className="infoTechMaster_infoRow_infoCol6_sectionInfo">
+                    <div className="infoTechMaster_infoRow_infoCol6" data-aos={dataAos}>
+                        <div className="infoTechMaster_infoRow_infoCol6_sectionInfo" data-aos={dataAos}>
                             <span
                                 className="infoTechMaster_infoRow_infoCol6_sectionInfo_aboutTech">About Tech Master</span>
                             <h2 className="infoTechMaster_infoRow_infoCol6_sectionInfo_techH2">
@@ -32,7 +32,7 @@ const InfoTechMaster = () => {
                             </span>
                             </h2>
                         </div>
-                        <div className="infoTechMaster_infoRow_infoCol6_award">
+                        <div className="infoTechMaster_infoRow_infoCol6_award" data-aos={dataAos}>
                             <div className="infoTechMaster_infoRow_infoCol6_award_awardSkill">
                                 <div className="infoTechMaster_infoRow_infoCol6_award_awardSkill_awardCol">
                                     <div className="infoTechMaster_infoRow_infoCol6_award_awardSkill_awardCol_listAwar">
@@ -69,7 +69,7 @@ const InfoTechMaster = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="infoTechMaster_infoRow_infoCol6_videoInfo">
+                        <div className="infoTechMaster_infoRow_infoCol6_videoInfo" data-aos={dataAos}>
                             <div className="infoTechMaster_infoRow_infoCol6_videoInfo_videoIcon">
                                 <a className="infoTechMaster_infoRow_infoCol6_videoInfo_videoIcon_iconA" href="#">
                                     <img src={videoPlay} alt=""/>

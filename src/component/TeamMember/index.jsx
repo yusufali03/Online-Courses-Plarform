@@ -6,9 +6,9 @@ import team2 from "../../assests/images/team9.webp";
 import team3 from "../../assests/images/team10.webp";
 import team4 from "../../assests/images/team11.webp";
 import {FaPlus} from "react-icons/fa6";
-import {FaFacebookF} from "react-icons/fa";
+import {FaFacebookF, FaLinkedinIn} from "react-icons/fa";
 import {FaXTwitter} from "react-icons/fa6";
-import { FaLinkedinIn } from "react-icons/fa";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 const TeamMember = () => {

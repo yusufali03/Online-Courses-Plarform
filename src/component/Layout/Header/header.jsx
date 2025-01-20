@@ -46,8 +46,8 @@ const Header = () => {
                             <CDropdownToggle className="nav-link" >Pages</CDropdownToggle>
                             <CDropdownMenu className="dropdown-menu">
                                 <CDropdownItem href="/about">About Us</CDropdownItem>
-                                <CDropdownItem href="#">Our Team</CDropdownItem>
-                                <CDropdownItem href="#">Our Team Details</CDropdownItem>
+                                <CDropdownItem href="/our-team">Our Team</CDropdownItem>
+                                <CDropdownItem href="/team-details">Our Team Details</CDropdownItem>
                                 <CDropdownItem href="#">Privacy Police</CDropdownItem>
                                 <CDropdownItem href="#">Terms & Conditions</CDropdownItem>
                             </CDropdownMenu>

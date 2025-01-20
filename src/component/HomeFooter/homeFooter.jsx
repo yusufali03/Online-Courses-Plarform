@@ -8,7 +8,7 @@ import {FaFacebookF,
     FaGoogle,
     FaLocationDot
 } from "react-icons/fa6";
-import "./style.scss"
+import "./homeFooter.scss"
 import { MdEmail } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
 import AOS from "aos";

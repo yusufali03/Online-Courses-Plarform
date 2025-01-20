@@ -1,105 +1,73 @@
-/* Global styles for the page */
 .loading-page {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	background: linear-gradient(135deg, #00c6ff, #0072ff); /* Vibrant gradient background */
-	overflow: hidden;
-	position: relative;
+  position: fixed;
+  z-index: 9999;
+  background-color: var(--whiteColor);
+  text-align: center;
+  //display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  .preloader {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    .fw{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 35px;
+    }
+    .plase{
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+    }
+
+    .waviy {
+
+      margin-top: 20px;
+      font-size: 60px;
+      display: flex;
+      gap: 25px;
+
+      .hrefs {
+        position: relative;
+        font-weight: 800;
+        display: inline-block;
+        color: var(--blackColor);
+        animation: waviy 1s infinite;
+        animation-delay: .1s;
+
+
+        &:nth-child(2) {
+          animation-delay: .2s;
+        }
+
+        &:nth-child(3) {
+          animation-delay: .3s;
+        }
+
+        &:nth-child(4) {
+          animation-delay: .4s;
+        }
+
+        &:nth-child(5) {
+          animation-delay: .5s;
+        }
+
+      }
+    }
+  }
 }
 
-/* Styling for the text */
-.loading-text {
-	font-size: 5rem;
-	font-weight: 700;
-	color: white;
-	font-family: 'Arial', sans-serif;
-	text-transform: uppercase;
-	letter-spacing: 4px;
-	display: flex;
-	flex-wrap: wrap;
-	position: relative;
-	z-index: 1;
-}
-
-/* Text animation: Fade and move in */
-.loading-text span {
-	opacity: 0;
-	transform: translateY(40px);
-	animation: fadeInUp 1s ease-out forwards, glowingText 1.5s ease-in-out infinite alternate;
-	animation-delay: calc(0.1s * var(--i)); /* Delay per letter */
-	display: inline-block;
-}
-
-/* Fade and move up animation for each letter */
-@keyframes fadeInUp {
-	0% {
-		opacity: 0;
-		transform: translateY(40px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-/* Glowing effect for the text */
-@keyframes glowingText {
-	0% {
-		text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7), 0 0 15px rgba(255, 255, 255, 0.7);
-	}
-	100% {
-		text-shadow: 0 0 20px rgba(0, 255, 255, 0.9), 0 0 30px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.6);
-	}
-}
-
-/* Color change for each letter */
-.loading-text span:nth-child(odd) {
-	animation: colorChange 1.5s ease forwards;
-}
-
-@keyframes colorChange {
-	0% {
-		color: #ff6347; /* Tomato color */
-	}
-	100% {
-		color: #ffb300; /* Yellowish color */
-	}
-}
-
-/* Add even more dynamic colors for even letters */
-.loading-text span:nth-child(even) {
-	animation: colorChangeEven 1.5s ease forwards;
-}
-
-@keyframes colorChangeEven {
-	0% {
-		color: #00bcd4; /* Light blue color */
-	}
-	100% {
-		color: #ff4081; /* Pink color */
-	}
-}
-
-/* Optional: Background animation for some extra flair */
-.loading-page::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for extra depth */
-	z-index: 0;
-	animation: backgroundGlow 4s ease-in-out infinite alternate;
-}
-
-@keyframes backgroundGlow {
-	0% {
-		background: rgba(255, 255, 255, 0.1);
-	}
-	100% {
-		background: rgba(255, 255, 255, 0.3);
-	}
+@keyframes waviy {
+  0%, 40%, 100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-15px)
+  }
 }
