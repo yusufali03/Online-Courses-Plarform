@@ -31,7 +31,7 @@ const TeamDetails = () => {
   return (
     <div>
       <PageTitleArea />
-      <section>
+      <section className="container">
         <TeamUserInfo />
         <div className="team-right-sidebar">
           <div className="team-right-info">
