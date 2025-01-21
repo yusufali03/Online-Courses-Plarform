@@ -1,6 +1,8 @@
 import React from "react";
 import "./CourseCard.scss";
-
+import { FaRegFileAlt } from "react-icons/fa";
+import { LuClock } from "react-icons/lu";
+import { FaRegStar } from "react-icons/fa";
 const courses = [
   {
     id: 1,
@@ -65,9 +67,9 @@ function CourseCard() {
                 <h3 className="price">{course.price}</h3>
                 <h2 className="title">{course.title}</h2>
                 <div className="details">
-                  <span>{course.lessons} Lessons</span>
-                  <span>{course.duration}</span>
-                  <span>⭐ {course.rating}</span>
+                  <span><FaRegFileAlt style={{"margin-right": "10px"}} size={16}/>{course.lessons} Lessons</span>
+                  <span><LuClock style={{"margin-right": "10px"}} size={16} />{course.duration}</span>
+                  <span><FaRegStar  style={{"margin-right": "10px"}} size={16} /> {course.rating}</span>
                 </div>
               </div>
             </div>

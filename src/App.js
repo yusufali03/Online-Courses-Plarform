@@ -13,6 +13,11 @@ const About = lazy(() => import("./page/About/about"));
 const TeamDetails = lazy(() => import("./page/TeamDetails/TeamDetails"));
 const Contact = lazy(() => import("./page/contact/Contact"));
 
+const TermsConditions = lazy(() => import("./page/TermsConditions/TermsConditions"));
+
+const PrivacyPolicyPage = lazy(() => import("./page/PrivacyPolicyPage/PrivacyPolicyPage"));
+
+
 const routes = [
     {path: "/", element: Home},
     {path: "/sign-in", element: SignIn},
@@ -21,6 +26,8 @@ const routes = [
     {path: "our-team", element: OurTeam},
     {path: "about", element: About},
     {path: "team-details", element: TeamDetails},
+    {path: "privacy-policy", element: PrivacyPolicyPage},
+    {path: "terms-conditions", element: TermsConditions},
 ];
 
 const RoutesContainer = () => (
