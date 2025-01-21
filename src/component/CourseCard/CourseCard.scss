@@ -59,7 +59,7 @@
 
           .title {
             font-size: 16px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             transition: all 0.1s ease-in-out;
 
             &:hover {
@@ -73,6 +73,12 @@
             font-size: 14px;
             font-weight: 400;
             color: #777;
+            span {
+              display: flex;
+              svg{
+                color: rgb(138, 71, 203);
+              }
+            }
           }
         }
       }

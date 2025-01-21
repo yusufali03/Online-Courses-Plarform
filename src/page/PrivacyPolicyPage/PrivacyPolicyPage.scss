@@ -1,0 +1,63 @@
+.container {
+  .title {
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: rgb(7, 7, 7);
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: rgb(85, 85, 85);
+      font-family: "Kumbh Sans", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+    ul {
+      padding-left: 18px;
+      li {
+        color: rgb(85, 85, 85);
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+      &.decimal {
+        li {
+          list-style-type: decimal;
+          &::marker {
+
+            color: rgb(7, 7, 7);
+          }
+
+        }
+      }
+      &.list-styled {
+        li {
+          list-style-type: disc;
+          &::marker {
+            color: rgb(7, 7, 7);
+          }
+        }
+      }
+    }
+    strong {
+    color: rgb(7, 7, 7);
+    }
+
+    a {
+      color: rgb(146, 33, 15);
+      &:hover {
+        color: var(--mainColor);
+      }
+    }
+
+
+    &:first-child {
+      margin-top: 10vw;
+    }
+    &:last-child {
+      margin-bottom: 10vw;
+    }
+  }
+}
