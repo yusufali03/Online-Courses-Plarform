@@ -4,6 +4,11 @@ import SectionTitle from "../../component/SectionTitle/SectionTitle";
 import "./OurTeam.scss";
 import AOS from "aos";
 
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { IoVolumeMuteOutline, IoVideocamOutline } from "react-icons/io5";
+import { MdOutlinePhone } from "react-icons/md";
+import { FaXTwitter } from "react-icons/fa6";
+
 const teamItems = [
   {
     link: "#",
@@ -66,7 +71,11 @@ const OurTeam = () => {
       <PageTitleArea titles={ourTeam} />
       <section className="team-area container">
         <div className="info">
-          <SectionTitle subtitle="Team Members" text="Our Expert" text_primary="Lecturer" />
+          <SectionTitle
+            subtitle="Team Members"
+            text="Our Expert"
+            text_primary="Lecturer"
+          />
           <p>
             Lorem Ipsum&nbsp;is simply dummy text of the printing and
             typesetting industry. Lorem Ipsum has
@@ -91,8 +100,6 @@ const OurTeam = () => {
           <div
             key={index}
             className="member-card"
-            data-aos="fade-up"
-            data-aos-delay={index * 100 + 50}
           >
             <a href={member.link}>
               <img src={member.img} alt={member.name} />
@@ -105,17 +112,17 @@ const OurTeam = () => {
               <ul class="">
                 <li class="">
                   <a href="https://www.facebook.com/" target="_blank">
-                    <i class="ri-facebook-fill">F</i>
+                    <FaFacebookF />
                   </a>
                 </li>
                 <li class="">
                   <a href="https://x.com/home" target="_blank">
-                    <i class="ri-twitter-x-fill">X</i>
+                    <FaXTwitter />
                   </a>
                 </li>
                 <li class="">
                   <a href="https://www.linkedin.com/" target="_blank">
-                    <i class="ri-linkedin-fill">In</i>
+                    <FaLinkedinIn />
                   </a>
                 </li>
               </ul>
@@ -125,7 +132,11 @@ const OurTeam = () => {
       </section>
       <section className="learning-area container">
         <div className="title">
-          <SectionTitle subtitle="Live Classes" text='It’s Easy To Start' text_primary="Learning"/>
+          <SectionTitle
+            subtitle="Live Classes"
+            text="It’s Easy To Start"
+            text_primary="Learning"
+          />
         </div>
         <div className="shapes" data-aos="fade-up">
           <img
@@ -156,9 +167,15 @@ const OurTeam = () => {
             alt=""
           />
           <div className="trigers">
-            <button className="mute">mute</button>
-            <button className="end">end</button>
-            <button className="video">video</button>
+            <button className="mute">
+              <IoVolumeMuteOutline size={30}/>
+            </button>
+            <button className="end">
+              <MdOutlinePhone size={30}/>
+            </button>
+            <button className="video">
+              <IoVideocamOutline size={30} />
+            </button>
           </div>
         </div>
       </section>

@@ -2,14 +2,13 @@ h2 {
   line-height: 1.2;
   font-size: 44px;
   color: #000;
-  margin-bottom: 13px;
+  margin: 13px 0;
   @media (max-width: 1280px) {
     font-size: 35px;
-    margin-bottom: 13px;
   }
   @media (max-width: 770px) {
     font-size: 27px;
-    margin-bottom: 10px;
+    margin: 10px 0;
   }
 }
 
@@ -39,7 +38,7 @@ h2 {
           display: flex;
           img {
             border-radius: 5px 0 0 5px;
-            padding: 10px 20px;
+            padding: 12px 20px;
             border: none;
             background-color: #000;
             color: #fff;
@@ -81,6 +80,13 @@ h2 {
           margin-bottom: 6px;
           font-size: 18px;
           font-weight: 700;
+          a {
+            color: #000;
+            &:hover{
+              color: rgb(138, 71, 203);
+            }
+          }
+
         }
         span {
           margin-bottom: 15px;
@@ -92,10 +98,8 @@ h2 {
           gap: 20px;
           li {
             a {
-              width: 36px;
-              height: 36px;
+              padding: 9px 9px 5px 9px;
               font-size: 17px;
-              line-height: 36px;
               text-align: center;
               position: relative;
               border-radius: 100%;
@@ -220,15 +224,14 @@ h2 {
       .trigers {
         position: absolute;
         bottom: 30px;
-        left: calc(50% - 105px);
+        left: calc(50% - 130px);
 
         display: flex;
         justify-content: center;
         gap: 30px;
 
         button {
-          width: 50px;
-          height: 50px;
+          padding: 20px 20px 16px 20px;
 
           font-weight: 600;
 
@@ -260,6 +263,19 @@ h2 {
           top: 30px;
         }
       }
+      .cast{
+        .trigers {
+          bottom: 20px;
+          left: calc(50% - 85px);
+          button {
+            padding: 10px 10px 7px 10px;
+            svg {
+              height: 20px;
+              width: 20px;
+            }
+          }
+        }
+      }
     }
     @media (max-width: 550px) {
       padding: 40px 15px;
@@ -281,14 +297,6 @@ h2 {
           right: 10px;
           font-size: 12px;
           padding: 10px 15px;
-        }
-        .trigers {
-          bottom: 20px;
-          left: calc(50% - 75px);
-          button {
-            width: 30px;
-            height: 30px;
-          }
         }
       }
     }
