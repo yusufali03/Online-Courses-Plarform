@@ -3,6 +3,9 @@ import Logo from "../../../assests/images/Logo.jpg";
 import { IoIosArrowDown } from "react-icons/io";
 import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle } from '@coreui/react'
 import {Link} from "react-router-dom";
+import { RxEnter } from "react-icons/rx";
+import { FaCaretDown } from "react-icons/fa";
+
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(null);
@@ -43,7 +46,7 @@ const Header = () => {
 
                         </li>
                         <CDropdown className="nav-item">
-                            <CDropdownToggle className="nav-link" >Pages</CDropdownToggle>
+                            <CDropdownToggle className="nav-link" >Pages <FaCaretDown /></CDropdownToggle>
                             <CDropdownMenu className="dropdown-menu">
                                 <CDropdownItem href="/about">About Us</CDropdownItem>
                                 <CDropdownItem href="/our-team">Our Team</CDropdownItem>
@@ -53,7 +56,7 @@ const Header = () => {
                             </CDropdownMenu>
                         </CDropdown>
                         <CDropdown className="nav-item">
-                            <CDropdownToggle className="nav-link" >Courses</CDropdownToggle>
+                            <CDropdownToggle className="nav-link" >Courses <FaCaretDown /></CDropdownToggle>
                             <CDropdownMenu className="dropdown-menu">
                                 <CDropdownItem href="#">Courses List</CDropdownItem>
                                 <CDropdownItem href="#">Courses Grid</CDropdownItem>
@@ -62,7 +65,7 @@ const Header = () => {
                             </CDropdownMenu>
                         </CDropdown>
                         <CDropdown className="nav-item">
-                            <CDropdownToggle className="nav-link" >Blog</CDropdownToggle>
+                            <CDropdownToggle className="nav-link" >Blog <FaCaretDown /></CDropdownToggle>
                             <CDropdownMenu className="dropdown-menu">
                                 <CDropdownItem href="#">Blog Standart</CDropdownItem>
                                 <CDropdownItem href="#">Blog Details</CDropdownItem>
@@ -73,6 +76,10 @@ const Header = () => {
 
                         <li className="nav-item">
                             <a className="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="/sign-in"> <RxEnter />
+                                Sign In</a>
                         </li>
 
                     </ul>
