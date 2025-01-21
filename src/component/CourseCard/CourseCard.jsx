@@ -53,7 +53,7 @@ function CourseCard() {
     <div className="courses">
       <div className="row">
         {courses.map((course) => (
-          <div className="course-card_layout">
+          <div className="course-card_layout"  data-aos="fade-up" data-aos-delay={course.id * 100}>
             <div className="course-card">
               <img
                 src={course.image}

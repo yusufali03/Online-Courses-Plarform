@@ -2,8 +2,7 @@ import React from "react";
 import PageTitleArea from "../../component/PageTitleArea/PageTitleArea";
 import SectionTitle from "../../component/SectionTitle/SectionTitle";
 import "./OurTeam.scss";
-import leftSmall from "../../assests/images/left-small.svg"
-
+import AOS from "aos";
 
 const teamItems = [
   {
@@ -51,28 +50,50 @@ const teamItems = [
 ];
 
 const OurTeam = () => {
-  const ourTeam="Our Team";
+  const ourTeam = "Our Team";
+
+  React.useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animatsiya davomiyligi (ms)
+      offset: 100, // Elementdan yuqori chekkasiga masofa
+      easing: "ease-in-out", // Animatsiya effekti
+      delay: 50, // Animatsiya kechikishi (ms)
+      once: true, // Animatsiya faqat bir marta ishlashi uchun
+    });
+  }, []);
   return (
-    <div>
+    <div className="wrapper">
       <PageTitleArea titles={ourTeam} />
-      <section className="team-area">
+      <section className="team-area container">
         <div className="info">
-          <SectionTitle />
+          <SectionTitle subtitle="Team Members" text="Our Expert" text_primary="Lecturer" />
           <p>
             Lorem Ipsum&nbsp;is simply dummy text of the printing and
             typesetting industry. Lorem Ipsum has
           </p>
-          <button href="team-details.html" class="">
+          <button
+            className="enroll"
+            onClick={() =>
+              window.open(
+                "https://preview.themeforest.net/item/edugen-education-online-course-html-template/full_screen_preview/54006205?_ga=2.264810255.1003209203.1735092300-1127771820.1734647781&_gac=1.16959435.1734647781.CjwKCAiApY-7BhBjEiwAQMrrEV5mUvW1v04fUjFU5vOU-VdUGIUVuBEuhGOO-D5TZyw3qhswsIiAJxoC9T8QAvD_BwE",
+                "_blank"
+              )
+            }
+          >
             <img
-              src="https://demo.themeies.com/edugen-html/assets/images/icon/left-bold.svg"
-              alt="icon"
+              src="https://demo.themeies.com/edugen-html/assets/images/icon/left-small.svg"
+              alt=""
             />
-            Join Our Team
+            <span>Enroll Now</span>
           </button>
-          <button className="aboutArea_texts_section_send">Learn More <img src={leftSmall} alt=""/></button>
         </div>
         {teamItems.map((member, index) => (
-          <div key={index} className="member-card">
+          <div
+            key={index}
+            className="member-card"
+            data-aos="fade-up"
+            data-aos-delay={index * 100 + 50}
+          >
             <a href={member.link}>
               <img src={member.img} alt={member.name} />
             </a>
@@ -101,13 +122,12 @@ const OurTeam = () => {
             </div>
           </div>
         ))}
-      </section >
-      <section className="learning-area">
+      </section>
+      <section className="learning-area container">
         <div className="title">
-
-          <SectionTitle />
+          <SectionTitle subtitle="Live Classes" text='It’s Easy To Start' text_primary="Learning"/>
         </div>
-        <div className="shapes">
+        <div className="shapes" data-aos="fade-up">
           <img
             className="shape1"
             src="https://demo.themeies.com/edugen-html/assets/images/shapes/shape11.svg"
@@ -119,7 +139,7 @@ const OurTeam = () => {
             alt=""
           />
         </div>
-        <div className="cast">
+        <div className="cast" data-aos="fade-up">
           <div className="live-info">
             <span className="red_circel"></span>
             <span className="live">LIVE</span>
