@@ -75,7 +75,7 @@ const Header = () => {
                         </CDropdown>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#contact">Contact</a>
+                            <Link className="nav-link" to="/contact">Contact</Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/sign-in"> <RxEnter />

@@ -1,10 +1,5 @@
 import React, {useEffect} from 'react';
 import "./about.scss";
-import page1 from "../../assests/images/pages1.webp"
-import page2 from "../../assests/images/pages2.webp"
-import page3 from "../../assests/images/pages3.webp"
-import page4 from "../../assests/images/pages4.svg"
-import page5 from "../../assests/images/pages5.svg"
 import InfoTechMaster from "./components/infoTechMaster";
 import ChooseUs from "./components/chooseUs/chooseUs";
 import FunFact from "./components/funFact/funFact";
