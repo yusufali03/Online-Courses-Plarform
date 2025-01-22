@@ -75,7 +75,9 @@ const OurTeam = () => {
             subtitle="Team Members"
             text="Our Expert"
             text_primary="Lecturer"
+            shape={true}
           />
+          
           <p>
             Lorem Ipsum&nbsp;is simply dummy text of the printing and
             typesetting industry. Lorem Ipsum has
@@ -93,14 +95,11 @@ const OurTeam = () => {
               src="https://demo.themeies.com/edugen-html/assets/images/icon/left-small.svg"
               alt=""
             />
-            <span>Enroll Now</span>
+            <span>Join Our Team</span>
           </button>
         </div>
         {teamItems.map((member, index) => (
-          <div
-            key={index}
-            className="member-card"
-          >
+          <div key={index} className="member-card">
             <a href={member.link}>
               <img src={member.img} alt={member.name} />
             </a>
@@ -136,7 +135,10 @@ const OurTeam = () => {
             subtitle="Live Classes"
             text="It’s Easy To Start"
             text_primary="Learning"
+            shape={true}
+
           />
+          
         </div>
         <div className="shapes" data-aos="fade-up">
           <img
@@ -168,13 +170,13 @@ const OurTeam = () => {
           />
           <div className="trigers">
             <button className="mute">
-              <IoVolumeMuteOutline size={30}/>
+              <IoVolumeMuteOutline size={25} />
             </button>
             <button className="end">
-              <MdOutlinePhone size={30}/>
+              <MdOutlinePhone size={25} />
             </button>
             <button className="video">
-              <IoVideocamOutline size={30} />
+              <IoVideocamOutline size={25} />
             </button>
           </div>
         </div>
