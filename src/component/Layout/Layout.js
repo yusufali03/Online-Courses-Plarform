@@ -46,8 +46,8 @@ const Layout = (props) => {
     };
   }, [speaker]);
 
-  // Tekshiruv uchun to'g'ri yo'llar
-  const isAuthRoute = ["/sign-in", "/sign-up"].includes(pathname);
+  const isNotFoundRoute = pathname === "/404"; // `/404` yo‘lini `NotFound` uchun ishlating.
+  const isAuthRoute = ["/sign-in", "/sign-up"].includes(pathname) || isNotFoundRoute;
 
   return (
       <>

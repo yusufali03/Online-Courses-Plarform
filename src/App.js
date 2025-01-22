@@ -1,8 +1,9 @@
 import React, {lazy, Suspense} from "react";
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import {BrowserRouter as Router, Navigate, Route, Routes} from "react-router-dom";
 import Spinner from "./component/Spinner/Spinner";
 import ScrollTop from "./hoc/ScrollTop";
 import Layout from "./component/Layout/Layout";
+import NotFound from "./page/404/NotFound";
 
 
 const Home = lazy(() => import("./page/Home/home"));
@@ -41,7 +42,8 @@ const RoutesContainer = () => (
                             <Route key={key} path={route.path} element={<RouteComponent/>}/>
                         );
                     })}
-                    {/* <Route path="*" element={<NotFound />} /> */}
+                    <Route path="*" element={<Navigate to="/404" />} />
+                    <Route path="/404" element={<NotFound />} />
                 </Routes>
             </Suspense>
         </Layout>
