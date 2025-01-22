@@ -37,7 +37,7 @@ const TeamDetails = () => {
       offset: 100, // Elementdan yuqori chekkasiga masofa
       easing: "ease-in-out", // Animatsiya effekti
       delay: 50, // Animatsiya kechikishi (ms)
-      once: false, // Animatsiya faqat bir marta ishlashi uchun
+      once: true, // Animatsiya faqat bir marta ishlashi uchun
     });
   }, []);
   return (
@@ -89,9 +89,10 @@ const TeamDetails = () => {
           </div>
           <div>
             <SectionTitle
-              subtitle=" Courses by Julia B. Corbin "
+              subtitle="Courses by Julia B. Corbin "
               text="Choose Our Top"
-              text_primary=" Courses shape"
+              text_primary="Courses"
+              shape={true}
             />
             <CourseCard />
           </div>

@@ -1,22 +1,7 @@
-h2 {
-  line-height: 1.2;
-  font-size: 44px;
-  color: #000;
-  margin: 13px 0;
-  @media (max-width: 1280px) {
-    font-size: 35px;
-  }
-  @media (max-width: 770px) {
-    font-size: 27px;
-    margin: 10px 0;
-  }
-}
-
 .wrapper {
   background-color: #fbfbfb;
 
   .team-area {
-    
     padding-top: 80px;
     padding-bottom: 80px;
     display: grid;
@@ -25,6 +10,19 @@ h2 {
     gap: 25px;
     .info {
       overflow: hidden;
+
+      // .info-title {
+      //   position: relative;
+      //   img {
+      //     position: absolute;
+      //     bottom: -10px;
+      //     max-width: 172px;
+      //     @media (max-width: 1280px) {
+      //       right: 140px;
+      //       width: 151px;
+      //     }
+      //   }
+      // }
 
       p {
         margin: 20px 0;
@@ -38,7 +36,7 @@ h2 {
           display: flex;
           img {
             border-radius: 5px 0 0 5px;
-            padding: 12px 20px;
+            padding: 17px 20px;
             border: none;
             background-color: #000;
             color: #fff;
@@ -48,7 +46,15 @@ h2 {
             height: 100%;
             border: 1px solid #000;
             border-radius: 0 5px 5px 0;
-            padding: 10px;
+            padding: 15px 30px;
+          }
+          @media (max-width: 1280px) {
+            img {
+              padding: 12px 20px;
+            }
+            span {
+              padding: 10px;
+            }
           }
         }
       }
@@ -82,11 +88,10 @@ h2 {
           font-weight: 700;
           a {
             color: #000;
-            &:hover{
+            &:hover {
               color: rgb(138, 71, 203);
             }
           }
-
         }
         span {
           margin-bottom: 15px;
@@ -192,11 +197,11 @@ h2 {
       }
       .yourself {
         position: absolute;
-        bottom: 30px;
-        left: 30px;
+        bottom: 50px;
+        left: 50px;
         z-index: 1;
 
-        width: 20%;
+        width: 200px;
         height: auto;
         border: 5px solid #fff;
         border-radius: 10px;
@@ -213,25 +218,29 @@ h2 {
 
         padding: 16px 30px;
         background: #fff;
-        border-radius: 10px;
+        border-radius: 4px;
         .red_circel {
-          width: 10px;
-          height: 10px;
+          width:  8px;
+          height: 8px;
           background-color: red;
           border-radius: 50%;
+        }
+        .timer {
+          color: rgb(135, 135, 135);
+          font-weight: 400;
         }
       }
       .trigers {
         position: absolute;
-        bottom: 30px;
-        left: calc(50% - 130px);
+        bottom: 50px;
+        left: calc(50% - 110px);
 
         display: flex;
         justify-content: center;
         gap: 30px;
 
         button {
-          padding: 20px 20px 16px 20px;
+          padding: 15px 15px 11px;
 
           font-weight: 600;
 
@@ -243,11 +252,11 @@ h2 {
             color: #000;
           }
           &.end {
-            background: red;
+            background: rgb(255, 85, 62);
             color: #fff;
           }
           &.video {
-            background: green;
+            background: rgb(28, 202, 129);
             color: #fff;
           }
           &:hover {
@@ -263,15 +272,48 @@ h2 {
           top: 30px;
         }
       }
-      .cast{
-        .trigers {
+    }
+    @media (max-width: 960px) {
+      .cast {
+        .yourself {
+          width: 100px;
           bottom: 20px;
-          left: calc(50% - 85px);
+          left: 20px;
+        }
+        .live-info {
+          padding: 8px 15px;
+          top:   20px;
+          right: 20px;
+        }
+        .trigers {
+          gap: 10px;
+          bottom: 20px;
+
+          left: calc(50% - 75px);
           button {
-            padding: 10px 10px 7px 10px;
+            padding: 14px 14px 11px 14px;
             svg {
-              height: 20px;
-              width: 20px;
+              height: 16px;
+              width: 16px;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      .cast {
+        .yourself {
+          width: 85px;
+          border: 3px solid #fff;
+        }
+
+        .trigers {
+          left: calc(50% - 55px);
+          button {
+            padding: 9px 9px 6px 9px;
+            svg {
+              height: 16px;
+              width: 16px;
             }
           }
         }
@@ -287,10 +329,9 @@ h2 {
 
       .cast {
         .yourself {
-          width: 60px;
-          bottom: 20px;
-          left: 20px;
-          border: 3px solid #fff;
+          width: 51px;
+          bottom: 10px;
+          left: 10px;
         }
         .live-info {
           top: 10px;
@@ -298,14 +339,16 @@ h2 {
           font-size: 12px;
           padding: 10px 15px;
         }
+        .trigers {
+          bottom: 10px;
+        }
       }
     }
   }
 }
 
 button {
-  &.enroll{
-
+  &.enroll {
     display: inline-block;
     border-radius: 5px;
     color: #000;
@@ -316,9 +359,9 @@ button {
     font-size: 17px;
     border: none;
     font-weight: 600;
-  
+
     cursor: pointer;
-  
+
     &:after {
       content: "";
       position: absolute;
