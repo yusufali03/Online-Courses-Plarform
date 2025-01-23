@@ -65,12 +65,14 @@
 
         .details {
           display: flex;
-          justify-content: space-between;
-          font-size: 14px;
+          gap: 30px;
+          
+          font-size: 18px;
           font-weight: 400;
           color: #777;
           span {
             display: flex;
+            align-items: center;
             svg {
               color: rgb(138, 71, 203);
             }
