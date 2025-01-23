@@ -12,10 +12,11 @@ const OurTeam = lazy(() => import("./page/OurTeam/OurTeam"));
 const About = lazy(() => import("./page/About/about"));
 const TeamDetails = lazy(() => import("./page/TeamDetails/TeamDetails"));
 const Contact = lazy(() => import("./page/contact/Contact"));
-
 const TermsConditions = lazy(() => import("./page/TermsConditions/TermsConditions"));
-
 const PrivacyPolicyPage = lazy(() => import("./page/PrivacyPolicyPage/PrivacyPolicyPage"));
+const CoursesList = lazy(() => import("./page/CoursesList/CoursesList"));
+
+
 
 
 const routes = [
@@ -28,6 +29,7 @@ const routes = [
     {path: "team-details", element: TeamDetails},
     {path: "privacy-policy", element: PrivacyPolicyPage},
     {path: "terms-conditions", element: TermsConditions},
+    {path: "courses-list", element: CoursesList},
 ];
 
 const RoutesContainer = () => (
