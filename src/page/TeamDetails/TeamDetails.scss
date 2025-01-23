@@ -82,6 +82,13 @@ p {
         }
       }
     }
+    .curses-area{
+      .courses-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+    }
     .shapes {
       .shape26 {
         position: absolute;

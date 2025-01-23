@@ -16,6 +16,7 @@ const CoursesListCard = (course) => {
           <img
             src={data.imageUrl}
             alt={data.title}
+            className="image"
           />
         </div>
         <div class="content">

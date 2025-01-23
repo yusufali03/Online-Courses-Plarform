@@ -5,7 +5,7 @@ import { PiSquaresFour } from "react-icons/pi";
 import { IoIosList } from "react-icons/io";
 import CoursesListCard from "../../component/CoursesListCard/CoursesListCard";
 import CourseCard from "../../component/CourseCard/CourseCard";
-
+import { TbReload } from "react-icons/tb";
 const courses = [
   {
     id: "1",
@@ -88,7 +88,7 @@ duration: '4h 30m',
 ];
 
 const CoursesList = () => {
-  const [mapping, setMapping] = useState("grid");
+  const [mapping, setMapping] = useState("list");
   return (
     <div className="wrapper">
       <PageTitleArea titles="Courses List" />
@@ -126,6 +126,7 @@ const CoursesList = () => {
             </div>
           ))}
         </div>
+        <button className="enroll">Load more <TbReload  /></button>
       </section>
     </div>
   );

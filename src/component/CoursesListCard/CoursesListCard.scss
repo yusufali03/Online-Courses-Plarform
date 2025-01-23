@@ -13,10 +13,22 @@
     border-radius: 8px;
     .image {
       img {
+        transition: all .5s ease-in-out;
+
         border-radius: 4px;
-        max-width: 150px;
+        width: 150px;
       }
     }
+    // .image {
+    //   display: inline-block; /* Строчно-блочный элемент */
+    // overflow: hidden;
+    //   img {
+    //     transition: all .5s ease-in-out;
+    // display: block;
+    //     border-radius: 4px;
+    //     // width: 150px;
+    //   }
+    // }
     .content {
       display: grid;
       justify-content: space-between;
