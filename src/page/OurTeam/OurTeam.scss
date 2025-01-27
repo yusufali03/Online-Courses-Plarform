@@ -10,22 +10,14 @@
     gap: 25px;
     .info {
       overflow: hidden;
-
-      // .info-title {
-      //   position: relative;
-      //   img {
-      //     position: absolute;
-      //     bottom: -10px;
-      //     max-width: 172px;
-      //     @media (max-width: 1280px) {
-      //       right: 140px;
-      //       width: 151px;
-      //     }
-      //   }
-      // }
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .section-title {
+        margin: 0;
+      }
 
       p {
-        margin: 20px 0;
         font-size: 18px;
         font-weight: 500;
         color: #4b4956;
@@ -62,6 +54,7 @@
     .member-card {
       display: grid;
       justify-items: center;
+      gap: 10px;
 
       padding: 20px;
       border: 2px dashed rgb(138, 71, 203);
@@ -69,7 +62,6 @@
       transition: transform 0.5s ease-in-out;
       a {
         overflow: hidden;
-        margin-bottom: 22px;
         border-radius: 10px;
         img {
           transition: transform 0.7s ease-in-out;
@@ -136,7 +128,6 @@
 
     @media (max-width: 1280px) {
       grid-template-columns: 1fr 1fr;
-      padding: 40px 6vw;
 
       .member-card {
         padding: 15px;
@@ -145,6 +136,9 @@
     @media (max-width: 550px) {
       grid-template-columns: 1fr;
       padding: 15px;
+      .info {
+        gap: 25px;
+      }
       .member-card {
         div {
           ul {
@@ -220,7 +214,7 @@
         background: #fff;
         border-radius: 4px;
         .red_circel {
-          width:  8px;
+          width: 8px;
           height: 8px;
           background-color: red;
           border-radius: 50%;
@@ -228,6 +222,9 @@
         .timer {
           color: rgb(135, 135, 135);
           font-weight: 400;
+        }
+        .live {
+          font-weight: 600;
         }
       }
       .trigers {
@@ -282,8 +279,9 @@
         }
         .live-info {
           padding: 8px 15px;
-          top:   20px;
+          top: 20px;
           right: 20px;
+          font-size: 14px;
         }
         .trigers {
           gap: 10px;
@@ -303,12 +301,22 @@
     @media (max-width: 768px) {
       .cast {
         .yourself {
-          width: 85px;
-          border: 3px solid #fff;
+          width: 55px;
+          border: 2px solid #fff;
+          bottom: 10px;
+          left: 10px;
+        }
+        .live-info {
+          padding: 6px 12px;
+          top: 10px;
+          font-size: 12px;
+          right: 10px;
         }
 
         .trigers {
           left: calc(50% - 55px);
+          bottom: 10px;
+
           button {
             padding: 9px 9px 6px 9px;
             svg {
@@ -329,18 +337,11 @@
 
       .cast {
         .yourself {
-          width: 51px;
-          bottom: 10px;
-          left: 10px;
         }
         .live-info {
-          top: 10px;
-          right: 10px;
           font-size: 12px;
-          padding: 10px 15px;
         }
         .trigers {
-          bottom: 10px;
         }
       }
     }
