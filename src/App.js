@@ -17,6 +17,7 @@ const TermsConditions = lazy(() => import("./page/TermsConditions/TermsCondition
 const PrivacyPolicyPage = lazy(() => import("./page/PrivacyPolicyPage/PrivacyPolicyPage"));
 const CoursesList = lazy(() => import("./page/CoursesList/CoursesList"));
 const BlogStandart = lazy(() => import("./page/BlogStandart/BlogStandart"));
+const BlogDetails = lazy(() => import("./page/BlogDetails/BlogDetails"));
 
 
 
@@ -33,6 +34,7 @@ const routes = [
     {path: "terms-conditions", element: TermsConditions},
     {path: "courses-list", element: CoursesList},
     {path: "blog-standart", element: BlogStandart},
+    {path: "blog-detials", element: BlogDetails},
 ];
 
 const RoutesContainer = () => (
