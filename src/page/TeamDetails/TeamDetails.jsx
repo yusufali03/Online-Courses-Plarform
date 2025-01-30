@@ -27,6 +27,52 @@ const rateCards = [
     description: "Award Winning",
   },
 ];
+const courses = [
+  {
+    id: 1,
+    imageUrl:
+      "https://demo.themeies.com/edugen-html/assets/images/courses/courses9.jpg", // Замените на путь к изображениям
+    price: "$24.99",
+    category: "Marketing",
+
+    title: "Basic Fundamentals of Interior & Graphics Design",
+    lessons: 2,
+    duration: "4h 30m",
+  },
+  {
+    id: 2,
+    imageUrl:
+      "https://demo.themeies.com/edugen-html/assets/images/courses/courses10.jpg",
+    category: "Marketing",
+    price: "Free",
+    title: "Increasing Engagement with Instagram & Facebook",
+    lessons: 2,
+    duration: "4h 30m",
+    rating: 4.8,
+  },
+  {
+    id: 3,
+    imageUrl:
+      "https://demo.themeies.com/edugen-html/assets/images/courses/courses11.jpg",
+    category: "Art & Design",
+    price: "$39.28",
+    title: "Logo Design: From Concept to Presentation",
+    lessons: 2,
+    duration: "4h 30m",
+    rating: 4.8,
+  },
+  {
+    id: 4,
+    imageUrl:
+      "https://demo.themeies.com/edugen-html/assets/images/courses/courses12.jpg",
+    category: "Art & Design",
+    price: "$19.48",
+    title: "Professional Ceramic Molding for Beginners",
+    lessons: 2,
+    duration: "4h 30m",
+    rating: 4.8,
+  },
+];
 
 const TeamDetails = () => {
   const titles = "Team Details";
@@ -87,14 +133,18 @@ const TeamDetails = () => {
               ))}
             </div>
           </div>
-          <div>
+          <div className="curses-area">
             <SectionTitle
               subtitle="Courses by Julia B. Corbin "
               text="Choose Our Top"
               text_primary="Courses"
               shape={true}
             />
-            <CourseCard />
+            <div className="courses-list">
+              {courses.map((course) => (
+                <CourseCard data={course} />
+              ))}
+            </div>
           </div>
         </div>
         <div className="shapes">

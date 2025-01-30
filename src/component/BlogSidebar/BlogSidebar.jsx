@@ -1,0 +1,86 @@
+import React from "react";
+import { IoSearchOutline } from "react-icons/io5";import { FaAngleRight } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
+import "./BlogSidebar.scss";
+import {
+  categoriesArray,
+  feedsArray,
+  recentBlogsArray,
+  tagsArray,
+} from "./BlogSidebar.data";
+
+const BlogSidebar = () => {
+  return (
+    <div className="items">
+      <div className="item">
+        <form action="">
+          <input type="text" placeholder="Search keyword..." />
+          <button type="submit">
+            <IoSearchOutline />
+          </button>
+        </form>
+      </div>
+
+      <div className="item">
+        <h3>Categories</h3>
+        <div className="categories">
+          {categoriesArray.map((cat) => (
+            <button className={cat.id === 1 && `active`} key={cat.id}>
+              <span>{cat.title}</span>
+              <FaAngleRight />
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="item">
+        <h3>Recent Blogs</h3>
+        <div className="recent-blogs">
+          {recentBlogsArray.map((blog) => (
+            <div className="recent-blog" key={blog.id}>
+              <a href={blog.link} className="image">
+                <img src={blog.imgUrl} alt={blog.title} />
+              </a>
+              <div className="blog-content">
+                <h4>
+                  <a href={blog.link}>{blog.title}</a>
+                </h4>
+                <a href={blog.link} className="read-more">
+                  Read More
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="item">
+        <h3>Popular Tags</h3>
+        <div className="tags">
+          {tagsArray.map((tag) => (
+            <button className={`tag ${tag.id === 1 && "active"}`}>
+              {tag.title}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="item">
+        <h3>Instagram Feed</h3>
+        <div className="feeds">
+          {feedsArray.map((feed) => (
+            <a href={feed.link} className="feed" key={feed.id}>
+              <img
+                src={feed.imageUrl}
+                alt={feed.link}
+              />
+              <FaInstagram />
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BlogSidebar;
