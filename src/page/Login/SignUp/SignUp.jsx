@@ -4,8 +4,10 @@ import {FaPhone} from "react-icons/fa6";
 import {RiLockPasswordFill} from "react-icons/ri";
 import { FaRegUser } from "react-icons/fa";
 
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 const SignUp = () => {
+    const location = useLocation();
+
     return (
         <div className="sign">
             <div className="sign_Rows">
@@ -22,8 +24,12 @@ const SignUp = () => {
                         Tech Master
                     </h1>
                     <div className="sign_Rows_colSignForm_switcher">
-                        <Link to="/sign-in" className="sign_Rows_colSignForm_switcher_text1">Log In</Link>
-                        <Link to="/sign-up" className="sign_Rows_colSignForm_switcher_text1">Register</Link>
+                        <Link to="/sign-in" className={`sign_Rows_colSignForm_switcher_text1 ${
+                            location.pathname === "/sign-in" ? "active" : ""
+                        }`}>Log In</Link>
+                        <Link to="/sign-up"  className={`sign_Rows_colSignForm_switcher_text1 ${
+                            location.pathname === "/sign-up" ? "active" : ""
+                        }`}>Register</Link>
                     </div>
                     <div className="sign_Rows_colSignForm_signForms">
                         <form method="post">

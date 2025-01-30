@@ -51,6 +51,14 @@ body {
     max-width: 1320px;
   }
 }
+.headBgs{
+  color:  #fff;
+  background:var(--balckColor) ;
+}
+.headOther{
+  background: #fff7fc;
+  color: var(--balckColor);
+}
 a{
   text-decoration: none;
   outline: none;

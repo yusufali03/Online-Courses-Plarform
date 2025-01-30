@@ -13,12 +13,10 @@ const OurTeam = lazy(() => import("./page/OurTeam/OurTeam"));
 const About = lazy(() => import("./page/About/about"));
 const TeamDetails = lazy(() => import("./page/TeamDetails/TeamDetails"));
 const Contact = lazy(() => import("./page/contact/Contact"));
-
 const TermsConditions = lazy(() => import("./page/TermsConditions/TermsConditions"));
-
 const PrivacyPolicyPage = lazy(() => import("./page/PrivacyPolicyPage/PrivacyPolicyPage"));
-
-
+const CourseGrid = lazy(() => import("./page/CoursesList/component/CourseGrid/CourseGrid"));
+const ListCourse = lazy(() => import("./page/CoursesList/component/ListCourse/ListCourse"));
 const routes = [
     {path: "/", element: Home},
     {path: "/sign-in", element: SignIn},
@@ -29,6 +27,8 @@ const routes = [
     {path: "team-details", element: TeamDetails},
     {path: "privacy-policy", element: PrivacyPolicyPage},
     {path: "terms-conditions", element: TermsConditions},
+    {path: "courses-list/grid", element: CourseGrid},
+    {path: "courses-list/item", element: ListCourse},
 ];
 
 const RoutesContainer = () => (

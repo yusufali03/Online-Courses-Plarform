@@ -1,16 +1,17 @@
 import React, {useEffect, useState} from "react";
 import Logo from "../../../assests/images/Logo.jpg";
-import { IoIosArrowDown } from "react-icons/io";
 import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle } from '@coreui/react'
 import {Link} from "react-router-dom";
 import { RxEnter } from "react-icons/rx";
 import { FaCaretDown } from "react-icons/fa";
+import {useLocation} from "react-router";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(null);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isInitial, setIsInitial] = useState(true);
+    const location = useLocation();
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
@@ -33,10 +34,13 @@ const Header = () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+    const isHomePage = location.pathname === "/"; // Faqat Home sahifasi uchun tekshiruv
+
     return (
-        <header  className={`header ${menuOpen ? "menu-opened" : ""} ${isScrolled ? "scrolled" : ""} ${isInitial ? "" : "hidden"}`}>
+        <header  className={`header ${menuOpen ? "menu-opened" : ""} ${isScrolled ? "scrolled" : ""} ${isInitial ? "" : "hidden"}`}
+        >
             <div className="container">
-                <a href="#" className="logo">
+                <a href="/" className="logo">
                     <img className="logo_picture"  src={Logo} alt="logo"/>
                 </a>
                 <nav className={`nav ${menuOpen ? "open" : ""}`}>
@@ -51,14 +55,14 @@ const Header = () => {
                                 <CDropdownItem href="/about">About Us</CDropdownItem>
                                 <CDropdownItem href="/our-team">Our Team</CDropdownItem>
                                 <CDropdownItem href="/team-details">Our Team Details</CDropdownItem>
-                                <CDropdownItem href="#">Privacy Police</CDropdownItem>
-                                <CDropdownItem href="#">Terms & Conditions</CDropdownItem>
+                                <CDropdownItem href="/privacy-policy">Privacy Police</CDropdownItem>
+                                <CDropdownItem href="/terms-conditions">Terms & Conditions</CDropdownItem>
                             </CDropdownMenu>
                         </CDropdown>
                         <CDropdown className="nav-item">
                             <CDropdownToggle className="nav-link" >Courses <FaCaretDown /></CDropdownToggle>
                             <CDropdownMenu className="dropdown-menu">
-                                <CDropdownItem href="#">Courses List</CDropdownItem>
+                                <CDropdownItem href="/courses-list/grid">Courses List</CDropdownItem>
                                 <CDropdownItem href="#">Courses Grid</CDropdownItem>
                                 <CDropdownItem href="#">Courses Details</CDropdownItem>
                                 <CDropdownItem href="#">Courses Sidebar</CDropdownItem>
