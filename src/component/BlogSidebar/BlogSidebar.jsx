@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IoSearchOutline } from "react-icons/io5";import { FaAngleRight } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
-import "./BlogSidebar.scss";
+import "./BlogSidebar.scss";import AOS from "aos";
+
 import {
   categoriesArray,
   feedsArray,
@@ -10,8 +11,20 @@ import {
 } from "./BlogSidebar.data";
 
 const BlogSidebar = () => {
+  const path = window.location.pathname; // "/blog-standart"
+  const slug = path.split("/").pop();
+
+  useEffect(() => {
+      AOS.init({
+        duration: 1000, // Animatsiya davomiyligi (ms)
+        offset: 100, // Elementdan yuqori chekkasiga masofa
+        easing: "ease-in-out", // Animatsiya effekti
+        delay: 50, // Animatsiya kechikishi (ms)
+        once: true, // Animatsiya faqat bir marta ishlashi uchun
+      });
+    }, []);
   return (
-    <div className="items">
+    <div className={`items ${slug}`} data-aos="fade-up">
       <div className="item">
         <form action="">
           <input type="text" placeholder="Search keyword..." />

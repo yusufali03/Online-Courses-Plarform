@@ -1,17 +1,21 @@
 import React from "react";
 import "./BlogCard.scss";
 import { IoPersonOutline, IoCalendarOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const BlogCard = () => {
+  const path = window.location.pathname;
+  const slug = path.split("/").pop();
+  
   return (
-    <div className="blog-card">
+    <div className={`blog-card ${slug}`}>
       <div className="image">
-        <a href="#" className="image">
+        <Link to="/blog-details" className="image">
           <img
             src="https://demo.themeies.com/edugen-html/assets/images/blog/blog9.jpg"
             alt=""
           />
-        </a>
+        </Link>
         <span>Education</span>
       </div>
       <div className="content">
@@ -26,16 +30,16 @@ const BlogCard = () => {
           </li>
         </ul>
         <h3>
-          <a href="#">Co-Education Makes You Respect The People</a>
+          <Link to="/blog-details">Co-Education Makes You Respect The People</Link>
         </h3>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took
         </p>
-        <a class="read-more" href="#">
+        <Link to="/blog-details" class="read-more">
           Read More
-        </a>
+        </Link>
       </div>
     </div>
   );
