@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./coursesList.scss";
+import "./CoursesList.scss";
 import PageTitleArea from "../../component/PageTitleArea/PageTitleArea";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
 import { PiListBullets } from "react-icons/pi";
