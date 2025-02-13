@@ -71,10 +71,10 @@ const Header = () => {
                         <CDropdown className="nav-item">
                             <CDropdownToggle className="nav-link" >Blog <FaCaretDown /></CDropdownToggle>
                             <CDropdownMenu className="dropdown-menu">
-                                <CDropdownItem href="#">Blog Standart</CDropdownItem>
-                                <CDropdownItem href="#">Blog Details</CDropdownItem>
-                                <CDropdownItem href="#">Blog With Sidebar</CDropdownItem>
-                                <CDropdownItem href="#">Blog Without Sidebar</CDropdownItem>
+                                <CDropdownItem href="blog-standart">Blog Standart</CDropdownItem>
+                                <CDropdownItem href="blog-details">Blog Details</CDropdownItem>
+                                <CDropdownItem href="blog-with-sidebar">Blog With Sidebar</CDropdownItem>
+                                <CDropdownItem href="blog-without-sidebar">Blog Without Sidebar</CDropdownItem>
                             </CDropdownMenu>
                         </CDropdown>
 

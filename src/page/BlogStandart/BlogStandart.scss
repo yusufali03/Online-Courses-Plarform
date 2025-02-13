@@ -2,17 +2,32 @@
   background-color: var(--whiteColor);
   .container {
     &.flex {
-
       display: grid;
       grid-template-columns: 20fr 9fr;
       gap: 24px;
     }
+    &.blog-without-sidebar {
+      grid-template-columns: 1fr;
+      .blog-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+
+      }
+    }
+    &.blog-with-sidebar {
+      .blog-cards {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
     .blog-cards {
+      padding-top: 110px;
       display: grid;
       gap: 24px;
+
     }
     .pagination {
       margin: 25px auto;
+      padding-bottom: 136px;
+
       display: flex;
       justify-content: center;
       gap: 12px;
@@ -39,8 +54,7 @@
     }
 
     @media (max-width: 990px) {
-      &.flex{
-
+      &.flex {
         grid-template-columns: 1fr;
       }
 

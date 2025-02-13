@@ -13,7 +13,7 @@ const Contact = () => {
             <PageTitleArea titles={titles}/>
             <div className="contact">
                 <div className="container">
-                    <div className="flexs">
+                    <div className="flexs main-contact__flex">
                         <div className="contact_lg4">
                             <div className="contact_lg4_singleContact">
                                 <div className="contact_lg4_singleContact_sectionTitles">

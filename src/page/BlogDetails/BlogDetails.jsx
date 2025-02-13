@@ -63,7 +63,7 @@ const BlogDetails = () => {
                   around us, the world inside of us, and where we fit within the
                   world.”
                 </h6>
-                <h3>--- Rosalina D. Jackson</h3>
+                <h3 className="dephise">Rosalina D. Jackson</h3>
                 <div class="shape">
                   <img
                     src="https://demo.themeies.com/edugen-html/assets/images/shapes/quote-shape.svg"
