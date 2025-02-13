@@ -12,7 +12,6 @@ p {
     display: flex;
     gap: 24px;
 
-
     padding-top: 80px;
     padding-bottom: 80px;
 
@@ -39,12 +38,12 @@ p {
           gap: 16px;
 
           margin-bottom: 60px;
-          
+
           .rate-card {
             box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.07);
             padding: 0 25px 25px 25px;
             border-radius: 8px;
-          
+
             transition: all 0.5s ease-in-out;
 
             display: grid;
@@ -65,7 +64,7 @@ p {
               margin-bottom: 15px;
             }
 
-            p{ 
+            p {
               font-size: 18px;
               color: rgb(123, 123, 138);
             }
@@ -74,16 +73,47 @@ p {
               transform: translateY(-12px);
             }
           }
+          @media (max-width: 1240px) {
+            .rate-card {
+              .icon {
+                height: 50px;
+
+                img {
+                  top: -40px;
+                  width: 65px;
+                  height: 65px;
+                  position: relative;
+                }
+              }
+
+              h3 {
+                font-size: 25px;
+                margin-bottom: 15px;
+              }
+
+              p {
+                font-size: 15px;
+              }
+            }
+          }
 
           @media (max-width: 768px) {
-            display: grid;
+            flex-wrap: wrap;
             gap: 50px;
+            .rate-card {
+              min-width: calc(50% - 25px);
+            }
+          }
+          @media (max-width: 575.5px) {
+            .rate-card {
+              min-width: 100%;
+            }
           }
         }
       }
     }
-    .curses-area{
-      .courses-list{
+    .curses-area {
+      .courses-list {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 15px;
@@ -123,11 +153,16 @@ p {
         display: none;
       }
     }
-    @media (max-width: 960px) {
+    @media (max-width: 990.5px) {
       display: grid;
     }
     @media (max-width: 768px) {
       padding: 40px;
+      .curses-area {
+        .courses-list {
+          grid-template-columns: 1fr;
+        }
+      }
     }
   }
 }

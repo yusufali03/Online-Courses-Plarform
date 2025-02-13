@@ -116,8 +116,8 @@ const TeamDetails = () => {
                 <div
                   key={card.id}
                   className="rate-card"
-                  data-aos="fade-up"
-                  data-aos-delay={card.id * 100}
+                  data-aos="fade"
+                  data-aos-delay={card.id * 500}
                 >
                   <div className="icon">
                     <img src={card.icon} alt="icon" />
@@ -135,7 +135,7 @@ const TeamDetails = () => {
           </div>
           <div className="curses-area">
             <SectionTitle
-              subtitle="Courses by Julia B. Corbin "
+              subtitle="Courses by Julia B. Corbin"
               text="Choose Our Top"
               text_primary="Courses"
               shape={true}

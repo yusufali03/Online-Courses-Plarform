@@ -17,8 +17,11 @@
           font-weight: 700;
 
           &_touch {
-
-            background: linear-gradient(90deg, #0000FF, #00FF00); // Gradient ranglar
+            background: linear-gradient(
+              90deg,
+              #0000ff,
+              #00ff00
+            ); // Gradient ranglar
             -webkit-background-clip: text; // Matnga cheklash
             -webkit-text-fill-color: transparent; // Matnni shaffof qilish
             position: relative; // Chiziqni joylashtirish uchun
@@ -50,7 +53,6 @@
           align-items: center;
           justify-content: center;
           background-color: #efe8f6;
-
         }
 
         &_contentContact {
@@ -67,17 +69,17 @@
 
   &_lg8 {
     width: 66%;
-    &_formContact{
+    &_formContact {
       padding: 40px;
       border-radius: 8px;
       margin-bottom: 25px;
       background-color: var(--whiteColor);
       box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.07);
-      &_colSex{
+      &_colSex {
         width: 48%;
-        &_form-group{
+        &_form-group {
           margin-bottom: 25px;
-          &_form-control{
+          &_form-control {
             width: 100%;
             border: 0;
             height: 60px;
@@ -95,13 +97,13 @@
               font-weight: 500;
             }
           }
-          .textarea{
+          .textarea {
             height: 200px;
             padding-top: 20px;
           }
         }
       }
-      .contactSend{
+      .contactSend {
         background-color: var(--mainColor);
         z-index: 1;
         position: relative;
@@ -113,7 +115,7 @@
         font-weight: 600;
         border: none;
         cursor: pointer;
-        &::before{
+        &::before {
           background-color: var(--blackColor);
           top: 0;
           left: 0;
@@ -132,5 +134,56 @@
         }
       }
     }
+  }
+
+  @media (max-width: 1398.5px) and (min-width: 1298.5px) {
+    &_lg4 {
+      &_singleContact {
+        &_sectionTitles {
+          &_get {
+            font-size: 35px;
+          }
+        }
+      }
+    }
+    &_lg8 {
+      &_formContact {
+        &_colSex {
+          &_form-group {
+            &_form-control {
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 990.5px) {
+    &_lg4 {
+      width: 100%;
+      &_singleContact {
+        &_iconList {
+          &_contactContent {
+            a, span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    &_lg8 {
+      width: 100%;
+      &_formContact {
+      }
+    }
+  }
+}
+@media (max-width: 990.5px) {
+  .main-contact__flex {
+    flex-direction: column;
+  }
+  h3 {
+    font-size: 18px;
+    margin-bottom: 7px;
   }
 }
