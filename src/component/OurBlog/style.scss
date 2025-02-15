@@ -12,7 +12,7 @@
       margin-bottom: 12px;
       font-size: 18px;
       font-weight: 600;
-      background: linear-gradient(90deg, #0000FF, #00FF00);
+      background: linear-gradient(90deg, #0000ff, #00ff00);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline-block;
@@ -27,7 +27,11 @@
       margin-bottom: 40px;
 
       &_ourLine {
-        background: linear-gradient(90deg, #0000FF, #00FF00); // Gradient ranglar
+        background: linear-gradient(
+          90deg,
+          #0000ff,
+          #00ff00
+        ); // Gradient ranglar
         -webkit-background-clip: text; // Matnga cheklash
         -webkit-text-fill-color: transparent; // Matnni shaffof qilish
         position: relative; // Chiziqni joylashtirish uchun
@@ -131,7 +135,6 @@
           img {
             transform: scale(1.08);
           }
-
         }
 
         &_blogRimg {
@@ -141,7 +144,7 @@
           display: block;
           overflow: hidden;
           border-radius: 10px;
-          margin-bottom: 15px;
+          margin-right: 30px;
           transition: var(--transition);
 
           img {
@@ -160,6 +163,96 @@
         left: -30px;
         bottom: -40px;
         animation: rotateme 20s linear infinite;
+      }
+    }
+  }
+
+  @media (max-width: 1399.5px) {
+    &_sectionSub {
+      &_ourSub {
+        font-size: 35px;
+      }
+    }
+    &_ourCard {
+      &_ourCol-5 {
+        &_ourBox {
+          &_blogContent {
+            &_blogTitle {
+              font-size: 18px;
+            }
+            &_blogP {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1199.5px) and (min-width: 991.5px) {
+    &_ourCard {
+      &_ourCol-5 {
+        &_ourBox {
+          .flexs {
+            flex-direction: column;
+          }
+          &_blogText {
+            width: 100%;
+          }
+          &_blogContent {
+            &_blogList {
+              align-items: center;
+              &_listDate {
+                font-size: 14px;
+              }
+            }
+          }
+          &_blogImg {
+            margin-bottom: 25px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 991.5px) {
+    &_sectionSub {
+      &_ourSub {
+        font-size: 30px;
+      }
+      &_shape {
+        display: none;
+      }
+    }
+    &_ourCard {
+      flex-direction: column;
+      &_ourCol-5 {
+        width: 100%;
+        &_shape25 {
+          display: none;
+        }
+      }
+    }
+  }
+  @media (max-width: 768.5px) {
+    &_sectionSub {
+      &_ourSub {
+        font-size: 24px;
+      }
+    }
+  }
+  @media (max-width: 768.5px) {
+    &_ourCard {
+      &_ourCol-5 {
+        &_ourBox {
+          .flexs {
+            flex-direction: column;
+          }
+          &_blogText{
+            width: 100%;
+            &_blogP{
+              font-size: 14px;
+            }
+          }
+        }
       }
     }
   }
