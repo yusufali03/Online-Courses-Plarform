@@ -301,12 +301,16 @@
     &_card {
       width: 100%;
       &_title {
+        margin-top: 0;
         &_bigGradien {
           font-size: 40px;
           br {
             display: none;
           }
         }
+      }
+      &_animation {
+        display: none;
       }
     }
     &_box {

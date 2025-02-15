@@ -21,7 +21,6 @@
 
           img {
             border-radius: 50%;
-
           }
         }
 
@@ -161,7 +160,7 @@
           left: 0;
           width: 0;
           height: 100%;
-          content: '';
+          content: "";
           z-index: -1;
 
           position: absolute;
@@ -182,17 +181,133 @@
     }
   }
   &_bottom {
-    &_copy{
+    &_copy {
       border-top: 1px solid #878787;
       background-color: var(--blackColor);
       padding-top: 17px;
       //padding-bottom: 17px;
     }
-    &_bText{
+    &_bText {
       text-align: center;
       color: #878787;
       font-size: 14px;
       font-weight: 400;
+    }
+  }
+  @media (max-width: 1399.5px) {
+    &_rows {
+      &_col-3 {
+        &_infoFoot {
+          &_servisFoot {
+            font-size: 22px;
+          }
+        }
+        &_contacts {
+          &_address {
+            &_footContent {
+              &_add {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+        .defaultSubmit {
+          font-size: 16px;
+          padding: 11px 20px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1199.5px) and (min-width: 991.5px) {
+    &_rows {
+      &_col-3 {
+        &_infoFoot {
+          &_follow {
+            font-size: 20px;
+            margin-top: 22px;
+            margin-bottom: 15px;
+          }
+          &_servisFoot {
+            font-size: 20px;
+            &_alls {
+              &_textFoot {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        &_contacts {
+          &_address {
+            &_footContent {
+              &_add {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 991.5px) {
+    &_rows {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      &_col-3 {
+        width: 100%;
+        margin-bottom: 25px;
+        &_infoFoot {
+          &_servisFoot {
+            margin-bottom: 20px;
+            &_alls {
+              margin-bottom: 10px;
+            }
+          }
+        }
+        &_contacts {
+          &_address {
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768.5px) and (min-width: 575.5px) {
+    padding-top: 70px;
+    &_rows {
+      grid-template-areas: "a a" "b c" "d d";
+      &_col-3 {
+        &:nth-child(1) {
+          grid-area: a;
+        }
+        &:nth-child(2) {
+          margin-left: -40px;
+          grid-area: b;
+        }
+        &:nth-child(3) {
+          grid-area: c;
+        }
+        &:nth-child(4) {
+          grid-area: d;
+        }
+        &_infoFoot {
+          &_servisFoot {
+            &_alls {
+              margin-bottom: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 575.5px) {
+    padding-top: 70px;
+    &_rows {
+      grid-template-columns: 1fr;
+      &_col-3 {
+        &:nth-child(2) {
+          margin-left: -40px;
+        }
+      }
     }
   }
 }

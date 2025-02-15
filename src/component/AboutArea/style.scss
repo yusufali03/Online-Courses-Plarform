@@ -295,6 +295,13 @@
           &_col-6 {
             &_ull {
               font-size: 16px;
+              padding-left: 48px;
+              &_lii {
+                width: 30px;
+                height: 30px;
+                font-size: 17px;
+                line-height: 30px;
+              }
             }
           }
         }
@@ -327,7 +334,7 @@
             }
           }
         }
-        
+
         &_learning {
           flex-direction: column;
           align-items: baseline;
