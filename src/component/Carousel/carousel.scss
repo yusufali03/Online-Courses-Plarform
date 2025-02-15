@@ -1,5 +1,4 @@
 .carousel {
-
   &_tesText {
     width: 90%;
     margin-bottom: 15px;
@@ -8,15 +7,15 @@
     margin-bottom: 15px;
     color: var(--bodyColor);
   }
-  &_tesName{
+  &_tesName {
     margin-bottom: 8px;
     color: var(--blackColor);
     font: {
       size: 20px;
       weight: 500;
-    };
+    }
   }
-  &_tesRole{
+  &_tesRole {
     font-size: 16px;
     font-weight: 500;
     color: var(--bodyColor);
@@ -48,7 +47,6 @@
       cursor: pointer;
     }
 
-
     &_custom-prev {
       right: 200px;
     }
@@ -64,6 +62,51 @@
       border-color: var(--mainColor);
       background-color: var(--mainColor);
       transition: all 0.3s ease;
+    }
+  }
+  @media (max-width: 1399.5px) and (min-width: 991.5px) {
+    &_owl {
+      &_custom-prev {
+        right: 90px;
+        width: 50px;
+        height: 50px;
+        svg {
+          width: 20px;
+        }
+      }
+      &_custom-next {
+        right: 20px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  @media (max-width: 768.5px) {
+    &_owl {
+      &_custom-prev {
+        right: 150px;
+        width: 40px;
+        height: 40px;
+      }
+      &_custom-next {
+        right: 80px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  @media (max-width: 550.5px) {
+    &_owl {
+      &_custom-prev {
+        right: 70px;
+        width: 40px;
+        height: 40px;
+      }
+      &_custom-next {
+        right: 10px;
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 }

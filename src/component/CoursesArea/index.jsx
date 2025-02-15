@@ -29,7 +29,7 @@ const CoursesArea = () => {
             <div className="container">
                 <div className="coursesArea_headings">
                     <div className="coursesArea_headings_subTitle" data-aos="fade-up">Most Featured Courses</div>
-                    <div className="coursesArea_headings_boxs">
+                    <div className="coursesArea_headings_boxs main-boxs">
                         <div className="coursesArea_headings_boxs_col5" data-aos="fade-up">
                             <h2 className="coursesArea_headings_boxs_col5_subb">Choose Our Top <span
                                 className="coursesArea_headings_boxs_col5_subb_spans">

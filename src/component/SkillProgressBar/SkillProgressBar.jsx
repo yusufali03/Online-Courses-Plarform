@@ -8,7 +8,7 @@ const SkillProgressBar = ({ label =label, percentage = percentage, dataAosRight 
             <div className="skill-header">
                 <h3 className="skillTitle">{label}</h3>
 
-                <span> <CountUp start={0} end={percentage} duration={10} />%</span>
+                <span className="skillTitle"> <CountUp start={0} end={percentage} duration={10} />%</span>
             </div>
             <div className="progress-bar">
                 <div

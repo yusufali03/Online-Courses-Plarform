@@ -28,7 +28,7 @@ const ChooseUs = ({ dataAos,dataAosRight }) => {
     return (
         <div className="chooseUs">
             <div className="container">
-                <div className="flexs" data-aos={dataAos}>
+                <div className="flexs main-flex__choose" data-aos={dataAos}>
                     <div className="chooseUs_colChoose">
                         <div className="globalTitle">Why Choose Us</div>
                         <h2 className="chooseUs_colChoose_titleChoose">
