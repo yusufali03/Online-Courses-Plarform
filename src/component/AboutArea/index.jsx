@@ -21,7 +21,7 @@ const AboutArea = () => {
     return (
         <div className="aboutArea">
             <div className="container">
-                <div className="flexs">
+                <div className="flexs main-flex__about-area">
                     <div className="aboutArea_photo" data-aos="fade-up">
                         <div className="aboutArea_photo_image">
                             <img src={abouts} alt=""/>

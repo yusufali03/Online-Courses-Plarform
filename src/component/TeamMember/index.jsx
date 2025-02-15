@@ -31,7 +31,7 @@ const TeamMember = () => {
                         className="teamMember_boxT_subTitleTe_meet_Timg" src={line} alt=""/></span></h2>
                 </div>
                 <div className="teamMember_col">
-                    <div className="teamMember_col_col3" style={{marginTop: "30px"}} data-aos="fade-up">
+                    <div className="teamMember_col_col3" data-aos="fade-up">
                         <div className="teamMember_col_col3_Images" >
                             <a href="#">
                                 <img className="teamMember_col_col3_Images_one" src={team1} alt=""/>
@@ -73,7 +73,7 @@ const TeamMember = () => {
                             <p className="mt_position">Instructor</p>
                         </div>
                     </div>
-                    <div className="teamMember_col_col3" data-aos="fade-up" style={{marginTop: "30px"}}>
+                    <div className="teamMember_col_col3" data-aos="fade-up">
                         <div className="teamMember_col_col3_Images">
                             <a href="#">
                                 <img className="teamMember_col_col3_Images_one" src={team3} alt=""/>

@@ -19,7 +19,11 @@
       margin-top: 12px;
 
       &_teamColor {
-        background: linear-gradient(90deg, #0000FF, #00FF00); // Gradient ranglar
+        background: linear-gradient(
+          90deg,
+          #0000ff,
+          #00ff00
+        ); // Gradient ranglar
         -webkit-background-clip: text; // Matnga cheklash
         -webkit-text-fill-color: transparent; // Matnni shaffof qilish
         position: relative; // Chiziqni joylashtirish uchun
@@ -35,11 +39,12 @@
   }
 
   &_teamRow {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
 
     &_teamCol-3 {
-      width: 23.5%;
+      width: 100%;
       &_singleTeam {
         margin-bottom: 25px;
 
@@ -79,42 +84,39 @@
               justify-content: center;
               align-items: center;
               background-color: var(--mainColor);
-
             }
-              .socialListIcon {
-                top: 0;
-                display: grid;
-                opacity: 0;
-                right: 20px;
-                visibility: visible;
-                position: absolute;
-                transition: var(--transition);
+            .socialListIcon {
+              top: 0;
+              display: grid;
+              opacity: 0;
+              right: 20px;
+              visibility: visible;
+              position: absolute;
+              transition: var(--transition);
+            }
+
+            .teamIconLink {
+              width: 60px;
+              height: 58px;
+              font-size: 24px;
+              line-height: 57px;
+              text-align: center;
+              display: inline-block;
+              color: var(--whiteColor);
+              background-color: var(--mainColor);
+              transition: var(--transition);
+              &:nth-child(2) {
+                height: 40px;
+                line-height: 40px;
               }
 
-              .teamIconLink {
-                width: 60px;
-                height: 58px;
-                font-size: 24px;
-                line-height: 57px;
-                text-align: center;
-                display: inline-block;
-                color: var(--whiteColor);
-                background-color: var(--mainColor);
-                transition: var(--transition);
-                &:nth-child(2) {
-                  height: 40px;
-                  line-height: 40px;
-                }
-
-                &:last-child {
-                  border-radius: 0px 0px 4px 4px;
-                }
+              &:last-child {
+                border-radius: 0px 0px 4px 4px;
               }
-
-
+            }
 
             &:hover {
-              .shareIconTeam{
+              .shareIconTeam {
                 opacity: 0;
                 visibility: hidden;
                 transition: var(--transition);
@@ -135,6 +137,74 @@
           }
         }
       }
+    }
+  }
+
+  @media (max-width: 1399.5px) {
+    &_subTeam {
+      &_teamTitle {
+        font-size: 35px;
+      }
+    }
+  }
+  @media (max-width: 1299.5px) and (min-width: 991.5px) {
+    &_teamRow {
+      &_teamCol-3 {
+        &_singleTeam {
+          &_teamContent {
+            padding: 30px 20px 125px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 991.5px) {
+    &_subTeam {
+      &_teamTitle {
+        font-size: 30px;
+      }
+    }
+    &_teamRow {
+      grid-template-columns: 1fr 1fr;
+      &_teamCol-3 {
+        &_singleTeam {
+          &_teamContent {
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768.5px) {
+    &_subTeam {
+      .globalTitle {
+        font-size: 16px;
+      }
+      &_teamTitle {
+        font-size: 24px;
+      }
+    }
+    &_teamRow {
+      &_teamCol-3 {
+        &_singleTeam {
+          margin-bottom: 0;
+          &_teamImages {
+            &_teamSocial {
+              .shareIconTeam {
+                width: 50px;
+                height: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 575.5px) {
+    &_teamRow{
+      grid-template-columns: 1fr;
     }
   }
 }

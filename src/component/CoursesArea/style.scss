@@ -1,10 +1,10 @@
-.coursesArea{
+.coursesArea {
   margin-top: 80px;
   background: #fff7fc;
   padding-bottom: 40px;
-  &_headings{
-    &_subTitle{
-      background: linear-gradient(90deg, #0000FF, #00FF00); // Gradient ranglar
+  &_headings {
+    &_subTitle {
+      background: linear-gradient(90deg, #0000ff, #00ff00); // Gradient ranglar
       -webkit-background-clip: text; // Matnga cheklash
       -webkit-text-fill-color: transparent; // Matnni shaffof qilish
       position: relative; // Chiziqni joylashtirish uchun
@@ -15,26 +15,30 @@
       font-size: 18px;
       font-weight: 600;
     }
-    &_boxs{
+    &_boxs {
       display: flex;
       justify-content: space-between;
       align-items: center;
 
       //align-content: center;
-      &_col5{
+      &_col5 {
         width: 48%;
-        &_subb{
+        &_subb {
           line-height: 1.3;
           color: var(--blackColor);
           font-size: 44px;
           font-weight: 700;
           margin-bottom: 40px;
-          &_spans{
-            background: linear-gradient(90deg, #0000FF, #00FF00); // Gradient ranglar
+          &_spans {
+            background: linear-gradient(
+              90deg,
+              #0000ff,
+              #00ff00
+            ); // Gradient ranglar
             -webkit-background-clip: text; // Matnga cheklash
             -webkit-text-fill-color: transparent; // Matnni shaffof qilish
             position: relative; // Chiziqni joylashtirish uchun
-            &_liness{
+            &_liness {
               width: 100%;
               margin: 0 auto;
               position: absolute;
@@ -43,10 +47,10 @@
             }
           }
         }
-        &_but{
+        &_but {
           display: flex;
           justify-content: end;
-          &_buttons{
+          &_buttons {
             z-index: 1;
             position: relative;
             padding: 17px 30px;
@@ -62,7 +66,7 @@
             font-size: 18px;
             font-weight: 600;
             cursor: pointer;
-            &::before{
+            &::before {
               top: 0;
               left: 0;
               width: 0;
@@ -81,7 +85,7 @@
             }
           }
         }
-        &_coursInfo{
+        &_coursInfo {
           padding: 30px;
           border-radius: 8px;
           margin-top: 30px;
@@ -92,7 +96,7 @@
           background-color: var(--whiteColor);
           border-bottom: 3px solid var(--whiteColor);
           box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.03);
-          &_CoursImg{
+          &_CoursImg {
             width: 25%;
             flex: 0 0 auto;
             display: block;
@@ -100,19 +104,19 @@
             border-radius: 4px;
             margin-right: 26px;
 
-            &_pho{
+            &_pho {
               width: 151px;
               height: 160px;
               border-radius: 4px;
               transition: var(--transition);
-              &:hover{
+              &:hover {
                 transform: scale(1.08);
               }
             }
           }
-          &_cont{
+          &_cont {
             width: 70%;
-            &_free{
+            &_free {
               display: flex;
               justify-content: space-between;
               //color: var(--mainColor);
@@ -120,11 +124,11 @@
               font-size: 18px;
               font-weight: 700;
               margin-bottom: 20px;
-              .star{
+              .star {
                 color: rgb(255, 188, 31);
               }
             }
-            &_basic{
+            &_basic {
               max-width: 390px;
               line-height: 1.3;
               margin-bottom: 25px;
@@ -136,9 +140,8 @@
                 color: var(--mainColor);
               }
             }
-            &_lesson{
-
-              &_dark{
+            &_lesson {
+              &_dark {
                 display: flex;
                 gap: 5px;
                 color: var(--bodyColor);
@@ -153,6 +156,134 @@
             transform: translateY(-7px);
             border-color: var(--mainColor);
             color: #1cca81;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1399.5px) {
+    &_headings {
+      &_boxs {
+        &_col5 {
+          &_subb {
+            font-size: 35px;
+          }
+          &_coursInfo {
+            &_cont {
+              &_basic {
+                font-size: 22px;
+              }
+            }
+            &_CoursImg {
+              width: 32%;
+            }
+          }
+          &_but {
+            &_buttons {
+              font-size: 16px;
+              padding: 11px 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1199.5px) and (min-width: 991.5px) {
+    &_headings {
+      &_boxs {
+        &_col5 {
+          &_coursInfo {
+            padding: 25px;
+            &_cont {
+              &_basic {
+                font-size: 18px;
+              }
+              &_lesson {
+                &_dark {
+                  font-size: 14px;
+                }
+              }
+            }
+            &_CoursImg {
+              margin-right: 16px;
+              width: 40%;
+            }
+            &_cont {
+              &_free {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 991.5px) {
+    &_headings {
+      &_boxs {
+        flex-direction: column;
+        &.main-boxs {
+          flex-direction: row;
+        }
+        &_col5 {
+          width: 100%;
+          &_subb {
+            margin-bottom: 0;
+            font-size: 35px;
+          }
+          &_coursInfo {
+            align-items: center;
+            &_cont {
+              width: 100%;
+              // display: flex;
+              // flex-direction: column;
+              // justify-content: space-between;
+              &_basic {
+                font-size: 20px;
+                max-width: 100%;
+              }
+            }
+            &_CoursImg {
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768.5px) {
+    &_headings {
+      &_boxs {
+        &_col5 {
+          &_subTitle {
+            font-size: 16px;
+          }
+          &_subb {
+            font-size: 24px;
+          }
+          &_coursInfo {
+            padding: 25px;
+            &_cont {
+              &_basic {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 575.5px) {
+    &_headings {
+      &_boxs {
+        &.main-boxs {
+          flex-direction: column;
+          gap: 20px;
+        }
+        &_col5 {
+          &_coursInfo {
+            flex-direction: column;
           }
         }
       }

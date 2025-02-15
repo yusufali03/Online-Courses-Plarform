@@ -16,7 +16,11 @@
       margin-bottom: 40px;
 
       &_colorChoose {
-        background: linear-gradient(90deg, #0000FF, #00FF00); // Gradient ranglar
+        background: linear-gradient(
+          90deg,
+          #0000ff,
+          #00ff00
+        ); // Gradient ranglar
         -webkit-background-clip: text; // Matnga cheklash
         -webkit-text-fill-color: transparent; // Matnni shaffof qilish
         position: relative; // Chiziqni joylashtirish uchun
@@ -31,7 +35,6 @@
     }
 
     &_backgroundChoose {
-
       text-align: center;
 
       .grils {
@@ -73,13 +76,78 @@
         bottom: 8px;
         position: absolute;
       }
-
     }
   }
-  &_shape3{
+  &_shape3 {
     top: 86px;
     left: 35px;
     z-index: -1;
     position: absolute;
+  }
+
+  @media (max-width: 1399.5px) {
+    .chooseUs {
+      &_colChoose {
+        width: 45%;
+        &_titleChoose {
+          font-size: 35px;
+        }
+        &_backgroundChoose {
+          &_bgshape {
+            img {
+              max-width: 110%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991.5px) {
+    .chooseUs {
+      &_colChoose {
+        width: 100%;
+        &_titleChoose {
+          font-size: 30px;
+          br {
+            display: none;
+          }
+        }
+        &:first-child {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 760.5px) {
+    .chooseUs {
+      &_colChoose {
+        width: 100%;
+        &_titleChoose {
+          font-size: 24px;
+          margin: 10px 0 25px;
+        }
+        &_backgroundChoose {
+          &_bgshape {
+            img {
+              max-width: 100%;
+            }
+          }
+          .grils {
+            max-width: 100%;
+          }
+        }
+      }
+      &_shape3 {
+        top: 46px;
+      }
+    }
+  }
+}
+
+@media (max-width: 990.5px) {
+  .main-flex__choose {
+    flex-direction: column;
   }
 }

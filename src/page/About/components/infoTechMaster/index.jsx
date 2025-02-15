@@ -64,7 +64,7 @@ const InfoTechMaster = ({ dataAos }) => {
                                             <img src={awardLogo} alt=""/>
                                         </div>
                                         <h3>25+</h3>
-                                        <p style={{fontSize: "16px", color: "#555"}}>Winning Awards</p>
+                                        <p style={{color: "#555"}}>Winning Awards</p>
                                     </div>
                                 </div>
                             </div>
