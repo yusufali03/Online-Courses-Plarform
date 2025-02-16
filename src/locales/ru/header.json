@@ -1,0 +1,21 @@
+{
+  "home": "Главная",
+  "pages": "Страницы",
+  "about_us": "О нас",
+  "our_team": "Наша команда",
+  "team_details": "Детали команды",
+  "privacy_policy": "Политика конфиденциальности",
+  "terms_conditions": "Условия и положения",
+  "courses": "Курсы",
+  "courses_list": "Список курсов",
+  "courses_grid": "Сетка курсов",
+  "courses_details": "Детали курса",
+  "courses_sidebar": "Боковая панель курсов",
+  "blog": "Блог",
+  "blog_standard": "Стандартный блог",
+  "blog_details": "Детали блога",
+  "blog_with_sidebar": "Блог с боковой панелью",
+  "blog_without_sidebar": "Блог без боковой панели",
+  "contact": "Контакты",
+  "sign_in": "Войти"
+}

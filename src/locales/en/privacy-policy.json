@@ -1,0 +1,44 @@
+{
+  "pageTitle": "Privacy Policy",
+  "sections": [
+    {
+      "title": "Our website",
+      "content": "Our website address is: https://Edugen.com/"
+    },
+    {
+      "title": "Intellectual property",
+      "content": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget euismod erat, sit amet vulputate enim. Etiam enim tellus, maximus vel augue sed, pharetra hendrerit orci. Vivamus sed massa in nibh imperdiet mattis quis sed augue. Pellentesque erat metus, vestibulum nec nisl.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget euismod erat, sit amet vulputate enim. Etiam enim tellus."
+      ]
+    },
+    {
+      "title": "Edugen Overview",
+      "content": "We may collect personal identification information from Users... Users can always refuse to supply personally identification information, except that it may prevent them from engaging in certain Site related activities."
+    },
+    {
+      "title": "General permission to use and access and use limitations",
+      "content": [
+        "This site is provided by Edugen. Edugen collects information in several ways from different parts of this site.",
+        "Complimentary ground shipping within 1 to 7 business days.",
+        "In-store collection available within 1 to 7 business days.",
+        "Next-day and Express delivery options also available.",
+        "Purchases are delivered in an orange box tied with a Bolduc ribbon, with the exception of certain items.",
+        "See the delivery FAQs for details on shipping methods, costs and delivery times."
+      ]
+    },
+    {
+      "title": "Linking to this Site",
+      "content": "Items returned within 14 days of their original shipment date in same as new condition will be eligible for a full refund or store credit. Refunds will be charged back to the form of payment used for purchase."
+    },
+    {
+      "title": "Confidential information",
+      "content": [
+        "Edugen accepts the following payment methods:",
+        "Credit Card: Visa, MasterCard, Discover, American Express, JCB, Visa Electron. The total will be charged to your card when the order is shipped.",
+        "Edugen features a Fast Checkout option, allowing you to securely save your credit card details.",
+        "PayPal: Shop easily online without having to enter your credit card details on the website. Your account will be charged once the order is completed."
+      ]
+    }
+  ]
+}

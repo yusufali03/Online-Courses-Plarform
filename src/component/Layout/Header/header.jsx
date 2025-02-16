@@ -1,101 +1,144 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../../assests/images/Logo.jpg";
-import { CDropdown, CDropdownItem, CDropdownMenu, CDropdownToggle } from '@coreui/react'
-import {Link} from "react-router-dom";
+import {
+  CDropdown,
+  CDropdownItem,
+  CDropdownMenu,
+  CDropdownToggle,
+} from "@coreui/react";
+import { Link } from "react-router-dom";
 import { RxEnter } from "react-icons/rx";
 import { FaCaretDown } from "react-icons/fa";
-import {useLocation} from "react-router";
+import { useLocation } from "react-router";
+import LanguageSwitcher from "../../LanguageSwitcher/LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [dropdownOpen, setDropdownOpen] = useState(null);
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [isInitial, setIsInitial] = useState(true);
-    const location = useLocation();
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isInitial, setIsInitial] = useState(true);
+  const location = useLocation();
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const { t } = useTranslation("header");
+
+  const toggleDropdown = (index) => {
+    setDropdownOpen(dropdownOpen === index ? null : index);
+  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
+        setIsInitial(false);
+      } else {
+        setIsScrolled(false);
+      }
     };
 
-    const toggleDropdown = (index) => {
-        setDropdownOpen(dropdownOpen === index ? null : index);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 100) {
-                setIsScrolled(true);
-                setIsInitial(false);
-            } else {
-                setIsScrolled(false);
-            }
-        };
+  }, []);
+  const isHomePage = location.pathname === "/"; // Faqat Home sahifasi uchun tekshiruv
 
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-    const isHomePage = location.pathname === "/"; // Faqat Home sahifasi uchun tekshiruv
+  return (
+    <header
+      className={`header ${menuOpen ? "menu-opened" : ""} ${
+        isScrolled ? "scrolled" : ""
+      } ${isInitial ? "" : "hidden"}`}
+    >
+      <div className="container">
+        <a href="/" className="logo">
+          <img className="logo_picture" src={Logo} alt="logo" />
+        </a>
+        <nav className={`nav ${menuOpen ? "open" : ""}`}>
+          <ul>
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                {t("home")}
+              </Link>
+            </li>
+            <CDropdown className="nav-item">
+              <CDropdownToggle className="nav-link">
+                {t("pages")}
+                <FaCaretDown />
+              </CDropdownToggle>
+              <CDropdownMenu className="dropdown-menu">
+                <CDropdownItem href="/about">{t("about_us")}</CDropdownItem>
+                <CDropdownItem href="/our-team">{t("our_team")}</CDropdownItem>
+                <CDropdownItem href="/team-details">
+                  {t("team_details")}
+                </CDropdownItem>
+                <CDropdownItem href="/privacy-policy">
+                  {t("privacy_policy")}
+                </CDropdownItem>
+                <CDropdownItem href="/terms-conditions">
+                  {t("terms_conditions")}
+                </CDropdownItem>
+              </CDropdownMenu>
+            </CDropdown>
+            <CDropdown className="nav-item">
+              <CDropdownToggle className="nav-link">
+                {t("courses")}
+                <FaCaretDown />
+              </CDropdownToggle>
+              <CDropdownMenu className="dropdown-menu">
+                <CDropdownItem href="/courses-list/grid">
+                  {t("courses_list")}
+                </CDropdownItem>
+                <CDropdownItem href="#">{t("courses_grid")}</CDropdownItem>
+                <CDropdownItem href="#">{t("courses_details")}</CDropdownItem>
+                <CDropdownItem href="#">{t("courses_sidebar")}</CDropdownItem>
+              </CDropdownMenu>
+            </CDropdown>
+            <CDropdown className="nav-item">
+              <CDropdownToggle className="nav-link">
+                {t("blog")}
+                <FaCaretDown />
+              </CDropdownToggle>
+              <CDropdownMenu className="dropdown-menu">
+                <CDropdownItem href="blog-standart">
+                  {t("blog_standard")}
+                </CDropdownItem>
+                <CDropdownItem href="blog-details">
+                  {t("blog_details")}
+                </CDropdownItem>
+                <CDropdownItem href="blog-with-sidebar">
+                  {t("blog_with_sidebar")}
+                </CDropdownItem>
+                <CDropdownItem href="blog-without-sidebar">
+                  {t("blog_without_sidebar")}
+                </CDropdownItem>
+              </CDropdownMenu>
+            </CDropdown>
+            <LanguageSwitcher />
 
-    return (
-        <header  className={`header ${menuOpen ? "menu-opened" : ""} ${isScrolled ? "scrolled" : ""} ${isInitial ? "" : "hidden"}`}
-        >
-            <div className="container">
-                <a href="/" className="logo">
-                    <img className="logo_picture"  src={Logo} alt="logo"/>
-                </a>
-                <nav className={`nav ${menuOpen ? "open" : ""}`}>
-                    <ul>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/">Home </Link>
-
-                        </li>
-                        <CDropdown className="nav-item">
-                            <CDropdownToggle className="nav-link" >Pages <FaCaretDown /></CDropdownToggle>
-                            <CDropdownMenu className="dropdown-menu">
-                                <CDropdownItem href="/about">About Us</CDropdownItem>
-                                <CDropdownItem href="/our-team">Our Team</CDropdownItem>
-                                <CDropdownItem href="/team-details">Our Team Details</CDropdownItem>
-                                <CDropdownItem href="/privacy-policy">Privacy Police</CDropdownItem>
-                                <CDropdownItem href="/terms-conditions">Terms & Conditions</CDropdownItem>
-                            </CDropdownMenu>
-                        </CDropdown>
-                        <CDropdown className="nav-item">
-                            <CDropdownToggle className="nav-link" >Courses <FaCaretDown /></CDropdownToggle>
-                            <CDropdownMenu className="dropdown-menu">
-                                <CDropdownItem href="/courses-list/grid">Courses List</CDropdownItem>
-                                <CDropdownItem href="#">Courses Grid</CDropdownItem>
-                                <CDropdownItem href="#">Courses Details</CDropdownItem>
-                                <CDropdownItem href="#">Courses Sidebar</CDropdownItem>
-                            </CDropdownMenu>
-                        </CDropdown>
-                        <CDropdown className="nav-item">
-                            <CDropdownToggle className="nav-link" >Blog <FaCaretDown /></CDropdownToggle>
-                            <CDropdownMenu className="dropdown-menu">
-                                <CDropdownItem href="blog-standart">Blog Standart</CDropdownItem>
-                                <CDropdownItem href="blog-details">Blog Details</CDropdownItem>
-                                <CDropdownItem href="blog-with-sidebar">Blog With Sidebar</CDropdownItem>
-                                <CDropdownItem href="blog-without-sidebar">Blog Without Sidebar</CDropdownItem>
-                            </CDropdownMenu>
-                        </CDropdown>
-
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/contact">Contact</Link>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/sign-in"> <RxEnter />
-                                Sign In</a>
-                        </li>
-
-                    </ul>
-                </nav>
-                <div className="burger-menu" onClick={toggleMenu}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </header>
-    );
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">
+                {t("contact")}
+              </Link>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/sign-in">
+                {" "}
+                <RxEnter />
+                {t("sign_in")}
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div className="burger-menu" onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+  );
 };
 
 export default Header;
