@@ -8,6 +8,7 @@ import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { IoVolumeMuteOutline, IoVideocamOutline } from "react-icons/io5";
 import { MdOutlinePhone } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 const teamItems = [
   {
@@ -55,7 +56,6 @@ const teamItems = [
 ];
 
 const OurTeam = () => {
-  const ourTeam = "Our Team";
 
   React.useEffect(() => {
     AOS.init({
@@ -66,21 +66,22 @@ const OurTeam = () => {
       once: true, // Animatsiya faqat bir marta ishlashi uchun
     });
   }, []);
+  const { t } = useTranslation("our_team");
+
   return (
     <div className="wrapper">
-      <PageTitleArea titles={ourTeam} />
+      <PageTitleArea titles={t("pageTitle")} />
       <section className="team-area container">
         <div className="info">
           <SectionTitle
-            subtitle="Team Members"
-            text="Our Expert"
+            subtitle={t("subtitle")}
+            text={t("title")} 
             text_primary="Lecturer"
             shape={true}
           />
           
           <p>
-            Lorem Ipsum&nbsp;is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has
+          {t("description")}
           </p>
           <button
             className="enroll"
@@ -95,7 +96,7 @@ const OurTeam = () => {
               src="https://demo.themeies.com/edugen-html/assets/images/icon/left-small.svg"
               alt=""
             />
-            <span>Join Our Team</span>
+            <span>{t("buttonText")}</span>
           </button>
         </div>
         {teamItems.map((member, index) => (
@@ -132,9 +133,9 @@ const OurTeam = () => {
       <section className="learning-area container">
         <div className="title">
           <SectionTitle
-            subtitle="Live Classes"
-            text="It’s Easy To Start"
-            text_primary="Learning"
+            subtitle={t("learningArea.subtitle")}
+            text={t("learningArea.title")}
+            text_primary={t("learningArea.titlePrimary")}
             shape={true}
 
           />
@@ -155,7 +156,7 @@ const OurTeam = () => {
         <div className="cast" data-aos="fade-up">
           <div className="live-info">
             <span className="red_circel"></span>
-            <span className="live">LIVE</span>
+            <span className="live">{t("learningArea.liveStatus")}</span>
             <span className="timer">01:30:08</span>
           </div>
           <img

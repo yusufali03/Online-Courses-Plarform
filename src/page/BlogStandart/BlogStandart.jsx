@@ -5,6 +5,7 @@ import AOS from "aos";
 import BlogCard from "../../component/BlogCard/BlogCard";
 import { Link } from "react-router-dom";
 import BlogSidebar from "../../component/BlogSidebar/BlogSidebar";
+import { useTranslation } from "react-i18next";
 
 const BlogStandart = () => {
   const path = window.location.pathname;
@@ -19,10 +20,12 @@ const BlogStandart = () => {
       once: true, // Animatsiya faqat bir marta ishlashi uchun
     });
   }, []);
+  const { t: tHeader } = useTranslation("header");
+
 
   return (
     <div className="wrapper">
-      <PageTitleArea titles="Blog" />
+      <PageTitleArea titles={tHeader("blog_details")} />
       <div className={`container flex ${slug}`}>
         <div>
           <div className="blog-cards">

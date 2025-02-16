@@ -7,6 +7,7 @@ import page4 from "../../assests/images/pages4.svg";
 import page5 from "../../assests/images/pages5.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 const PageTitleArea = ({titles}) => {
 
   useEffect(() => {
@@ -18,6 +19,8 @@ const PageTitleArea = ({titles}) => {
       once: true,     // Animatsiya faqat bir marta ishlashi uchun
     });
   }, []);
+    const { t } = useTranslation("header");
+  
   return (
       <>
         <div className="pageTitleArea">
@@ -26,7 +29,7 @@ const PageTitleArea = ({titles}) => {
               <div className="pageTitleArea_titleHead_aboutContent">
                 <h2 className="pageTitleArea_titleHead_aboutContent_aboutus" data-aos="fade-up">{titles}</h2>
                 <div className="pageTitleArea_titleHead_aboutContent_aboutList" data-aos="fade-up">
-                  <div className="pageTitleArea_titleHead_aboutContent_aboutList_textAbout">Home</div>
+                  <div className="pageTitleArea_titleHead_aboutContent_aboutList_textAbout">{t('home')}</div>
                 </div>
                 <div className="pageTitleArea_titleHead_aboutContent_colChange" data-aos="fade-up">{titles}</div>
               </div>

@@ -1,0 +1,41 @@
+{
+  "pageTitle": "About Us",
+
+  "infoTechMaster": {
+    "aboutTitle": "About Tech Master",
+    "mainHeading": "Discover Our Vision for Digital",
+    "mainHeadingHighlight": "Education",
+    "awards": [
+      "Digital skill empowerment",
+      "Expert-led courses",
+      "Career-focused education",
+      "Supportive learning",
+      "Life-changing digital education"
+    ],
+    "awardCard": {
+      "count": "25+",
+      "text": "Winning Awards"
+    },
+    "videoSection": {
+      "title": "All Classes Video Provided",
+      "description": "There are many variations of passages of but the majority have suffered."
+    }
+  },
+  "chooseUs": {
+    "globalTitle": "Why Choose Us",
+    "mainHeading": "One Platform & Many",
+    "mainHeading2": "For You",
+    "mainHeadingHighlight": "Courses",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown."
+  },
+  "testimonial": {
+    "title": "Testimonials",
+    "subtitle": "Voices of Success: Hear from Our ",
+    "subtitleHighlight": "Students"
+  },
+  "teamMembers": {
+    "title": "Team Members",
+    "subtitle": "Meet Our ",
+    "subtitleHighlight": "Instructors"
+  }
+}

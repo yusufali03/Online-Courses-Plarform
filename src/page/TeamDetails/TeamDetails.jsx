@@ -6,6 +6,7 @@ import SectionTitle from "../../component/SectionTitle/SectionTitle";
 import CourseCard from "../../component/CourseCard/CourseCard";
 import AOS from "aos";
 import CountUp from "react-countup";
+import { useTranslation } from "react-i18next";
 
 const rateCards = [
   {
@@ -74,8 +75,10 @@ const courses = [
   },
 ];
 
+
+
 const TeamDetails = () => {
-  const titles = "Team Details";
+  const { t: tHeader } = useTranslation("header");
 
   React.useEffect(() => {
     AOS.init({
@@ -86,9 +89,10 @@ const TeamDetails = () => {
       once: true, // Animatsiya faqat bir marta ishlashi uchun
     });
   }, []);
+  const { t } = useTranslation("translation");
   return (
     <div className="wrapper">
-      <PageTitleArea titles={titles} />
+      <PageTitleArea titles={tHeader("team_details")} />
       <section className="container">
         <TeamUserInfo />
         <div className="team-right-sidebar">
@@ -135,9 +139,9 @@ const TeamDetails = () => {
           </div>
           <div className="curses-area">
             <SectionTitle
-              subtitle="Courses by Julia B. Corbin"
-              text="Choose Our Top"
-              text_primary="Courses"
+              subtitle={t("coursesSection.subtitle")}
+              text={t("coursesSection.title")}
+              text_primary={t("coursesSection.titlePrimary")}
               shape={true}
             />
             <div className="courses-list">
