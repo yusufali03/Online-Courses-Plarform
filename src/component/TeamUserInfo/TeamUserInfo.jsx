@@ -2,6 +2,7 @@ import React from "react";
 import "./TeamUserInfo.scss";
 
 import AOS from "aos";
+import { useTranslation } from "react-i18next";
 
 const contactItems = [
   {
@@ -64,6 +65,8 @@ const TeamUserInfo = () => {
         once: true, // Animatsiya faqat bir marta ishlashi uchun
       });
     }, []);
+  const { t } = useTranslation("translation");
+
   return (
     <div className="team-left-sidebar" data-aos="fade-up">
       <img
@@ -87,7 +90,7 @@ const TeamUserInfo = () => {
             </li>
           ))}
         </ul>
-        <h4>Follow Me On:</h4>
+        <h4>{t("team-user-info_sidebar.follow-on")}</h4>
         <ul className="socials">
           {socialLinks.map((link) => (
             <li key={link.id}>

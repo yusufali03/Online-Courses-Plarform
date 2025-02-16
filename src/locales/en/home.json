@@ -1,0 +1,108 @@
+{
+  "hero": {
+    "tagline": "Online Education Websayt",
+    "title": "Innovate With \n Digital",
+    "highlight": "Expertise",
+    "description": "Embark on a Journey of Digital Discovery: Expert-Led Courses Designed to Equip",
+    "enroll_now": "Enroll Now",
+    "chat_with_mentor": "Chat with a mentor",
+    "find_mentor": "Find your mentor here"
+  },
+  "aboutArea": {
+    "section_head": "About Tech Master",
+    "title": "Discover Our Vision for \n Digital",
+    "highlight": "Education",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make",
+    "easy_learning": {
+      "title": "Easy Learning",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has"
+    },
+    "features": [
+      "Empowering Education",
+      "Innovative Teaching Methods",
+      "Flexible Learning Options",
+      "Expert-Led Courses"
+    ],
+    "learn_more": "Learn More"
+  },
+  "coursesArea": {
+    "subtitle": "Most Featured Courses",
+    "title": "Choose Our Top",
+    "highlight": "Courses",
+    "explore_button": "Explore All Courses"
+  },
+  "teamMember": {
+    "subtitle": "Team Members ",
+    "title": "Meet Our ",
+    "highlight": "Instructors"
+  },
+  "chooseArea": {
+    "subtitle": "Why Choose Us",
+    "title": "One Platform & Many",
+    "highlight": "Courses",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when",
+    "button": "Enroll Now",
+    "features": [
+      {
+        "title": "Expert-Led Curriculum",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been"
+      },
+      {
+        "title": "Expert-Led Curriculum",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been"
+      },
+      {
+        "title": "Expert-Led Curriculum",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been"
+      }
+    ]
+  },
+  "testimonial": {
+    "subtitle": "Testimonials",
+    "title": "Voices of Success: Hear from Our",
+    "highlight": "Students"
+  },
+  "ourBlog": {
+    "subtitle": "Our Blog",
+    "title": "Read Our Latest ",
+    "highlight": "Blog"
+  },
+  "testimonialsTwo": {
+    "title": "Ready to Elevate Your Skills?",
+    "titleContinuation": "Join Our Courses Today",
+    "description1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "description2": "Lorem Ipsum has been the industry's standard dummy text ever since.",
+    "buttonText": "Enroll Now"
+  },
+  "homeFooter": {
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
+    "followUs": "Follow Us",
+    "servicesTitle": "Services",
+    "services": [
+      "Air Conditions",
+      "Appliance Repair",
+      "Ventilation",
+      "Electrical Work",
+      "Home Maintenance"
+    ],
+    "contactTitle": "Contact",
+    "contact": {
+      "address": {
+        "label": "Address",
+        "value": "1867 Fire Access, USA"
+      },
+      "email": {
+        "label": "Email",
+        "value": "hvacserv@email.com"
+      },
+      "call": {
+        "label": "Call",
+        "value": "+1 234 5678 900"
+      }
+    },
+    "subscribeTitle": "Subscribe Newsletter:",
+    "subscribePlaceholder": "Enter Your Email:",
+    "subscribeButton": "Submit Now",
+    "copyright": "Copyright © TechMaster . All rights reserved."
+  }
+}

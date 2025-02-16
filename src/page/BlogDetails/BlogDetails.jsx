@@ -8,11 +8,16 @@ import { FaCircle } from "react-icons/fa";
 import BlogSidebar from "../../component/BlogSidebar/BlogSidebar";
 import "./BlogDetails.scss";
 import CommentsCard from "../../component/CommentsCard/CommentsCard";
+import { useTranslation } from "react-i18next";
 
 const BlogDetails = () => {
+  const { t } = useTranslation("translation");
+  const { t: tHeader } = useTranslation("header");
+  console.log(t("blog_details"));
+
   return (
     <div className="wrapper">
-      <PageTitleArea titles="Blog" />
+      <PageTitleArea titles={tHeader("blog_details")} />
       <div className="container flex">
         <div>
           <div className="blog-details-info">
@@ -63,7 +68,7 @@ const BlogDetails = () => {
                   around us, the world inside of us, and where we fit within the
                   world.”
                 </h6>
-                <h3>--- Rosalina D. Jackson</h3>
+                <h3 className="dephise">Rosalina D. Jackson</h3>
                 <div class="shape">
                   <img
                     src="https://demo.themeies.com/edugen-html/assets/images/shapes/quote-shape.svg"
@@ -132,13 +137,13 @@ const BlogDetails = () => {
 
               <div className="additionalInfos tags-socials">
                 <div className="additionalInfo tags">
-                  <div className="title">Tags:</div>
+                  <div className="title">{t("blog_details.tags")}</div>
                   <div className="tag">Business</div>
                   <div className="tag">Design</div>
                   <div className="tag">Business</div>
                 </div>
                 <div className="additionalInfo">
-                  <div className="title">Share On:</div>
+                  <div className="title">{t("blog_details.share")}</div>
                   {socialLinks.map((link) => (
                     <a
                       key={link.id}
@@ -160,7 +165,7 @@ const BlogDetails = () => {
                     </a>
                     <div className="post-content">
                       <a href={blog.link} className="read-more">
-                        Prev Post
+                        {t("blog_details.prev")}
                       </a>
                       <h4>
                         <a href={blog.link}>{blog.title}</a>
@@ -172,7 +177,7 @@ const BlogDetails = () => {
                   <div className="recent-posts" key={blog.id}>
                     <div className="post-content">
                       <a href={blog.link} className="read-more">
-                        Next Post
+                      {t("blog_details.next")}
                       </a>
                       <h4>
                         <a href={blog.link}>{blog.title}</a>
@@ -195,16 +200,31 @@ const BlogDetails = () => {
             </div>
           </div>
           <div className="contact-form">
-            <h3>Leave A Reply</h3>
-            <p>Your email address will not be published. Requires fields are marked*</p>
+            <h3>{t("contactForm.title")}</h3>
+            <p>{t("contactForm.description")}</p>
             <form action="#">
               <div className="row">
-                <input type="text" placeholder="Name*"/>
-                <input type="email"placeholder="Email*" />
+                <input
+                  type="text"
+                  placeholder={t("contactForm.namePlaceholder")}
+                />
+                <input
+                  type="email"
+                  placeholder={t("contactForm.emailPlaceholder")}
+                />
               </div>
-                <input type="email"placeholder="Website Address" />
-                <textarea name="" id="" placeholder="Your Message*"></textarea>
-                <button className="enroll">Post Comment</button>
+              <input
+                type="email"
+                placeholder={t("contactForm.websitePlaceholder")}
+              />
+              <textarea
+                name=""
+                id=""
+                placeholder={t("contactForm.messagePlaceholder")}
+              ></textarea>
+              <button className="enroll">
+                {t("contactForm.submitButton")}
+              </button>
             </form>
           </div>
         </div>

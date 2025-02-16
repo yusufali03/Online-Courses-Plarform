@@ -1,4 +1,6 @@
 .items {
+  padding-top: 110px;
+  padding-bottom: 136px;
   .item {
     padding: 30px;
     border-radius: 8px;
@@ -264,5 +266,9 @@
         }
       }
     }
+  }
+
+  &.blog-without-sidebar {
+    display: none;
   }
 }

@@ -10,7 +10,7 @@
       margin-bottom: 12px;
       font-size: 18px;
       font-weight: 600;
-      background: linear-gradient(90deg, #0000FF, #00FF00);
+      background: linear-gradient(90deg, #0000ff, #00ff00);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline-block;
@@ -23,7 +23,11 @@
       font-weight: 700;
 
       &_meet {
-        background: linear-gradient(90deg, #0000FF, #00FF00); // Gradient ranglar
+        background: linear-gradient(
+          90deg,
+          #0000ff,
+          #00ff00
+        ); // Gradient ranglar
         -webkit-background-clip: text; // Matnga cheklash
         -webkit-text-fill-color: transparent; // Matnni shaffof qilish
         position: relative; // Chiziqni joylashtirish uchun
@@ -48,6 +52,10 @@
       flex: 0 0 auto;
       position: relative;
       transition: var(--transition);
+
+      &:nth-child(odd) {
+        margin-top: 30px;
+      }
 
       &_Images {
         position: relative;
@@ -81,15 +89,14 @@
               display: inline-block;
               color: var(--whiteColor);
               background-color: var(--mainColor);
-              &:first-child{
+              &:first-child {
                 border-radius: 4px 4px 0px 0px;
               }
-              &:nth-child(2){
+              &:nth-child(2) {
                 border-radius: 0;
               }
               &:last-child {
                 border-radius: 0px 0px 4px 4px;
-
               }
             }
           }
@@ -123,21 +130,19 @@
             visibility: visible;
             transition: var(--transition);
           }
-
         }
-
       }
 
       .mt {
         margin-top: 35px;
         margin-bottom: 20px;
-        &_mentorName{
+        &_mentorName {
           margin-bottom: 5px;
           font-size: 18px;
           font-weight: 700;
           color: var(--blackColor);
         }
-        &_position{
+        &_position {
           color: var(--bodyColor);
           font-weight: 500;
         }
@@ -145,6 +150,101 @@
       &:hover {
         transform: translateY(-7px);
       }
+    }
+  }
+
+  @media (max-width: 1399.5px) and (min-width: 991.5px) {
+    &_boxT {
+      &_subTitleTe {
+        font-size: 35px;
+      }
+    }
+    &_col {
+      &_col3 {
+        .mt {
+          &_mentorName {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1199.5px) {
+    &_col {
+      &_col3 {
+        &_Images {
+          &_social {
+            &_share {
+              width: 50px;
+              height: 55px;
+              font-size: 22px;
+            }
+
+            &_media {
+              &_network {
+                width: 50px;
+                height: 55px;
+                font-size: 22px;
+                &:last-child {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 991.5px) {
+    &_boxT {
+      &_subTitleTe {
+        font-size: 30px;
+      }
+    }
+    &_col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      &_col3 {
+        padding: 0 12px;
+        margin-top: 0;
+        width: 100%;
+        &:nth-child(odd) {
+          margin-top: 0px;
+        }
+        .mt {
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768.5px) {
+    &_boxT {
+      &_subTeam {
+        font-size: 16px;
+      }
+      &_subTitleTe {
+        font-size: 30px;
+      }
+    }
+    &_col {
+      &_col3 {
+        padding: 0;
+        .mt {
+          margin: 25px 0;
+        }
+      }
+    }
+  }
+  @media (max-width: 575.5px) {
+    &_boxT {
+      &_subTitleTe {
+        font-size: 24px;
+      }
+    }
+
+    &_col {
+      grid-template-columns: 1fr;
     }
   }
 }

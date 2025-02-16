@@ -10,7 +10,6 @@
     &_infoCol6 {
       width: 48%;
 
-
       &_imageOne {
         text-align: right;
       }
@@ -32,7 +31,7 @@
         &_aboutTech {
           font-size: 18px;
           font-weight: 700;
-          background: linear-gradient(90deg, #0000FF, #00FF00);
+          background: linear-gradient(90deg, #0000ff, #00ff00);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           display: inline-block;
@@ -46,7 +45,11 @@
           font-weight: 700;
 
           &_infoLi {
-            background: linear-gradient(90deg, #0000FF, #00FF00); // Gradient ranglar
+            background: linear-gradient(
+              90deg,
+              #0000ff,
+              #00ff00
+            ); // Gradient ranglar
             -webkit-background-clip: text; // Matnga cheklash
             -webkit-text-fill-color: transparent; // Matnni shaffof qilish
             position: relative; // Chiziqni joylashtirish uchun
@@ -101,6 +104,9 @@
               &_logoAward {
                 margin-bottom: 30px;
               }
+              p {
+                font-size: 16px;
+              }
 
               &:hover {
                 transform: translateY(-7px);
@@ -113,8 +119,8 @@
       &_videoInfo {
         display: flex;
         align-items: center;
-        &_videoIcon{
-          &_iconA{
+        &_videoIcon {
+          &_iconA {
             width: 80px;
             height: 80px;
             line-height: 80px;
@@ -132,19 +138,101 @@
             }
           }
         }
-        &_contentVideo{
+        &_contentVideo {
           max-width: 328px;
-          &_videoTitle{
+          &_videoTitle {
             margin-bottom: 9px;
             color: var(--blackColor);
             font-size: 18px;
             font-weight: 600;
           }
-          &_textVideo{
+          &_textVideo {
             color: var(--bodyColor);
             font-size: 18px;
             font-weight: 500;
             line-height: 1.5;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991.5px) {
+    &_infoRow {
+      flex-direction: column;
+      &_infoCol6 {
+        width: 100%;
+        margin-bottom: 25px;
+        &_sectionInfo {
+          margin-bottom: 25px;
+          &_aboutTech {
+            font-size: 18px;
+          }
+          &_techH2 {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768.5px) {
+    &_infoRow {
+      &_infoCol6 {
+        &_sectionInfo {
+          &_aboutTech {
+            font-size: 16px;
+          }
+          &_techH2 {
+            font-size: 24px;
+          }
+        }
+        &_award {
+          margin-top: 25px;
+          margin-bottom: 30px;
+          &_awardSkill {
+            &_awardCol {
+              width: 100%;
+              &_listAwar {
+                font-size: 16px;
+              }
+            }
+            &_awardCol5 {
+              &_cardAwar {
+                h3 {
+                  font-size: 20px;
+                }
+                p {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+        &_videoInfo {
+          &_contentVideo {
+            &_textVideo {
+              font-size: 14px;
+            }
+          }
+        }
+        &_imageTwo {
+          margin-top: 0;
+          &_grils {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 575.5px) {
+    &_infoRow {
+      &_infoCol6 {
+        &_award {
+          &_awardSkill {
+            flex-direction: column;
+            &_awardCol5 {
+              width: 100%;
+            }
           }
         }
       }

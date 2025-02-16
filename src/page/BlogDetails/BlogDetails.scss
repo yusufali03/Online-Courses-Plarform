@@ -2,6 +2,7 @@
   background-color: var(--whiteColor);
   .container {
     .blog-details-info {
+      padding-top: 110px;
       margin-bottom: 60px;
       .image {
         img {
@@ -71,7 +72,23 @@
           }
           h3 {
             color: var(--whiteColor);
+            font-size: 24px;
             font-weight: 500;
+
+            &.dephise {
+              position: relative;
+              padding-left: 65px;
+              &::before {
+                top: 50%;
+                left: 0;
+                width: 48px;
+                height: 3px;
+                content: "";
+                position: absolute;
+                transform: translateY(-50%);
+                background-color: var(--whiteColor);
+              }
+            }
           }
 
           .shape {
@@ -79,7 +96,16 @@
             bottom: 25px;
             position: absolute;
             img {
-              animation: rotateme 10s linear infinite;
+              animation: rotate 10s linear infinite;
+
+              @keyframes rotate {
+                0% {
+                  transform: rotate(0deg); /* Начальная точка вращения */
+                }
+                100% {
+                  transform: rotate(360deg); /* Полный оборот */
+                }
+              }
             }
           }
         }
@@ -202,21 +228,84 @@
           p {
             padding-bottom: 8px;
           }
-          .additionalInfos {
-            .additionalInfo {
-              .title {
-                font-size: 16px;
-              }
-              .recent-posts {
-                padding: 15px;
-                .post-content {
-                  h4 {
-                    a {
-                      font-size: 15px;
-                      font-weight: 600;
+          blockquote {
+            h6 {
+              font-size: 22px;
+            }
+            .additionalInfos {
+              .additionalInfo {
+                .title {
+                  font-size: 16px;
+                }
+                .recent-posts {
+                  padding: 15px;
+                  .post-content {
+                    h4 {
+                      a {
+                        font-size: 15px;
+                        font-weight: 600;
+                      }
+                    }
+                    .read-more {
+                      font-size: 14px;
                     }
                   }
-                  .read-more {
+                }
+              }
+            }
+          }
+        }
+
+        @media (max-width: 1200px) and (min-width: 990px) {
+          .content {
+            h2 {
+              font-size: 22px;
+            }
+            blockquote {
+              gap: 15px;
+              h6 {
+                font-size: 17px;
+              }
+              h3 {
+                font-size: 18px;
+              }
+            }
+            h5 {
+              font-size: 20px;
+            }
+            .additionalInfos {
+              &.tags-socials {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+              }
+            }
+          }
+        }
+
+        @media (max-width: 990px) {
+          .content {
+            gap: 20px;
+            padding: 20px;
+            ul {
+              li {
+                span {
+                  font-size: 14px;
+                }
+              }
+            }
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      @media (max-width: 1200px) {
+        .content {
+          .additionalInfos {
+            .recent-posts {
+              .post-content {
+                h4 {
+                  a {
                     font-size: 14px;
                   }
                 }
@@ -225,50 +314,6 @@
           }
         }
       }
-
-      @media (max-width: 1200px) and (min-width: 990px) {
-        .content {
-          h2 {
-            font-size: 22px;
-          }
-          blockquote {
-            gap: 15px;
-            h6 {
-              font-size: 17px;
-            }
-            h3 {
-              font-size: 18px;
-            }
-          }
-          h5 {
-            font-size: 20px;
-          }
-          .additionalInfos {
-            &.tags-socials {
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-            }
-          }
-        }
-      }
-
-      @media (max-width: 990px) {
-        .content {
-          gap: 20px;
-          padding: 20px;
-          ul {
-            li {
-              span {
-                font-size: 14px;
-              }
-            }
-          }
-          p {
-            font-size: 14px;
-          }
-        }
-      }
-
       @media (max-width: 768px) {
         .content {
           gap: 15px;
@@ -336,6 +381,8 @@
     .contact-form {
       display: grid;
       gap: 25px;
+
+      padding-bottom: 136px;
 
       p {
         font-size: 16px;
@@ -443,12 +490,7 @@
             font-size: 14px;
           }
         }
-        
       }
-    }
-
-    h3 {
-      font-size: 34px;
     }
 
     &.flex {

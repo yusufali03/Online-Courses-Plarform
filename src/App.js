@@ -34,7 +34,9 @@ const routes = [
     {path: "privacy-policy", element: PrivacyPolicyPage},
     {path: "terms-conditions", element: TermsConditions},
     {path: "blog-standart", element: BlogStandart},
-    {path: "blog-detials", element: BlogDetails},
+    {path: "blog-details", element: BlogDetails},
+    {path: "blog-with-sidebar", element: BlogStandart},
+    {path: "blog-without-sidebar", element: BlogStandart},
     {path: "courses-list/grid", element: CourseGrid},
     {path: "courses-list/item", element: ListCourse},
 ];

@@ -37,7 +37,7 @@
         margin-bottom: 12px;
         font-size: 18px;
         font-weight: 600;
-        background: linear-gradient(90deg, #0000FF, #00FF00);
+        background: linear-gradient(90deg, #0000ff, #00ff00);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: inline-block;
@@ -51,7 +51,11 @@
         margin-bottom: 40px;
 
         &_sec {
-          background: linear-gradient(90deg, #0000FF, #00FF00); // Gradient ranglar
+          background: linear-gradient(
+            90deg,
+            #0000ff,
+            #00ff00
+          ); // Gradient ranglar
           -webkit-background-clip: text; // Matnga cheklash
           -webkit-text-fill-color: transparent; // Matnni shaffof qilish
           position: relative; // Chiziqni joylashtirish uchun
@@ -116,7 +120,6 @@
               color: var(--whiteColor);
             }
           }
-
         }
 
         &::before {
@@ -124,7 +127,7 @@
           left: 0;
           width: 16%;
           height: 100%;
-          content: '';
+          content: "";
           z-index: 0;
           position: absolute;
           transition: var(--transition);
@@ -138,7 +141,6 @@
           &::before {
             width: 100%;
             border-radius: 8px;
-
           }
         }
       }
@@ -180,7 +182,6 @@
               color: var(--whiteColor);
               transform: translateY(-50%);
               background: #1cca81;
-
             }
 
             &:hover {
@@ -188,9 +189,8 @@
             }
           }
         }
-
       }
-      &_send{
+      &_send {
         z-index: 1;
         position: relative;
         padding: 17px 30px;
@@ -206,7 +206,7 @@
         font-size: 18px;
         font-weight: 600;
         cursor: pointer;
-        &::before{
+        &::before {
           top: 0;
           left: 0;
           width: 0;
@@ -225,5 +225,136 @@
         }
       }
     }
+  }
+  @media (max-width: 1399.5px) and (min-width: 1199.5px) {
+    &_texts {
+      &_section {
+        &_title {
+          font-size: 35px;
+        }
+        &_List {
+          &_col-6 {
+            &_ull {
+              font-size: 16px;
+            }
+          }
+        }
+        &_send {
+          font-size: 16px;
+          padding: 11px 20px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1199.5px) {
+    &_texts {
+      &_section {
+        &_ps {
+          font-size: 16px;
+        }
+        &_learning {
+          &_infoCard {
+            &_lit {
+              font-size: 15px;
+            }
+            &_big {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 991.5px) and (min-width: 768.5px) {
+    &_photo,
+    &_texts {
+      width: 100%;
+      &_section {
+        &_send {
+          font-size: 16px;
+          padding: 11px 20px;
+        }
+      }
+    }
+
+    &_texts {
+      &_section {
+        &_title {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  @media (max-width: 768.5px) {
+    &_photo,
+    &_texts {
+      width: 100%;
+      &_section {
+        margin-left: 0;
+        &_List {
+          &_col-6 {
+            &_ull {
+              font-size: 16px;
+              padding-left: 48px;
+              &_lii {
+                width: 30px;
+                height: 30px;
+                font-size: 17px;
+                line-height: 30px;
+              }
+            }
+          }
+        }
+        &_title {
+          font-size: 24px;
+          margin-bottom: 25px;
+          br {
+            display: none;
+          }
+        }
+        &_send {
+          font-size: 16px;
+          padding: 11px 20px;
+        }
+      }
+    }
+  }
+  @media (max-width: 575.5px) {
+    &_texts {
+      width: 100%;
+      &_section {
+        margin-left: 0;
+        &_List {
+          flex-direction: column;
+          margin-bottom: 0;
+          &_col-6 {
+            width: 100%;
+            &_ull {
+              margin-bottom: 32px;
+            }
+          }
+        }
+
+        &_learning {
+          flex-direction: column;
+          align-items: baseline;
+          padding: 20px;
+          margin-top: 25px;
+          margin-bottom: 35px;
+          &_ic {
+            margin-bottom: 16px;
+            img {
+              max-width: 70px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991.5px) {
+  .main-flex__about-area {
+    flex-direction: column;
   }
 }

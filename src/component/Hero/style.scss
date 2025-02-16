@@ -6,7 +6,6 @@
   overflow: hidden;
 
   .flex {
-
     display: flex;
     justify-content: space-between;
   }
@@ -37,7 +36,7 @@
       &_gradient {
         font-size: 18px;
         font-weight: 700;
-        background: linear-gradient(90deg, #0000FF, #00FF00);
+        background: linear-gradient(90deg, #0000ff, #00ff00);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: inline-block;
@@ -49,9 +48,12 @@
         font-weight: 700; // Qalin matn
         color: var(--whiteColor);
 
-
         &_colors {
-          background: linear-gradient(90deg, #0000FF, #00FF00); // Gradient ranglar
+          background: linear-gradient(
+            90deg,
+            #0000ff,
+            #00ff00
+          ); // Gradient ranglar
           -webkit-background-clip: text; // Matnga cheklash
           -webkit-text-fill-color: transparent; // Matnni shaffof qilish
           position: relative; // Chiziqni joylashtirish uchun
@@ -63,7 +65,6 @@
             left: 40px;
           }
         }
-
       }
 
       &_des {
@@ -97,7 +98,7 @@
           display: inline-block;
           border-radius: 5px;
           padding: 15px 30px 15px 100px;
-          color:var(--whiteColor);
+          color: var(--whiteColor);
           transition: 0.5s;
           border: 1px solid var(--whiteColor);
           overflow: hidden;
@@ -111,8 +112,6 @@
             border-radius: 4px 0px 0px 4px;
             transition: 0.5s ease-in-out;
             transform: translateY(-50%);
-
-
           }
 
           &::before {
@@ -150,7 +149,7 @@
           text-align: center;
           //display: inline-block;
           //margin-top: 5px;
-          transition: .5s;
+          transition: 0.5s;
           background: var(--whiteColor);
           color: var(--mainColor);
 
@@ -168,7 +167,7 @@
 
           &:hover {
             background: var(--mainColor);
-            color:var(--whiteColor);
+            color: var(--whiteColor);
           }
         }
       }
@@ -210,28 +209,27 @@
       max-width: 296px;
       position: absolute;
       border-radius: 10px;
-      transition: .5s;
+      transition: 0.5s;
       background: var(--whiteColor);
       box-shadow: 0px 35px 55px 0px rgba(0, 0, 0, 0.08);
-
 
       &_content {
         &_h33 {
           font-size: 20px;
           font-weight: 500;
-          transition: .5s;
+          transition: 0.5s;
           //color: #000;
           margin-bottom: 8px;
         }
 
         &_dess {
           //color: ;
-          transition: .5s;
+          transition: 0.5s;
           font-size: 16px;
           font-weight: 500;
         }
       }
-      &_messageIcon{
+      &_messageIcon {
         width: 60px;
         height: 60px;
         margin-left: 15px;
@@ -242,7 +240,7 @@
         text-align: center;
         border-radius: 100%;
         //display: inline-block;
-        background: linear-gradient(100deg, #0063F4 7.82%, #00F0AA 87.12%);
+        background: linear-gradient(100deg, #0063f4 7.82%, #00f0aa 87.12%);
       }
       &::before {
         top: 0;
@@ -252,7 +250,7 @@
         content: "";
         z-index: -1;
         position: absolute;
-        transition: .5s;
+        transition: 0.5s;
         border-radius: 10px 0px 0px 10px;
         background-color: var(--mainColor);
       }
@@ -265,6 +263,81 @@
           width: 100%;
           border-radius: 10px;
           visibility: visible;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1399.5px) {
+    height: 100%;
+    &_card {
+      &_title {
+        &_bigGradient {
+          font-size: 55px;
+        }
+        &_buttonList {
+          &_btn {
+            padding: 10px 10px 10px 80px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1199.5px) {
+    &_card {
+      &_title {
+        &_bigGradient {
+          font-size: 50px;
+        }
+      }
+    }
+  }
+  @media (max-width: 991.5px) {
+    height: auto;
+    .flex {
+      flex-direction: column;
+    }
+    &_card {
+      width: 100%;
+      &_title {
+        margin-top: 0;
+        &_bigGradien {
+          font-size: 40px;
+          br {
+            display: none;
+          }
+        }
+      }
+      &_animation {
+        display: none;
+      }
+    }
+    &_box {
+      width: 100%;
+    }
+  }
+  @media (max-width: 768.5px) {
+    &_card {
+      &_title {
+        &_gradient,
+        &_des {
+          font-size: 16px;
+        }
+        &_bigGradient {
+          font-size: 30px;
+        }
+      }
+    }
+    &_box {
+      &_info {
+        &_content {
+          &_h33 {
+            font-size: 18px;
+          }
+          &_dess {
+            font-size: 14px;
+          }
         }
       }
     }

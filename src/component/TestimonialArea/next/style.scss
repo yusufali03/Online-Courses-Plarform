@@ -1,8 +1,8 @@
-.testimonialsTwo{
+.testimonialsTwo {
   background-color: var(--blackColor);
   z-index: 1;
   position: relative;
-  &::before{
+  &::before {
     top: 0;
     left: 0;
     width: 100%;
@@ -12,7 +12,7 @@
     position: absolute;
     background-color: #fff7fc;
   }
-  &_nextInfo{
+  &_nextInfo {
     background-color: #1cca81;
     padding-left: 10px;
     padding-right: 10px;
@@ -21,10 +21,10 @@
     padding-top: 130px;
     position: relative;
     z-index: 1;
-    &_testSub{
+    &_testSub {
       text-align: center;
       margin: auto;
-      &_nextTitle{
+      &_nextTitle {
         color: var(--whiteColor);
         line-height: 1.3;
         margin-bottom: 32px;
@@ -32,36 +32,93 @@
         font-weight: 700;
       }
     }
-    &_one{
+    &_one {
       position: absolute;
       top: 30px;
       left: 30px;
     }
-    &_two{
+    &_two {
       position: absolute;
       top: 30px;
       right: 30px;
     }
-    &_three{
+    &_three {
       position: absolute;
       bottom: 30px;
       left: 30px;
     }
-    &_four{
+    &_four {
       position: absolute;
       bottom: 30px;
       right: 30px;
     }
   }
-  &_shape24{
+  &_shape24 {
     position: absolute;
     bottom: 0.1px;
     z-index: 2;
     left: 0px;
     animation: rotate 15s linear infinite;
+    @media (max-width: 991.5px) {
+      display: none;
+    }
+  }
+  @media (max-width: 1399.5px) {
+    &_nextInfo {
+      &_testSub {
+        &_nextTitle {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+  @media (max-width: 991.5px) {
+    &_nextInfo {
+      &_testSub {
+        max-width: 510px;
+        &_nextTitle {
+          font-size: 30px;
+        }
+        p {
+          margin-bottom: 0;
+          br {
+            display: none;
+          }
+        }
+      }
+      &_one {
+        display: none;
+      }
+      &_two {
+        display: none;
+      }
+      &_three {
+        display: none;
+      }
+      &_four {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 768.5px) {
+    &_nextInfo {
+      padding: 70px 10px 50px;
+      &_testSub {
+        &_nextTitle {
+          font-size: 24px;
+          br {
+            display: none;
+          }
+        }
+        p {
+          font-size: 16px;
+          padding: 0 5px;
+        }
+      }
+    }
   }
 }
-.shapeFooter{
+.shapeFooter {
   height: 1090px;
   right: 0;
   top: 0;
@@ -69,6 +126,9 @@
   position: absolute;
   padding-top: 271px;
   margin-bottom: 0;
+  @media (max-width: 991.5px) {
+    display: none;
+  }
 }
 
 @keyframes rotate {
