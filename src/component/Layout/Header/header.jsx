@@ -98,10 +98,10 @@ const Header = () => {
                 <FaCaretDown />
               </CDropdownToggle>
               <CDropdownMenu className="dropdown-menu">
-                <CDropdownItem href="/courses-list/grid">
+                <CDropdownItem href="/courses-list/item">
                   {t("courses_list")}
                 </CDropdownItem>
-                <CDropdownItem href="#">{t("courses_grid")}</CDropdownItem>
+                <CDropdownItem href="/courses-list/grid">{t("courses_grid")}</CDropdownItem>
                 <CDropdownItem href="#">{t("courses_details")}</CDropdownItem>
                 <CDropdownItem href="#">{t("courses_sidebar")}</CDropdownItem>
               </CDropdownMenu>
