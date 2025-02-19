@@ -39,7 +39,7 @@ function CourseCard(data) {
                 {course.duration}
               </span>
               <span>
-                <FaRegStar style={{ "margin-right": "10px" }} size={16} />{" "}
+                <FaRegStar style={{ "margin-right": "10px" }} size={16} />
                 {course.rating}
               </span>
             </div>
