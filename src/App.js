@@ -17,11 +17,9 @@ const TermsConditions = lazy(() => import("./page/TermsConditions/TermsCondition
 const PrivacyPolicyPage = lazy(() => import("./page/PrivacyPolicyPage/PrivacyPolicyPage"));
 const CourseGrid = lazy(() => import("./page/CoursesList/component/CourseGrid/CourseGrid"));
 const ListCourse = lazy(() => import("./page/CoursesList/component/ListCourse/ListCourse"));
+const CourseDetails = lazy(() => import("./page/CourseDetails/CourseDetails"));
 const BlogStandart = lazy(() => import("./page/BlogStandart/BlogStandart"));
 const BlogDetails = lazy(() => import("./page/BlogDetails/BlogDetails"));
-
-
-
 
 const routes = [
     {path: "/", element: Home},
@@ -39,6 +37,7 @@ const routes = [
     {path: "blog-without-sidebar", element: BlogStandart},
     {path: "courses-list/grid", element: CourseGrid},
     {path: "courses-list/item", element: ListCourse},
+    {path: "courses-details", element: CourseDetails},
 ];
 
 const RoutesContainer = () => (

@@ -102,7 +102,7 @@ const Header = () => {
                   {t("courses_list")}
                 </CDropdownItem>
                 <CDropdownItem href="/courses-list/grid">{t("courses_grid")}</CDropdownItem>
-                <CDropdownItem href="#">{t("courses_details")}</CDropdownItem>
+                <CDropdownItem href="/courses-details">{t("courses_details")}</CDropdownItem>
                 <CDropdownItem href="#">{t("courses_sidebar")}</CDropdownItem>
               </CDropdownMenu>
             </CDropdown>
