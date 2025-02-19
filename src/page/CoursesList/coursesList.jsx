@@ -3,6 +3,8 @@ import "./coursesList.scss";
 import PageTitleArea from "../../component/PageTitleArea/PageTitleArea";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
 import { PiListBullets } from "react-icons/pi";
+import CoursesSidebar from "./component/CoursesSidebar/CoursesSidebar";
+
 
 const CoursesList = () => {
     const titles = "Courses List";
@@ -111,6 +113,7 @@ const CoursesList = () => {
                             </div>
                         )}
                     </div>
+                {/* <CoursesSidebar/> */}
                 </div>
             </div>
         </>
