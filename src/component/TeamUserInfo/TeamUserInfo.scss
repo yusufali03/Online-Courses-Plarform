@@ -1,0 +1,65 @@
+.team-left-sidebar {
+  width: 100%;
+  max-height: 750px;
+  background-color: #fff;
+  border-radius: 0px 0px 8px 8px;
+  -webkit-box-shadow: 1px 34px 39px -33px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 1px 34px 39px -33px rgba(34, 60, 80, 0.2);
+  box-shadow: 1px 34px 39px -33px rgba(34, 60, 80, 0.2);
+
+  z-index: 3;
+
+  img {
+    width: 100%;
+  }
+
+  .content {
+    display: grid;
+    gap: 16px;
+
+    padding: 20px;
+    --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+    ul {
+      display: flex;
+      gap: 6px;
+      li {
+        a {
+          font-weight: 500;
+          color: rgb(85, 85, 85);
+        }
+      }
+      &.socials {
+        li {
+          transition: all .5s ease-in-out;
+          img {
+            height: auto;
+            width: 30px;
+          }
+          &:hover {
+            transform: translateY(-6px);
+          }
+        }
+      }
+      &.list-unstyled {
+        display: grid;
+        li {
+          display: flex;
+          gap: 5px;
+          .icon {
+            border-radius: 4px;
+            padding: 3px 4px 0px 4px;
+            background-color: rgb(28, 202, 129);
+            img {
+              width: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 990.5px) {
+    max-height: 100%;
+  }
+}

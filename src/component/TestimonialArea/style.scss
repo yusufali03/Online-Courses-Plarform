@@ -1,0 +1,95 @@
+.testimonial {
+  padding-bottom: 100px;
+  &_row {
+    display: flex;
+    justify-content: space-between;
+
+    &_col-5 {
+      width: 50%;
+
+      &_tesSub {
+        background-clip: text;
+        margin-bottom: 12px;
+        font-size: 18px;
+        font-weight: 600;
+        background: linear-gradient(90deg, #0000ff, #00ff00);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      }
+
+      &_tesTitle {
+        line-height: 1.3;
+        color: var(--blackColor);
+        flex-direction: row;
+        font-size: 44px;
+        font-weight: 700;
+        margin-bottom: 40px;
+
+        &_tesColor {
+          background: linear-gradient(
+            90deg,
+            #0000ff,
+            #00ff00
+          ); // Gradient ranglar
+          -webkit-background-clip: text; // Matnga cheklash
+          -webkit-text-fill-color: transparent; // Matnni shaffof qilish
+          position: relative; // Chiziqni joylashtirish uchun
+
+          &_tesLine {
+            width: 100%;
+            margin: 0 auto;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+          }
+        }
+      }
+      &_tesImg {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  @media (max-width: 1399.5px) {
+    &_row {
+      &_col-5 {
+        &_tesTitle {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1199.5px) {
+    &_row {
+      flex-direction: column;
+      align-items: center;
+      &_col-5 {
+        width: 100%;
+        &_tesTitle {
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 991.5px) {
+    &_row {
+      &_col-5 {
+        &_tesTitle {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  @media (max-width: 768.5px) {
+    &_row {
+      &_col-5 {
+        &_tesTitle {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

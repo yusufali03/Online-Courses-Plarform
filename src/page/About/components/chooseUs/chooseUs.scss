@@ -1,0 +1,153 @@
+.chooseUs {
+  padding-top: 130px;
+  background: #fff7fc;
+  position: relative;
+  z-index: 1;
+
+  &_colChoose {
+    width: 50%;
+    position: relative;
+    &_titleChoose {
+      margin-top: 30px;
+      line-height: 1.3;
+      color: var(--blackColor);
+      font-size: 44px;
+      font-weight: 700;
+      margin-bottom: 40px;
+
+      &_colorChoose {
+        background: linear-gradient(
+          90deg,
+          #0000ff,
+          #00ff00
+        ); // Gradient ranglar
+        -webkit-background-clip: text; // Matnga cheklash
+        -webkit-text-fill-color: transparent; // Matnni shaffof qilish
+        position: relative; // Chiziqni joylashtirish uchun
+        &_lineChoose {
+          width: 90%;
+          margin: 0 auto;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+
+    &_backgroundChoose {
+      text-align: center;
+
+      .grils {
+        text-align: center;
+      }
+
+      &_bgshape {
+        top: 50%;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        margin: auto;
+        text-align: center;
+        position: absolute;
+        transform: translateY(-50%);
+      }
+
+      &_bgshape4 {
+        top: 8px;
+        z-index: -2;
+        right: 10px;
+        position: absolute;
+      }
+
+      &_bgshape5 {
+        top: 130px;
+        left: 25px;
+        position: absolute;
+      }
+
+      &_bgshape6 {
+        left: 60px;
+        bottom: 42px;
+        position: absolute;
+      }
+
+      &_bgshape7 {
+        right: 60px;
+        bottom: 8px;
+        position: absolute;
+      }
+    }
+  }
+  &_shape3 {
+    top: 86px;
+    left: 35px;
+    z-index: -1;
+    position: absolute;
+  }
+
+  @media (max-width: 1399.5px) {
+    .chooseUs {
+      &_colChoose {
+        width: 45%;
+        &_titleChoose {
+          font-size: 35px;
+        }
+        &_backgroundChoose {
+          &_bgshape {
+            img {
+              max-width: 110%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991.5px) {
+    .chooseUs {
+      &_colChoose {
+        width: 100%;
+        &_titleChoose {
+          font-size: 30px;
+          br {
+            display: none;
+          }
+        }
+        &:first-child {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 760.5px) {
+    .chooseUs {
+      &_colChoose {
+        width: 100%;
+        &_titleChoose {
+          font-size: 24px;
+          margin: 10px 0 25px;
+        }
+        &_backgroundChoose {
+          &_bgshape {
+            img {
+              max-width: 100%;
+            }
+          }
+          .grils {
+            max-width: 100%;
+          }
+        }
+      }
+      &_shape3 {
+        top: 46px;
+      }
+    }
+  }
+}
+
+@media (max-width: 990.5px) {
+  .main-flex__choose {
+    flex-direction: column;
+  }
+}
