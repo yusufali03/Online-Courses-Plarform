@@ -106,7 +106,7 @@ const Header = () => {
                 <CDropdownItem href="#">{t("courses_sidebar")}</CDropdownItem>
               </CDropdownMenu>
             </CDropdown>
-            <CDropdown className="nav-item">
+            {/* <CDropdown className="nav-item">
               <CDropdownToggle className="nav-link">
                 {t("blog")}
                 <FaCaretDown />
@@ -125,7 +125,7 @@ const Header = () => {
                   {t("blog_without_sidebar")}
                 </CDropdownItem>
               </CDropdownMenu>
-            </CDropdown>
+            </CDropdown> */}
 
             <CDropdown className="nav-item">
               <CDropdownToggle className="nav-link">

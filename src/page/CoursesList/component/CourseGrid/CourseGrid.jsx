@@ -1,5 +1,4 @@
 import React from 'react';
-import CoursesList from "../../CoursesList";
 import "./courseGrid.scss";
 import course7 from "../../../../assests/images/course/courses7.webp"
 import course8 from "../../../../assests/images/course/courses8.webp"
@@ -9,7 +8,7 @@ const CourseGrid = () => {
 
     return (
         <>
-            <CoursesList/>
+            {/* <CoursesList/> */}
             <div className="courseGrid">
                 <div className="container">
                     <div className="courseGrid_rowList">

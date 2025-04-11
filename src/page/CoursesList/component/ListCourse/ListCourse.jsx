@@ -1,5 +1,4 @@
 import React from 'react';
-import CoursesList from "../../CoursesList";
 import CoursesArea from "../../../../component/CoursesArea";
 import coursImg from "../../../../assests/images/courses13.webp";
 import {FaStar} from "react-icons/fa";
@@ -14,7 +13,7 @@ import coursImg6 from "../../../../assests/images/courses18.webp";
 const ListCourse = () => {
     return (
         <>
-            <CoursesList/>
+            {/* <CoursesList/> */}
             <div className="container">
                 <div className="coursesArea_headings_boxs">
                     <div className="coursesArea_headings_boxs_col5" data-aos="fade-up">
