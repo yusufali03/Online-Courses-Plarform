@@ -1,5 +1,7 @@
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 from django.db import models
+from django.utils.translation import gettext_lazy as _
+from django.utils import timezone
 
 class CustomUserManager(BaseUserManager):
     def create_user(self, phone_number, password=None, **extra_fields):
@@ -21,7 +23,13 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     full_name = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
-    date_joined = models.DateTimeField(auto_now_add=True)
+    date_joined = models.DateTimeField(_('date joined'), editable=True)
+    date_joined = models.DateTimeField(auto_now_add=True, verbose_name=_('date joined'))
+    profile_picture = models.ImageField(
+        upload_to='profiles/',
+        null=True,
+        blank=True,
+    )
 
     USERNAME_FIELD = 'phone_number'
     REQUIRED_FIELDS = ['full_name']
