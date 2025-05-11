@@ -1,0 +1,32 @@
+/* src/pages/Settings/Settings.scss */
+
+.settings-container {
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+  }
+  
+  .settings-sidebar {
+    width: 200px;
+    padding: 16px;
+    background: #fafafa;
+    border-radius: 4px;
+  
+    .MuiTypography-root {
+      margin-bottom: 8px;
+    }
+  }
+  
+  .settings-content {
+    flex: 1;
+  
+    .settings-form {
+      padding: 24px;
+      border-radius: 4px;
+  
+      .MuiTextField-root {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  
