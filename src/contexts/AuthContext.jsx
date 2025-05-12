@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
   });
   const [user, setUser] = useState({});
 
-  const API = process.env.REACT_APP_API_URL || 'http://127.0.0.1:8000/api';
+  const API = process.env.REACT_APP_API_URL || 'http://45.80.149.202:8000/api';
 
   // Login stores tokens
   const login = async (phone_number, password) => {
