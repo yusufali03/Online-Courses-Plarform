@@ -1,0 +1,59 @@
+// Header.scss
+.header {
+    .user-dropdown {
+      .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem; // space between avatar and name
+        padding: 0.25rem 0.5rem;
+      }
+      .avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #6c757d;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 1rem;
+        text-transform: uppercase;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .user-name {
+        font-size: 0.9rem;
+        color: #343a40;
+        white-space: nowrap;
+      }
+  
+      // Dropdown menu icon spacing
+      .nav-link svg {
+        margin-left: 0.25rem;
+        font-size: 0.8rem;
+      }
+  
+      // Dropdown item styling
+      .dropdown-menu {
+        min-width: 150px;
+        padding: 0.5rem 0;
+        border-radius: 0.25rem;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+      }
+      .dropdown-menu .dropdown-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        &:hover {
+          background-color: #f8f9fa;
+        }
+      }
+    }
+  }
+  

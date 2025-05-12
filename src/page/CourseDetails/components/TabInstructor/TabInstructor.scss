@@ -1,0 +1,67 @@
+.instructor-info {
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  .instructor-user {
+    margin-bottom: 30px;
+    align-items: center !important;
+    display: flex !important;
+    .image {
+      display: block;
+      flex: 0 0 auto;
+      margin-right: 30px;
+      img {
+        width: 270px;
+        height: 312px;
+        border-radius: 4px;
+      }
+    }
+    .content {
+      h2 {
+        margin-bottom: 10px;
+        color: var(--blackColor);
+        font-size: 34px;
+        font-family: var(--fontFamily);
+      }
+      span {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--mainColor);
+
+      }
+      ul {
+        margin-top: 30px;
+        list-style-image: none;
+        padding-left: 0 !important;
+        margin-bottom: 0 !important;
+        li {
+          position: relative !important;
+          font-weight: 500;
+          padding-left: 35px;
+          margin-bottom: 20px;
+          img {
+            top: 50%;
+            left: 0;
+            position: absolute;
+            transform: translateY(-50%);
+          }
+        }
+        &.social-link {
+          margin-top: 45px;
+          li {
+            margin-right: 30px;
+            transition: var(--transition);
+            display: inline-block !important;
+            &:hover {
+              transform: translateY(-7px);
+            }
+          }
+        }
+      }
+    }
+  }
+  p {
+    font-weight: 500;
+    color: var(--bodyColor);
+  }
+}

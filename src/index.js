@@ -1,0 +1,33 @@
+import React, {Suspense} from "react";
+import {createRoot} from "react-dom/client";
+import "./assests/style/global.scss"
+import "./assests/style/header.scss"
+import "./assests/style/footer.scss"
+import Routes from "./App";
+import i18n from "./serves/i18n";
+import {I18nextProvider} from "react-i18next";
+import { Provider } from "react-redux";
+import 'react-toastify/dist/ReactToastify.css';
+import store from "./reduxToolkit/store";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { AuthProvider } from './contexts/AuthContext.jsx';
+import 'aos/dist/aos.css';
+library.add(fas);
+
+
+const container = document.getElementById("root");
+const root = createRoot(container);
+
+root.render(
+    <AuthProvider>
+
+    <I18nextProvider i18n={i18n}>
+        <Suspense fallback="">
+            <Provider store={store}>
+                <Routes/>
+            </Provider>
+        </Suspense>
+    </I18nextProvider>
+    </AuthProvider>
+);

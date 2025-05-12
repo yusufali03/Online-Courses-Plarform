@@ -1,0 +1,210 @@
+.teamMembersAbout {
+  background: #fff7fc;
+  position: relative;
+  z-index: 1;
+  padding-top: 130px;
+  padding-bottom: 110px;
+
+  &_subTeam {
+    text-align: center;
+    margin-bottom: 55px;
+
+    &_teamTitle {
+      line-height: 1.3;
+      color: var(--blackColor);
+      flex-direction: row;
+      font-size: 44px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      margin-top: 12px;
+
+      &_teamColor {
+        background: linear-gradient(
+          90deg,
+          #0000ff,
+          #00ff00
+        ); // Gradient ranglar
+        -webkit-background-clip: text; // Matnga cheklash
+        -webkit-text-fill-color: transparent; // Matnni shaffof qilish
+        position: relative; // Chiziqni joylashtirish uchun
+        &_teamLine {
+          width: 80%;
+          margin: 0 auto;
+          position: absolute;
+          bottom: -5px;
+          left: 20px;
+        }
+      }
+    }
+  }
+
+  &_teamRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+
+    &_teamCol-3 {
+      width: 100%;
+      &_singleTeam {
+        margin-bottom: 25px;
+
+        &_teamContent {
+          border-radius: 8px;
+          text-align: left;
+          padding: 40px 20px 140px;
+          background-color: #0c1327;
+
+          &_teamNames {
+            margin-bottom: 10px;
+            color: var(--whiteColor);
+            font-size: 18px;
+            font-weight: 700;
+          }
+        }
+
+        &_teamImages {
+          margin-top: -100px;
+          margin-left: 20px;
+          margin-right: 20px;
+          position: relative;
+
+          &_teamSocial {
+            transition: var(--transition);
+            .shareIconTeam {
+              top: -30px;
+              right: 20px;
+              position: absolute;
+              transition: var(--transition);
+              width: 60px;
+              height: 60px;
+              line-height: 55px;
+              text-align: center;
+              border-radius: 4px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: var(--mainColor);
+            }
+            .socialListIcon {
+              top: 0;
+              display: grid;
+              opacity: 0;
+              right: 20px;
+              visibility: visible;
+              position: absolute;
+              transition: var(--transition);
+            }
+
+            .teamIconLink {
+              width: 60px;
+              height: 58px;
+              font-size: 24px;
+              line-height: 57px;
+              text-align: center;
+              display: inline-block;
+              color: var(--whiteColor);
+              background-color: var(--mainColor);
+              transition: var(--transition);
+              &:nth-child(2) {
+                height: 40px;
+                line-height: 40px;
+              }
+
+              &:last-child {
+                border-radius: 0px 0px 4px 4px;
+              }
+            }
+
+            &:hover {
+              .shareIconTeam {
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+              }
+              cursor: pointer;
+              .socialListIcon {
+                opacity: 1;
+                visibility: visible;
+                transition: var(--transition);
+              }
+
+              .teamLink {
+                opacity: 2;
+                visibility: visible;
+                transition: var(--transition);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1399.5px) {
+    &_subTeam {
+      &_teamTitle {
+        font-size: 35px;
+      }
+    }
+  }
+  @media (max-width: 1299.5px) and (min-width: 991.5px) {
+    &_teamRow {
+      &_teamCol-3 {
+        &_singleTeam {
+          &_teamContent {
+            padding: 30px 20px 125px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 991.5px) {
+    &_subTeam {
+      &_teamTitle {
+        font-size: 30px;
+      }
+    }
+    &_teamRow {
+      grid-template-columns: 1fr 1fr;
+      &_teamCol-3 {
+        &_singleTeam {
+          &_teamContent {
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768.5px) {
+    &_subTeam {
+      .globalTitle {
+        font-size: 16px;
+      }
+      &_teamTitle {
+        font-size: 24px;
+      }
+    }
+    &_teamRow {
+      &_teamCol-3 {
+        &_singleTeam {
+          margin-bottom: 0;
+          &_teamImages {
+            &_teamSocial {
+              .shareIconTeam {
+                width: 50px;
+                height: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 575.5px) {
+    &_teamRow{
+      grid-template-columns: 1fr;
+    }
+  }
+}

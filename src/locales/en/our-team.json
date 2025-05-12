@@ -1,0 +1,19 @@
+{
+  "pageTitle": "Оur team",
+  "subtitle": "Team Members",
+  "title": "Our Expert Lecturer",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has.",
+  "buttonText": "Join Our Team",
+  "learningArea": {
+    "subtitle": "Live Classes",
+    "title": "It’s Easy To Start",
+    "titlePrimary": "Learning",
+    "liveStatus": "LIVE",
+    "timer": "01:30:08",
+    "buttons": {
+      "mute": "Mute",
+      "end": "End Call",
+      "video": "Video"
+    }
+  }
+}
