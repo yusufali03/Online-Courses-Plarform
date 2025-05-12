@@ -1,0 +1,54 @@
+{
+  "coursesSection": {
+    "subtitle": "Courses by Julia B. Corbin",
+    "title": "Choose Our Top",
+    "titlePrimary": "Courses"
+  },
+"team-user-info_sidebar": {
+    "follow-on": "Follow Me On:"
+  },
+  "blog-sidebar": {
+    "categories": "Categories",
+    "recent": "Recent Blogs",
+    "tags": "Popular Tags",
+    "feed": "Instagram Feed",
+    "read_more": "Read More"
+  },
+
+  "blog_details": {
+    "tags": "Tags",
+    "next": "Next Post",
+    "prev": "Prev Post",
+    "share": "Share On"
+  },
+  "contactForm": {
+    "title": "Leave A Reply",
+    "description": "Your email address will not be published. Required fields are marked *",
+    "namePlaceholder": "Name*",
+    "emailPlaceholder": "Email*",
+    "websitePlaceholder": "Website Address",
+    "messagePlaceholder": "Your Message*",
+    "submitButton": "Post Comment"
+  },
+  "reply": "Reply",
+  "main": "Main",
+  "about": "About",
+  "gallery": "Gallery",
+  "contact": "Contact",
+  "art": "art board",
+  "services": "Services",
+  "name": "Name",
+  "writeName": "First Name",
+  "writeLastName": "Last Name",
+  "number": "Phone Number",
+  "lastName": "Last Name",
+  "description": "Description",
+  "have": "Have questions?",
+  "all": "All the latest",
+  "send": "Send",
+  "partner": "Our partners",
+  "test_sayt": "The site was launched on a trial basis",
+  "message": "Send us a message",
+  "address": "Yashnabad District Elbek Street Building 61 Technopark D 30",
+  "help": "We are always ready to help you. To contact us, you can call us or send us an email."
+}

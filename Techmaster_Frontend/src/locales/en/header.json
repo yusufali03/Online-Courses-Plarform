@@ -1,0 +1,23 @@
+{
+  "language": "en",
+
+  "home": "Home",
+  "pages": "Pages",
+  "about_us": "About Us",
+  "our_team": "Our Team",
+  "team_details": "Our Team Details",
+  "privacy_policy": "Privacy Policy",
+  "terms_conditions": "Terms & Conditions",
+  "courses": "Courses",
+  "courses_list": "Courses List",
+  "courses_grid": "Courses Grid",
+  "courses_details": "Courses Details",
+  "courses_sidebar": "Courses Sidebar",
+  "blog": "Blog",
+  "blog_standard": "Blog Standard",
+  "blog_details": "Blog Details",
+  "blog_with_sidebar": "Blog With Sidebar",
+  "blog_without_sidebar": "Blog Without Sidebar",
+  "contact": "Contact",
+  "sign_in": "Sign In"
+}

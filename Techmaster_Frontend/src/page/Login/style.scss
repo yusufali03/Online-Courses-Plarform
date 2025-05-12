@@ -1,0 +1,187 @@
+.sign {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  -webkit-box-pack: center;
+  overflow: hidden;
+
+  &_Rows {
+    width: 100%;
+    display: flex;
+
+    &_colSignImg {
+      width: 65%;
+      background-image: url("../../assests/images/bg5-l.jpg");
+      min-height: 100vh;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      &_intro {
+        max-width: 600px;
+        width: 100%;
+        padding: 30px;
+
+        &_subTitleSign {
+          font-weight: 300;
+          font-size: 40px;
+          color: #fff;
+          line-height: 1.5;
+        }
+
+        &_signBig {
+          font-size: 88px;
+          font-weight: 700;
+          color: #fff;
+          margin-bottom: 25px;
+        }
+
+        &_desSign {
+          color: #fff;
+
+        }
+      }
+    }
+
+    &_colSignForm {
+      width: 35%;
+      background-color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      justify-content: center;
+      padding: 50px;
+      position: relative;
+
+      &_headTitleSign {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 60px;
+        font-weight: 700;
+      }
+
+      &_switcher {
+        position: absolute;
+        left: -97px;
+        top: 100px;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        -webkit-box-align: center;
+
+        &_text1 {
+          color: #fff;
+          font-size: 18px;
+          padding: 10px 30px 10px 20px;
+          border-radius: 45px 0 0 45px;
+          width: 100%;
+          transition: all 0.3s ease-in-out;
+
+
+          &:hover{
+            color: #000;
+            background-color: #fff;
+          }
+          &.active{
+            color: #000;
+            background-color: #fff;
+          }
+        }
+      }
+      &_signForms{
+        width: 100%;
+        flex: 1;
+        margin-bottom: 40px;
+        justify-content: center;
+        -webkit-box-flex: 1;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        .form-group{
+
+          position: relative;
+          z-index: 1;
+          margin-bottom: 30px;
+          .form-control{
+            min-height: 40px;
+            box-shadow: none;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #e7e7e7;
+            padding: 10px 10px 10px 30px;
+            color: #111111;
+            &:focus{
+              outline: none;
+            }
+            &::-webkit-input-placeholder {
+              color: #a1a1a1;
+              font-size: 15px;
+              font-weight: 300;
+            }
+
+          }
+          .phoneIcon{
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 50%;
+            color: #a1a1a1;
+            transform: translateY(-50%);
+          }
+          .between{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .btn-fill{
+              position: relative;
+              z-index: 1;
+              padding: 17px 36px;
+              color: var(--whiteColor);
+              background-color: var(--mainColor);
+              font-size: 18px;
+              border: none;
+              font-weight: 600;
+              display: flex;
+              gap: 15px;
+              align-items: center;
+              border-radius: 45px;
+              cursor: pointer;
+
+            }
+            .checkbox{
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              .checkboxLabel{
+                color: #a4a4a4;
+                margin-bottom: 0;
+                font-size: 15px;
+                position: relative;
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

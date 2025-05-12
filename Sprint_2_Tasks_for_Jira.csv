@@ -1,0 +1,25 @@
+Summary,Status,Assignee,Issue Type,Sprint,Start Date,Due Date
+Finalize Sprint 2 backlog & roadmap,Planning,Project Manager,Task,Sprint 2,2025-04-22,2025-05-05
+"Confirm priority of features (payment, dashboard)",Planning,Business Analyst,Task,Sprint 2,2025-04-22,2025-05-05
+Define API contracts (Frontend ↔ Backend),Planning,Backend + Frontend Dev,Task,Sprint 2,2025-04-22,2025-05-05
+Confirm security risks and mitigation plan,Planning,Security Consultant,Task,Sprint 2,2025-04-22,2025-05-05
+Final polish of frontend pages (responsive),Design,Frontend Developer,Task,Sprint 2,2025-04-22,2025-05-05
+UI mockups for admin panel,Design,Business Analyst,Task,Sprint 2,2025-04-22,2025-05-05
+Design certificate templates,Design,Frontend + Embedded Developer,Task,Sprint 2,2025-04-22,2025-05-05
+"Payment gateway integration (Stripe, Payme, etc.)",Development,Backend Developer,Task,Sprint 2,2025-04-22,2025-05-05
+Course progress tracking backend + API,Development,Backend Developer,Task,Sprint 2,2025-04-22,2025-05-05
+Course certificate logic implementation,Development,Embedded + Backend Developer,Task,Sprint 2,2025-04-22,2025-05-05
+Admin panel backend (CRUD for courses/users),Development,Backend Developer,Task,Sprint 2,2025-04-22,2025-05-05
+Notifications system setup,Development,Backend + Security Consultant,Task,Sprint 2,2025-04-22,2025-05-05
+Connect frontend forms to backend APIs,Implementation,Frontend Developer,Task,Sprint 2,2025-04-22,2025-05-05
+Store data in database properly,Implementation,Database Analyst,Task,Sprint 2,2025-04-22,2025-05-05
+"Link notification services (emails, alerts)",Implementation,Backend Developer,Task,Sprint 2,2025-04-22,2025-05-05
+Deploy backend updates to testing server,Implementation,Backend Developer,Task,Sprint 2,2025-04-22,2025-05-05
+Test payment system with real/sandbox data,Testing,Backend Developer + Security Consultant,Task,Sprint 2,2025-04-22,2025-05-05
+Test user dashboard features,Testing,Business Analyst,Task,Sprint 2,2025-04-22,2025-05-05
+Conduct security tests on password reset,Testing,Security Consultant,Task,Sprint 2,2025-04-22,2025-05-05
+UI/UX testing for all frontend pages,Testing,Project Manager + Business Analyst,Task,Sprint 2,2025-04-22,2025-05-05
+Fix bugs from testing feedback,Maintenance,All Devs,Task,Sprint 2,2025-04-22,2025-05-05
+Prepare final certificate download flow,Maintenance,Embedded Developer,Task,Sprint 2,2025-04-22,2025-05-05
+Final project polish for demo,Maintenance,All Team,Task,Sprint 2,2025-04-22,2025-05-05
+Upload demo video + presentation,Maintenance,Project Manager,Task,Sprint 2,2025-04-22,2025-05-05
